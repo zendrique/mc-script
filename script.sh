@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
-#Supporter pour la version 1.15.2 de minecraft et prise ne charge de forge 1.12.2
-#commande lencement du script
-# sudo -s
-#cd /home && wget ...
-#chmod +x script.sh && sh script.sh
+#Supporter pour la version 1.15.2 de minecraft, Snapshot 20w09A et prise ne charge de forge 1.12.2
+clear
 
 echo "Chargement..."
 sleep 2
@@ -12,7 +9,7 @@ apt update && apt upgrade -y
 
 clear
 
-echo "Téléchargement des dépendance et logiciel utile..."
+echo "Téléchargement des dépendances et logiciels utiles..."
 
 apt install nano -y
 apt install screen -y
@@ -24,7 +21,7 @@ apt install openjdk-8-jre-headless -y
 apt install default-jdk -y
 clear
 
-echo "Que voulez-vous installer ?\n"
+echo "Que voulez-vous installer ou mettre à jour ?\n"
 echo "1 - Vanilla\n"
 echo "2 - Snapshot\n"
 echo "3 - Spigot\n"
@@ -46,6 +43,7 @@ echo "Installation du serveur : Vanilla"
 cd /home
 mkdir vanilla
 cd vanilla
+rm -f server.jar
 echo "Téléchargement du serveur"
 wget https://launcher.mojang.com/v1/objects/bb2b6b1aefcd70dfd1892149ac3a215f6c636b07/server.jar
 touch eula.txt && echo "eula=true" >> eula.txt
@@ -53,7 +51,7 @@ touch start.sh && echo "screen -d -m -S vanilla java -Xmx1024M -Xms1024M -jar se
 chmod +x start.sh
 echo "Terminer !\n"
 echo "Pour démarrer votre serveur faites la commande : cd /home/vanilla && sh start.sh"
-echo "Pour ecceder à votre console taper la commande : screen -r vanilla"
+echo "Pour accéder à votre console taper la commande : screen -r vanilla"
 echo "Détail de l'installation :"
 echo "Version du serveur : 1.15.2"
 echo "API : DatapackAPI"
@@ -67,6 +65,7 @@ echo "Installation du serveur : snapshot"
 cd /home
 mkdir snapshot
 cd snapshot
+rm -f server.jar
 echo "Téléchargement du serveur"
 wget https://launcher.mojang.com/v1/objects/6f1e5ae00b938bbe15560b7174be7a3b4c78c450/server.jar
 touch eula.txt && echo "eula=true" >> eula.txt
@@ -74,7 +73,7 @@ touch start.sh && echo "screen -d -m -S snapshot java -Xmx1024M -Xms1024M -jar s
 chmod +x start.sh
 echo "Terminer !\n"
 echo "Pour démarrer votre serveur faites la commande : cd /home/snapshot && sh start.sh"
-echo "Pour ecceder à votre console taper la commande : screen -r snapshot"
+echo "Pour accéder à votre console taper la commande : screen -r snapshot"
 echo "Détail de l'installation :"
 echo "Version du serveur : 20W09A"
 echo "API : DatapackAPI"
@@ -88,14 +87,16 @@ echo "Installation du serveur : Spigot"
 cd /home
 mkdir spigot
 cd spigot
+rm -f spigot.jar
 mkdir buildtools
 cd buildtools
 echo "Téléchargement de BuildTools..."
 wget https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
 git config --global --unset core.autocrlf
 java -jar BuildTools.jar --rev latest
-mv spigot-15.2.jar /home/spigot
+mv spigot-*.jar /home/spigot
 cd /home/spigot
+mv spigot-*.jar spigot.jar
 touch eula.txt && echo "eula=true" >> eula.txt
 touch start.sh && echo "screen -d -m -S spigot java -Xms3G -Xmx3G -XX:+UseConcMarkSweepGC -jar spigot.jar nogui" >> start.sh
 chmod +x start.sh
@@ -104,7 +105,7 @@ rm -R buildtools
 clear
 echo "Terminer !\n"
 echo "Pour démarer votre serveur faites la commande : cd /home/spigot && sh start.sh"
-echo "Pour ecceder à votre console taper la commande : screen -r spigot"
+echo "Pour accéder à votre console taper la commande : screen -r spigot"
 echo "Detail de l'installation :"
 echo "Version du serveur : 1.15.2"
 echo "API : SpigotAPI"
@@ -118,23 +119,25 @@ echo "Instalation de : Bukkit"
 cd /home
 mkdir bukkit
 cd bukkit
+rm -f craftbukkit.jar
 mkdir buildtools
 cd buildtools
 echo "Téléchargement de BuildTools..."
 wget https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
 git config --global --unset core.autocrlf
 java -jar BuildTools.jar --rev latest --compile craftbukkit
-mv craftbukkit-1.15.2.jar /home/bukkit
+mv craftbukkit-*.jar /home/bukkit
 cd /home/bukkit
+mv craftbukkit-* craftbukkit.jar
 touch eula.txt && echo "eula=true" >> eula.txt
-touch start.sh && echo "screen -d -m -S bukkit java -Xms3G -Xmx3G -XX:+UseConcMarkSweepGC -jar craftbukkit-1.15.2.jar nogui" >> start.sh
+touch start.sh && echo "screen -d -m -S bukkit java -Xms3G -Xmx3G -XX:+UseConcMarkSweepGC -jar craftbukkit.jar nogui" >> start.sh
 chmod +x start.sh
 echo "Nettoyage..."
 rm -R buildtools
 clear
 echo "Terminer !\n"
 echo "Pour démarer votre serveur faites la commande : cd /home/bukkit && sh start.sh"
-echo "Pour ecceder à votre console taper la commande : screen -r bukkit"
+echo "Pour accéder à votre console taper la commande : screen -r bukkit"
 echo "Detail de l'installation :"
 echo "Version du serveur : 1.15.2"
 echo "API : SpigotAPI"
@@ -148,6 +151,7 @@ echo "Instalation de : PaperSpigot"
 cd /home
 mkdir paperspigot
 cd paperspigot
+rm -f paperclip.jar
 echo "Téléchargement de paperspigot..."
 wget https://papermc.io/ci/job/Paper-1.15/lastSuccessfulBuild/artifact/paperclip.jar
 touch eula.txt && echo "eula=true" >> eula.txt
@@ -156,7 +160,7 @@ chmod +x start.sh
 clear
 echo "Terminer !\n"
 echo "Pour démarer votre serveur faites la commande : cd /home/paperspigot && sh start.sh"
-echo "Pour ecceder à votre console taper la commande : screen -r paperspigot"
+echo "Pour accéder à votre console taper la commande : screen -r paperspigot"
 echo "Detail de l'installation :"
 echo "Version du serveur : 1.15.2"
 echo "API : SpigotAPI"
@@ -170,21 +174,27 @@ echo "Instalation de : Forge 1.15.2"
 cd /home
 mkdir forge-1.15.2
 cd forge-1.15.2
+rm -f forge-*.jar
+rm -f forge.jar
+rm -R libraries
 mkdir mods
 echo "Téléchargement de forge"
 wget https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.15.2-31.1.18/forge-1.15.2-31.1.18-installer.jar
+mv forge-*-installer.jar forge-installer.jar
 clear
 echo "Installation de forge 1.15.2"
-java -jar forge-1.15.2-31.1.18-installer.jar --installServer
+java -jar forge-installer.jar --installServer
+mv forge-*.jar forge.jar
 touch eula.txt && echo "eula=true" >> eula.txt
-touch start.sh && echo "screen -d -m -S forge-1.15.2 java -jar forge-1.15.2-31.1.18.jar nogui" >> start.sh
+touch start.sh && echo "screen -d -m -S forge-1.15.2 java -jar forge.jar nogui" >> start.sh
 chmod +x start.sh
 echo "Nettoyage..."
-rm -R forge-1.15.2-31.1.18-installer.jar
+rm -f forge-installer.jar
+rm -f forge-*-installer.jar.log
 clear
 echo "Terminer !\n"
 echo "Pour démarer votre serveur faites la commande : cd /home/forge-1.15.2 && sh start.sh"
-echo "Pour ecceder à votre console taper la commande : screen -r forge-1.15.2"
+echo "Pour accéder à votre console taper la commande : screen -r forge-1.15.2"
 echo "Detail de l'installation :"
 echo "Version du serveur : 1.15.2"
 echo "API : Forge"
@@ -198,21 +208,27 @@ echo "Instalation de : Forge 1.12.2"
 cd /home
 mkdir forge-1.12.2
 cd forge-1.12.2
+rm -f forge.jar
+rm -f forge-*.jar
+rm -R libraries
 mkdir mods
 echo "Téléchargement de forge"
 wget https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.12.2-14.23.5.2847/forge-1.12.2-14.23.5.2847-installer.jar
 clear
+mv forge-*-installer.jar forge-installer.jar
 echo "Installation de forge"
-java -jar forge-1.12.2-14.23.5.2847-installer.jar --installServer
+java -jar forge-installer.jar --installServer
+mv forge-*-universal.jar forge.jar
 touch eula.txt && echo "eula=true" >> eula.txt
-touch start.sh && echo "screen -d -m -S forge-1.12.2 java -jar forge-1.12.2-14.23.5.2847-universal.jar nogui" >> start.sh
+touch start.sh && echo "screen -d -m -S forge-1.12.2 java -jar forge.jar nogui" >> start.sh
 chmod +x start.sh
 echo "Nettoyage..."
-rm -R forge-1.12.2-14.23.5.2847-universal.jar
+rm -r forge-installer.jar
+rm -f forge-*-installer.jar.log
 clear
 echo "Terminer !\n"
 echo "Pour démarer votre serveur faites la commande : cd /home/forge-1.12.2 && sh start.sh"
-echo "Pour ecceder à votre console taper la commande : screen -r forge-1.12.2"
+echo "Pour accéder à votre console taper la commande : screen -r forge-1.12.2"
 echo "Detail de l'installation"
 echo "Version du serveur : 1.12.2"
 echo "API : Forge"
@@ -226,27 +242,33 @@ echo "Instalation de : Sponge Forge"
 cd /home
 mkdir sponge
 cd sponge
+rm -f forge.jar
+rm -f forge-*.jar
+rm -R libraries
 echo "Téléchargement de forge"
 wget https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.12.2-14.23.5.2847/forge-1.12.2-14.23.5.2847-installer.jar
+mv forge-*-installer.jar forge-installer.jar
 clear
 echo "Installation de forge"
-java -jar forge-1.12.2-14.23.5.2847-installer.jar --installServer
+java -jar forge-installer.jar --installServer
+mv forge-*-universal.jar forge.jar
 touch eula.txt && echo "eula=true" >> eula.txt
-touch start.sh && echo "screen -d -m -S sponge java -jar forge-1.12.2-14.23.5.2847-universal.jar nogui" >> start.sh
+touch start.sh && echo "screen -d -m -S sponge java -jar forge.jar nogui" >> start.sh
 chmod +x start.sh
 clear
 echo "Nettoyage..."
-rm -R forge-1.12.2-14.23.5.2847-installer.jar
-rm -f rm -f forge-1.12.2-14.23.5.2847-installer.jar.log
+rm -f forge-installer.jar
+rm -f rm -f forge-*-installer.jar.log
 echo "Instalation de sponge..."
 mkdir mods
 cd mods
+rm -f spongeforge-*.jar
 wget https://repo.spongepowered.org/maven/org/spongepowered/spongeforge/1.12.2-2838-7.1.9/spongeforge-1.12.2-2838-7.1.9.jar
 mkdir plugins
 clear
 echo "Terminer !\n"
 echo "Pour démarer votre serveur faites la commande : cd /home/sponge && sh start.sh"
-echo "Pour ecceder à votre console taper la commande : screen -r sponge"
+echo "Pour accéder à votre console taper la commande : screen -r sponge"
 echo "Detail de l'installation"
 echo "Version du serveur : 1.12.2"
 echo "API : Sponge Forge, Forge"
@@ -261,19 +283,22 @@ clear
 cd /home
 mkdir catserver
 cd catserver
+rm -f catserver.jar
+rm -f catserver-*-universal.jar
 echo "Téléchargement de CatServer..."
 wget https://github.com/Luohuayu/CatServer/releases/download/20.02.28/CatServer-05e5dcd-universal.jar
+mv CatServer-*-universal.jar CatServer.jar
 clear
 echo "Installation de catserver"
 touch eula.txt && echo "eula=true" >> eula.txt
-touch start.sh && echo "screen -d -m -S catserver java -jar CatServer-05e5dcd-universal.jar nogui" >> start.sh
+touch start.sh && echo "screen -d -m -S catserver java -jar CatServer.jar nogui" >> start.sh
 chmod +x start.sh
 mkdir plugins
 mkdir mods
 clear
 echo "Terminer !\n"
 echo "Pour démarer votre serveur faites la commande : cd /home/catserver && sh start.sh"
-echo "Pour ecceder à votre console taper la commande : screen -r catserver"
+echo "Pour accéder à votre console taper la commande : screen -r catserver"
 echo "Detail de l'installation"
 echo "Version du serveur : 1.12.2"
 echo "API : SpigotAPI, Forge"
