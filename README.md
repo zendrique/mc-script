@@ -8,4 +8,4 @@ Pour installer mc-script copier colle la commande suivante dans un terminale
 
 cd /home
 
-wget https://github.com/zendrique/mc-script/releases/download/0.1/script.sh && sh script.sh >>
+wget https://github.com/zendrique/mc-script/releases/download/0.2/script.sh && sh script.sh >>
