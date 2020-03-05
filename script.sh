@@ -41,11 +41,13 @@ case $installation in
 clear
 echo "Installation du serveur : Vanilla"
 cd /home
-echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer et les a autres sauvegardes écrasées s’il en existe ctrl + c pour annuler"
+echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer et les autres sauvegardes écrasées s’il en existe ctrl + c pour annuler"
 sleep 4
 rm -f vanilla-backup.zip
 zip -r vanilla-backup.zip vanilla/
 mkdir vanilla
+chmod 777 vanilla/
+chmod 777 vanilla/*
 cd vanilla
 rm -f server.jar
 rm -f start.sh
@@ -55,6 +57,7 @@ wget https://launcher.mojang.com/v1/objects/bb2b6b1aefcd70dfd1892149ac3a215f6c63
 touch eula.txt && echo "eula=true" >> eula.txt
 touch start.sh && echo "screen -d -m -S vanilla java -Xmx1024M -Xms1024M -jar server.jar nogui" >> start.sh
 chmod 777 start.sh
+chmod 777 server.jar
 echo "Terminer !\n"
 echo "Pour démarrer votre serveur faites la commande : cd /home/vanilla && sh start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r vanilla"
@@ -69,20 +72,23 @@ echo "Fichier de démarrage de : start.sh"
 clear
 echo "Installation du serveur : snapshot"
 cd /home
-echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer et les a autres sauvegardes écrasées s’il en existe ctrl + c pour annuler"
+echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer et les autres sauvegardes écrasées s’il en existe ctrl + c pour annuler"
 sleep 4
 rm -f snapshot-backup.zip
 zip -r snapshot-backup.zip snapshot/
 mkdir snapshot
+chmod 777 snapshot/
+chmod 777 snapshot/*
 cd snapshot
 rm -f server.jar
 rm -f start.sh
 rm -f eula.txt
 echo "Téléchargement du serveur"
-wget https://launcher.mojang.com/v1/objects/6f1e5ae00b938bbe15560b7174be7a3b4c78c450/server.jar
+wget https://launcher.mojang.com/v1/objects/b9310c21839112d6758b0b245998f57a2b9a0500/server.jar
 touch eula.txt && echo "eula=true" >> eula.txt
 touch start.sh && echo "screen -d -m -S snapshot java -Xmx1024M -Xms1024M -jar server.jar nogui" >> start.sh
 chmod 777 start.sh
+chmod 777 server.jar
 echo "Terminer !\n"
 echo "Pour démarrer votre serveur faites la commande : cd /home/snapshot && sh start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r snapshot"
@@ -97,11 +103,13 @@ echo "Fichier de démarrage de : start.sh"
 clear
 echo "Installation du serveur : Spigot"
 cd /home
-echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer et les a autres sauvegardes écrasées s’il en existe ctrl + c pour annuler"
+echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer et les autres sauvegardes écrasées s’il en existe ctrl + c pour annuler"
 sleep 4
 rm -f spigot-backup.zip
 zip -r spigot-backup.zip spigot/
 mkdir spigot
+chmod 777 spigot/
+chmod 777 spigot/*
 cd spigot
 rm -f spigot.jar
 rm -f start.sh
@@ -118,6 +126,7 @@ mv spigot-*.jar spigot.jar
 touch eula.txt && echo "eula=true" >> eula.txt
 touch start.sh && echo "screen -d -m -S spigot java -Xms3G -Xmx3G -XX:+UseConcMarkSweepGC -jar spigot.jar nogui" >> start.sh
 chmod 777 start.sh
+chmod 777 spigot.jar
 echo "Nettoyage..."
 rm -R buildtools
 clear
@@ -135,11 +144,13 @@ echo "Fichier de démarrage de : start.sh"
 clear
 echo "Instalation de : Bukkit"
 cd /home
-echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer et les a autres sauvegardes écrasées s’il en existe ctrl + c pour annuler"
+echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer et les autres sauvegardes écrasées s’il en existe ctrl + c pour annuler"
 sleep 4
 rm -f bukkit-backup.zip
 zip -r bukkit-backup.zip bukkit/
 mkdir bukkit
+chmod 777 bukkit/
+chmod 777 bukkit/*
 cd bukkit
 rm -f craftbukkit.jar
 rm -f start.sh
@@ -156,6 +167,7 @@ mv craftbukkit-* craftbukkit.jar
 touch eula.txt && echo "eula=true" >> eula.txt
 touch start.sh && echo "screen -d -m -S bukkit java -Xms3G -Xmx3G -XX:+UseConcMarkSweepGC -jar craftbukkit.jar nogui" >> start.sh
 chmod 777 start.sh
+chmod 777 craftbukkit.jar
 echo "Nettoyage..."
 rm -R buildtools
 clear
@@ -173,11 +185,13 @@ echo "Fichier de démarrage de : start.sh"
 clear
 echo "Instalation de : PaperSpigot"
 cd /home
-echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer et les a autres sauvegardes écrasées s’il en existe ctrl + c pour annuler"
+echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer et les autres sauvegardes écrasées s’il en existe ctrl + c pour annuler"
 sleep 4
 rm -f paperspigot-backup.zip
 zip -r paperspigot-backup.zip paperspigot/
 mkdir paperspigot
+chmod 777 paperspigot/
+chmod 777 paperspigot/*
 cd paperspigot
 rm -f paperclip.jar
 rm -f start.sh
@@ -187,6 +201,7 @@ wget https://papermc.io/ci/job/Paper-1.15/lastSuccessfulBuild/artifact/paperclip
 touch eula.txt && echo "eula=true" >> eula.txt
 touch start.sh && echo "screen -d -m -S paperspigot java -Xms3G -Xmx3G -XX:+UseConcMarkSweepGC -jar paperclip.jar nogui" >> start.sh
 chmod 777 start.sh
+chmod 777 paperclip.jar
 clear
 echo "Terminer !\n"
 echo "Pour démarer votre serveur faites la commande : cd /home/paperspigot && sh start.sh"
@@ -202,11 +217,13 @@ echo "Fichier de démarrage de : start.sh"
 clear
 echo "Instalation de : Forge 1.15.2"
 cd /home
-echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer et les a autres sauvegardes écrasées s’il en existe ctrl + c pour annuler"
+echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer et les autres sauvegardes écrasées s’il en existe ctrl + c pour annuler"
 sleep 4
 rm -f forge-1.15.2-backup.zip
 zip -r forge-1.15.2-backup.zip forge-1.15.2/
 mkdir forge-1.15.2
+chmod 777 forge-1.15.2/
+chmod 777 forge-1.15.2/*
 cd forge-1.15.2
 rm -f forge-*.jar
 rm -f forge.jar
@@ -214,6 +231,8 @@ rm -f start.sh
 rm -f eula.txt
 rm -R libraries
 mkdir mods
+chmod 777 mods/
+chmod 777 mods/*
 echo "Téléchargement de forge"
 wget https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.15.2-31.1.18/forge-1.15.2-31.1.18-installer.jar
 mv forge-*-installer.jar forge-installer.jar
@@ -224,6 +243,7 @@ mv forge-*.jar forge.jar
 touch eula.txt && echo "eula=true" >> eula.txt
 touch start.sh && echo "screen -d -m -S forge-1.15.2 java -jar forge.jar nogui" >> start.sh
 chmod 777 start.sh
+chmod 777 forge.jar
 echo "Nettoyage..."
 rm -f forge-installer.jar
 rm -f forge-*-installer.jar.log
@@ -243,11 +263,13 @@ echo "Fichier de démarrage de : start.sh"
 clear
 echo "Instalation de : Forge 1.12.2"
 cd /home
-echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer et les a autres sauvegardes écrasées s’il en existe ctrl + c pour annuler"
+echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer et les autres sauvegardes écrasées s’il en existe ctrl + c pour annuler"
 sleep 4
 rm -f forge-1.12.2-backup.zip
 zip -r forge-1.12.2-backup.zip forge-1.12.2/
 mkdir forge-1.12.2
+chmod 777 forge-1.12.2/
+chmod 777 forge-1.12.2/*
 cd forge-1.12.2
 rm -f start.sh
 rm -f eula.txt
@@ -255,6 +277,8 @@ rm -f forge.jar
 rm -f forge-*.jar
 rm -R libraries
 mkdir mods
+chmod 777 mods/
+chmod 777 mods/*
 echo "Téléchargement de forge"
 wget https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.12.2-14.23.5.2847/forge-1.12.2-14.23.5.2847-installer.jar
 clear
@@ -265,6 +289,7 @@ mv forge-*-universal.jar forge.jar
 touch eula.txt && echo "eula=true" >> eula.txt
 touch start.sh && echo "screen -d -m -S forge-1.12.2 java -jar forge.jar nogui" >> start.sh
 chmod 777 start.sh
+chmod 777 forge.jar
 echo "Nettoyage..."
 rm -r forge-installer.jar
 rm -f forge-*-installer.jar.log
@@ -284,11 +309,13 @@ echo "Fichier de démarrage de : start.sh"
 clear
 echo "Instalation de : Sponge Forge"
 cd /home
-echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer et les a autres sauvegardes écrasées s’il en existe ctrl + c pour annuler"
+echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer et les autres sauvegardes écrasées s’il en existe ctrl + c pour annuler"
 sleep 4
 rm -f sponge-backup.zip
 zip -r sponge-backup.zip sponge/
 mkdir sponge
+chmod 777 sponge/
+chmod 777 sponge/*
 cd sponge
 rm -f start.sh
 rm -f eula.txt
@@ -305,6 +332,7 @@ mv forge-*-universal.jar forge.jar
 touch eula.txt && echo "eula=true" >> eula.txt
 touch start.sh && echo "screen -d -m -S sponge java -jar forge.jar nogui" >> start.sh
 chmod 777 start.sh
+chmod 777 forge.jar
 clear
 echo "Nettoyage..."
 rm -f forge-installer.jar
@@ -312,10 +340,16 @@ rm -f forge-*-installer.jar.log
 rm -f forge-installer.jar.log
 echo "Instalation de sponge..."
 mkdir mods
+chmod 777 mods/
+chmod 777 mods/*
 cd mods
 rm -f spongeforge-*.jar
 wget https://repo.spongepowered.org/maven/org/spongepowered/spongeforge/1.12.2-2838-7.1.9/spongeforge-1.12.2-2838-7.1.9.jar
+mv spongeforge-*.jar sponge.jar
+chmod 777 sponge.jar
 mkdir plugins
+chmod 777 plugins/
+chmod 777 plugins/*
 clear
 echo "Terminer !\n"
 echo "Pour démarer votre serveur faites la commande : cd /home/sponge && sh start.sh"
@@ -332,11 +366,13 @@ echo "Fichier de démarrage de : start.sh"
 # CatServer
 clear
 cd /home
-echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer et les a autres sauvegardes écrasées s’il en existe ctrl + c pour annuler"
+echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer et les autres sauvegardes écrasées s’il en existe ctrl + c pour annuler"
 sleep 4
 rm -f CatServer-backup.zip
 zip -r catserver-backup.zip catserver/
 mkdir catserver
+chmod 777 catserver/
+chmod 777 catserver/*
 cd catserver
 rm -f start.sh
 rm -f eula.txt
@@ -345,6 +381,7 @@ rm -f catserver-*-universal.jar
 echo "Téléchargement de CatServer..."
 wget https://github.com/Luohuayu/CatServer/releases/download/20.02.28/CatServer-05e5dcd-universal.jar
 mv CatServer-*-universal.jar CatServer.jar
+chmod 777 CatServer.jar
 clear
 echo "Installation de catserver"
 touch eula.txt && echo "eula=true" >> eula.txt
