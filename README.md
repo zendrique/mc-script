@@ -4,8 +4,8 @@ mc-script fonctionne sur debian et ubuntu.
 
 Pour installer mc-script copier colle la commande suivante dans un terminale (demande un accet root)
 
-<< sudo -s 
+1 : sudo -s 
 
-cd /home
+2 cd /home
 
-wget https://github.com/zendrique/mc-script/releases/download/0.3/script.sh && sh script.sh >>
+3: wget https://github.com/zendrique/mc-script/releases/download/0.4/script.sh && sh script.sh >>
