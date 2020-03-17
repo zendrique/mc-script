@@ -37,10 +37,10 @@ clear
 echo "Merci de Taper : 1 puis entrer"
 sudo update-alternatives --config java
 rm -f /et/environment
-touch environment && echo "/usr/lib/jvm/adoptopenjdk-8-hotspot-amd64/bin/java" >> environment
+touch /etc/environment && echo "/usr/lib/jvm/adoptopenjdk-8-hotspot-amd64/bin/java" >> /etc/environment
 source /etc/environment
 echo $JAVA_HOME
-sleep 1
+sleep 2
 clear
 
 echo "Que voulez-vous installer ou mettre à jour ?\n"
@@ -60,6 +60,7 @@ echo "13 - Quitter\n"
 echo "Taper le nombre qui correspond à ce que vous voulez installer et appuyer sur entrer."
 read installation
 case $installation in
+
 1)
 # Vanilla
 clear
@@ -275,9 +276,9 @@ mv forge-*-installer.jar forge-installer.jar
 clear
 echo "Installation de forge 1.15.2"
 java -jar forge-installer.jar --installServer
-mv forge-*.jar forge.jar
 touch eula.txt && echo "eula=true" >> eula.txt
 touch start.sh && echo "screen -d -m -S forge-1.15.2 java -jar forge.jar nogui" >> start.sh
+mv forge-*.jar forge.jar
 chmod 777 start.sh
 chmod 777 forge.jar
 echo "Nettoyage..."
@@ -462,11 +463,13 @@ cd thermos
 rm -f start.sh
 rm -f eula.txt
 rm -f Thermos-1.7.10-1614-server.jar
+rm -f Thermos.jar
+rm -R libraries
 clear
 echo "Installation de Thermos..."
 wget https://github.com/CyberdyneCC/Thermos/releases/download/58/Thermos-1.7.10-1614-server.jar
 wget https://github.com/CyberdyneCC/Thermos/releases/download/58/libraries.zip
-mv Thermos-1.7-*-server.jar Thermos.jar
+mv Thermos-1.7.10-*-server.jar Thermos.jar
 unzip libraries.zip
 rm -f libraries.zip
 touch eula.txt && echo "eula=true" >> eula.txt
@@ -581,6 +584,10 @@ uname -a
 echo "contributeur : zendrique"
 echo "Se script est concue pour fonctionner avec les systémes d'exploitation utilisant comment gestionnaire de packet apt"
 echo "nous recommendons d'utiliser debian ou ubuntu."
+echo "Appuiyer sur une touche pour continuer"
+read retour
+case $retour in
+*) menue
 ;;
 13)
 # Quiter
