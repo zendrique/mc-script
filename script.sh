@@ -60,7 +60,6 @@ echo "13 - Quitter\n"
 echo "Taper le nombre qui correspond à ce que vous voulez installer et appuyer sur entrer."
 read installation
 case $installation in
-
 1)
 # Vanilla
 clear
@@ -602,5 +601,4 @@ break
 echo "404 Not found."
 ;;
 *) echo "Saisie non valide"
-;;
 esac
