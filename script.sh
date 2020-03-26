@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#Supporter pour la version 1.15.2 de minecraft, Snapshot 20w1A et prise ne charge de forge 1.12.2 et 1.15.2
+#Supporter pour la version 1.15.2 de minecraft, Snapshot 20w12A et prise ne charge de forge 1.12.2 et 1.15.2
 clear
 
 echo "Chargement..."
@@ -41,6 +41,8 @@ touch /etc/environment && echo "/usr/lib/jvm/adoptopenjdk-8-hotspot-amd64/bin/ja
 source /etc/environment
 echo $JAVA_HOME
 sleep 2
+clear
+echo "Initialisation en cours"
 clear
 
 echo "Que voulez-vous installer ou mettre à jour ?\n"
@@ -111,7 +113,7 @@ rm -f server.jar
 rm -f start.sh
 rm -f eula.txt
 echo "Téléchargement du serveur"
-wget https://launcher.mojang.com/v1/objects/0c80ec15d36440cdeaffe1a0791fed78faea62ce/server.jar
+wget https://launcher.mojang.com/v1/objects/16f18c21286a3f566d3d0431d13aa133bebe6eff/server.jar
 touch eula.txt && echo "eula=true" >> eula.txt
 touch start.sh && echo "screen -d -m -S snapshot java -Xmx1024M -Xms1024M -jar server.jar nogui" >> start.sh
 chmod 777 start.sh
@@ -583,10 +585,6 @@ uname -a
 echo "contributeur : zendrique"
 echo "Se script est concue pour fonctionner avec les systémes d'exploitation utilisant comment gestionnaire de packet apt"
 echo "nous recommendons d'utiliser debian ou ubuntu."
-echo "Appuiyer sur une touche pour continuer"
-read retour
-case $retour in
-*) menue
 ;;
 13)
 # Quiter
