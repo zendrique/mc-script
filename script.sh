@@ -9,38 +9,30 @@ apt update && apt upgrade -y
 
 clear
 
-echo "Téléchargement des dépendances et logiciels utiles..."
+echo "Téléchargement des dépendances..."
 
 apt install nano -y
 apt install screen -y
 apt install curl -y
 apt install git -y
 apt install zip -y
-apt install default-jre -y
-apt install openjdk-8-jre-headless -y
-apt install default-jdk -y
+apt install mv -y
+apt install install apt-transport-https -y
+apt install ca-certificates -y
+apt install dirmngr -y
+apt install gnupg -y
+apt install software-properties-common -y
 
 clear
 
 echo "Ajoue des depot Java 8..."
-sudo apt install apt-transport-https ca-certificates wget dirmngr gnupg software-properties-common -y
-wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add -
-sudo add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
-sudo apt update
+wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | apt-key add -
+add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
+apt update
 clear
 echo "Téléchargement de Java 8..."
-sudo apt install adoptopenjdk-8-hotspot -y
-clear
-echo "Modification patsh Java 11"
-java -version
-clear
-echo "Merci de Taper : 1 puis entrer"
-sudo update-alternatives --config java
-rm -f /et/environment
-touch /etc/environment && echo "/usr/lib/jvm/adoptopenjdk-8-hotspot-amd64/bin/java" >> /etc/environment
-source /etc/environment
-echo $JAVA_HOME
-sleep 2
+apt install adoptopenjdk-8-hotspot -y
+
 clear
 echo "Initialisation en cours"
 clear
@@ -71,6 +63,7 @@ echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer
 sleep 4
 rm -f vanilla-backup.zip
 zip -r vanilla-backup.zip vanilla/
+clear
 mkdir vanilla
 chmod 777 vanilla/
 chmod 777 -R vanilla/
@@ -105,6 +98,7 @@ echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer
 sleep 4
 rm -f snapshot-backup.zip
 zip -r snapshot-backup.zip snapshot/
+clear
 mkdir snapshot
 chmod 777 snapshot/
 chmod 777 -R snapshot/
@@ -139,6 +133,7 @@ echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer
 sleep 4
 rm -f spigot-backup.zip
 zip -r spigot-backup.zip spigot/
+clear
 mkdir spigot
 chmod 777 spigot/
 chmod 777 -R spigot/
@@ -182,6 +177,7 @@ echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer
 sleep 4
 rm -f bukkit-backup.zip
 zip -r bukkit-backup.zip bukkit/
+clear
 mkdir bukkit
 chmod 777 bukkit/
 chmod 777 -R bukkit/
@@ -225,6 +221,7 @@ echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer
 sleep 4
 rm -f paperspigot-backup.zip
 zip -r paperspigot-backup.zip paperspigot/
+clear
 mkdir paperspigot
 chmod 777 paperspigot/
 chmod 777 -R paperspigot/
@@ -259,6 +256,7 @@ echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer
 sleep 4
 rm -f forge-1.15.2-backup.zip
 zip -r forge-1.15.2-backup.zip forge-1.15.2/
+clear
 mkdir forge-1.15.2
 chmod 777 forge-1.15.2/
 chmod 777 -R forge-1.15.2/
@@ -272,14 +270,14 @@ mkdir mods
 chmod 777 mods/
 chmod 777 -R mods/
 echo "Téléchargement de forge"
-wget https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.15.2-31.1.18/forge-1.15.2-31.1.18-installer.jar
+wget https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.15.2-31.1.27/forge-1.15.2-31.1.27-installer.jar
 mv forge-*-installer.jar forge-installer.jar
 clear
 echo "Installation de forge 1.15.2"
 java -jar forge-installer.jar --installServer
 touch eula.txt && echo "eula=true" >> eula.txt
 touch start.sh && echo "screen -d -m -S forge-1.15.2 java -jar forge.jar nogui" >> start.sh
-mv forge-*.jar forge.jar
+mv forge-*.*.jar forge.jar
 chmod 777 start.sh
 chmod 777 forge.jar
 echo "Nettoyage..."
@@ -307,6 +305,7 @@ echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer
 sleep 4
 rm -f forge-1.12.2-backup.zip
 zip -r forge-1.12.2-backup.zip forge-1.12.2/
+clear
 mkdir forge-1.12.2
 chmod 777 forge-1.12.2/
 chmod 777 -R forge-1.12.2/
@@ -355,6 +354,7 @@ echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer
 sleep 4
 rm -f sponge-backup.zip
 zip -r sponge-backup.zip sponge/
+clear
 mkdir sponge
 chmod 777 sponge/
 chmod 777 -R sponge/
@@ -386,7 +386,7 @@ chmod 777 mods/
 chmod 777 -R mods/
 cd mods
 rm -f spongeforge-*.jar
-wget https://repo.spongepowered.org/maven/org/spongepowered/spongeforge/1.12.2-2838-7.1.9/spongeforge-1.12.2-2838-7.1.9.jar
+wget https://repo.spongepowered.org/maven/org/spongepowered/spongeforge/1.12.2-2838-7.1.10/spongeforge-1.12.2-2838-7.1.10.jar
 mv spongeforge-*.jar sponge.jar
 chmod 777 sponge.jar
 mkdir plugins
@@ -415,6 +415,7 @@ echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer
 sleep 4
 rm -f CatServer-backup.zip
 zip -r catserver-backup.zip catserver/
+clear
 mkdir catserver
 chmod 777 catserver/
 chmod 777 -R catserver/
@@ -424,7 +425,7 @@ rm -f eula.txt
 rm -f catserver.jar
 rm -f catserver-*-universal.jar
 echo "Téléchargement de CatServer..."
-wget https://github.com/Luohuayu/CatServer/releases/download/20.02.28/CatServer-05e5dcd-universal.jar
+wget https://github.com/Luohuayu/CatServer/releases/download/20.03.25/CatServer-84310a9-universal.jar
 mv CatServer-*-universal.jar CatServer.jar
 chmod 777 CatServer.jar
 clear
@@ -457,6 +458,7 @@ echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer
 sleep 4
 rm -f thermos.zip
 zip -r thermos.zip thermos/
+clear
 mkdir thermos
 chmod 777 thermos/
 chmod 777 -R thermos/
