@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#Supporter pour la version 1.15.2 de minecraft, Snapshot 20w12A et prise ne charge de forge 1.12.2 et 1.15.2
+#Supporter pour la version 1.15.2 de minecraft, Snapshot 20w13b et prise ne charge de forge 1.12.2 et 1.15.2
 clear
 
 echo "Chargement..."
