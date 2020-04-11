@@ -7,4 +7,4 @@ Vous devez disposer de packet wget
 
 1 : cd /home
 
-2: sudo wget https://github.com/zendrique/mc-script/releases/download/0.8/script.sh && sudo sh script.sh
+2: sudo wget https://github.com/zendrique/mc-script/releases/download/0.9/script.sh && sudo sh script.sh
