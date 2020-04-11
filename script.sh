@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#Supporter pour la version 1.15.2 de minecraft, Snapshot 20w13b et prise ne charge de forge 1.12.2 et 1.15.2
+#Supporter pour la version 1.15.2 de minecraft, Snapshot 20w15a, prise ne charge de forge 1.12.2 et 1.15.2 et BungeeCord 1.15.2 - 1.8
 clear
 
 echo "Chargement..."
@@ -48,9 +48,10 @@ echo "7 - Forge 1.12.2\n"
 echo "8 - Sponge\n"
 echo "9 - CatServer\n"
 echo "10 - Thermos\n"
-echo "11 - Débogage\n"
-echo "12 - Info Système\n"
-echo "13 - Quitter\n"
+echo "11 - Bungeecord\n"
+echo "12 - Débogage\n"
+echo "13 - Info Système\n"
+echo "14 - Quitter\n"
 echo "Taper le nombre qui correspond à ce que vous voulez installer et appuyer sur entrer."
 read installation
 case $installation in
@@ -107,7 +108,7 @@ rm -f server.jar
 rm -f start.sh
 rm -f eula.txt
 echo "Téléchargement du serveur"
-wget https://launcher.mojang.com/v1/objects/16f18c21286a3f566d3d0431d13aa133bebe6eff/server.jar
+wget https://launcher.mojang.com/v1/objects/64ca02e1e9fc7e60eac4aba788580b16eb12f71f/server.jar
 touch eula.txt && echo "eula=true" >> eula.txt
 touch start.sh && echo "screen -d -m -S snapshot java -Xmx1024M -Xms1024M -jar server.jar nogui" >> start.sh
 chmod 777 start.sh
@@ -270,7 +271,7 @@ mkdir mods
 chmod 777 mods/
 chmod 777 -R mods/
 echo "Téléchargement de forge"
-wget https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.15.2-31.1.27/forge-1.15.2-31.1.27-installer.jar
+wget https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.15.2-31.1.43/forge-1.15.2-31.1.43-installer.jar
 mv forge-*-installer.jar forge-installer.jar
 clear
 echo "Installation de forge 1.15.2"
@@ -425,7 +426,7 @@ rm -f eula.txt
 rm -f catserver.jar
 rm -f catserver-*-universal.jar
 echo "Téléchargement de CatServer..."
-wget https://github.com/Luohuayu/CatServer/releases/download/20.03.25/CatServer-84310a9-universal.jar
+wget https://github.com/Luohuayu/CatServer/releases/download/20.03.29/CatServer-3440193-universal.jar
 mv CatServer-*-universal.jar CatServer.jar
 chmod 777 CatServer.jar
 clear
@@ -493,8 +494,44 @@ echo "Dossier des mods : /home/thermos/mods"
 echo "Dossier des plugins : /home/thermos/plugins"
 echo "Fichier de démarrage de : start.sh"
 ;;
-# Débogage
 11)
+# Bungeecord
+clear
+echo "Instalation de : BungeeCord"
+cd /home
+echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer et les autres sauvegardes écrasées s’il en existe ctrl + c pour annuler"
+sleep 4
+rm -f bungeecord.zip
+zip -r bungeecord.zip bungeecord/
+clear
+mkdir bungeecord
+chmod 777 bungeecord/
+chmod 777 -R bungeecord/
+cd bungeecord
+rm -f BungeeCord.jar
+rm -f start.sh
+rm -f eula.txt
+wget https://ci.md-5.net/job/BungeeCord/lastSuccessfulBuild/artifact/bootstrap/target/BungeeCord.jar
+clear
+echo "Installation de BungeeCord..."
+touch eula.txt && echo "eula=true" >> eula.txt
+touch start.sh && echo "screen -d -m -S bungeecord java -jar BungeeCord.jar nogui" >> start.sh
+mkdir plugins
+cd /home
+chmod 777 -R bungeecord/
+clear
+echo "Terminer !\n"
+echo "Pour démarer votre serveur faites la commande : cd /home/bungeecord && sh start.sh"
+echo "Pour accéder à votre console taper la commande : screen -r thermos"
+echo "Detail de l'installation"
+echo "Version du proxy : 1.8 - 1.15.2"
+echo "API : BungeeCord"
+echo "Dossier d'instalation : /home/bungeecord"
+echo "Dossier des plugins : /home/bungeecord/plugins"
+echo "Fichier de démarrage de : start.sh"
+;;
+12)
+# Débogage
 clear
 echo "Démarage du Débogage..."
 sleep 1
@@ -579,7 +616,7 @@ echo "Si votre Problème n'est pas résolue aller voire"
 echo "https://github.com/zendrique/mc-script/issues"
 echo "Pour obtenir de l'aide"
 ;;
-12)
+13)
 # Info systéme
 clear
 echo "Votre Système :"
@@ -588,7 +625,7 @@ echo "contributeur : zendrique"
 echo "Se script est concue pour fonctionner avec les systémes d'exploitation utilisant comment gestionnaire de packet apt"
 echo "nous recommendons d'utiliser debian ou ubuntu."
 ;;
-13)
+14)
 # Quiter
 echo "Suppression du script..."
 cd /home
