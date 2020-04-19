@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#Supporter pour la version 1.15.2 de minecraft, Snapshot 20w15a, prise ne charge de forge 1.12.2 et 1.15.2 et BungeeCord 1.15.2 - 1.8
+#Supporter pour la version 1.15.2 de minecraft, Snapshot 20w16a, prise ne charge de forge 1.12.2 et 1.15.2 et BungeeCord 1.15.2 - 1.8
 clear
 
 echo "Chargement..."
@@ -108,7 +108,7 @@ rm -f server.jar
 rm -f start.sh
 rm -f eula.txt
 echo "Téléchargement du serveur"
-wget https://launcher.mojang.com/v1/objects/64ca02e1e9fc7e60eac4aba788580b16eb12f71f/server.jar
+wget https://launcher.mojang.com/v1/objects/754bbd654d8e6bd90cd7a1464a9e68a0624505dd/server.jar
 touch eula.txt && echo "eula=true" >> eula.txt
 touch start.sh && echo "screen -d -m -S snapshot java -Xmx1024M -Xms1024M -jar server.jar nogui" >> start.sh
 chmod 777 start.sh
