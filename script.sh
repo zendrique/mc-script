@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#Supporter pour la version 1.15.2 de minecraft, Snapshot 20w16a, prise ne charge de forge 1.12.2 et 1.15.2 et BungeeCord 1.15.2 - 1.8
+#Supporter pour la version 1.15.2 de minecraft, Snapshot 20w17a, prise ne charge de forge 1.12.2 et 1.15.2 et BungeeCord 1.15.2 - 1.8
 clear
 
 echo "Chargement..."
@@ -108,7 +108,7 @@ rm -f server.jar
 rm -f start.sh
 rm -f eula.txt
 echo "Téléchargement du serveur"
-wget https://launcher.mojang.com/v1/objects/754bbd654d8e6bd90cd7a1464a9e68a0624505dd/server.jar
+wget https://launcher.mojang.com/v1/objects/0b7e36b084577fb26148c6341d590ac14606db21/server.jar
 touch eula.txt && echo "eula=true" >> eula.txt
 touch start.sh && echo "screen -d -m -S snapshot java -Xmx1024M -Xms1024M -jar server.jar nogui" >> start.sh
 chmod 777 start.sh
@@ -514,7 +514,6 @@ rm -f eula.txt
 wget https://ci.md-5.net/job/BungeeCord/lastSuccessfulBuild/artifact/bootstrap/target/BungeeCord.jar
 clear
 echo "Installation de BungeeCord..."
-touch eula.txt && echo "eula=true" >> eula.txt
 touch start.sh && echo "screen -d -m -S bungeecord java -jar BungeeCord.jar nogui" >> start.sh
 mkdir plugins
 cd /home
@@ -522,7 +521,7 @@ chmod 777 -R bungeecord/
 clear
 echo "Terminer !\n"
 echo "Pour démarer votre serveur faites la commande : cd /home/bungeecord && sh start.sh"
-echo "Pour accéder à votre console taper la commande : screen -r thermos"
+echo "Pour accéder à votre console taper la commande : screen -r bungeecord"
 echo "Detail de l'installation"
 echo "Version du proxy : 1.8 - 1.15.2"
 echo "API : BungeeCord"
