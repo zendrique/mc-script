@@ -2,42 +2,48 @@
 #Supporter pour la version 1.15.2 de minecraft, Snapshot 20w17a, prise ne charge de forge 1.12.2 et 1.15.2 et BungeeCord 1.15.2 - 1.8
 clear
 
-echo "Chargement..."
-sleep 2
-echo "Mise à jour du système..."
-apt update && apt upgrade -y
+if [ "$EUID" -ne 0 ]; then 
+    echo "[!] Veuillez lancer le script en root (via sudo)"
+    exit
+fi
 
-clear
 
-echo "Téléchargement des dépendances..."
+echo "[?] Voulez-vous mettre à jour votre système ? (1 ou 2)" 
+select yn in "Oui" "Non"; do
+    case $yn in
+        Oui ) apt update && apt upgrade -y; break;;
+        Non ) break;;
+    esac
+done
 
-apt install nano -y
-apt install screen -y
-apt install curl -y
-apt install git -y
-apt install zip -y
-apt install mv -y
-apt install install apt-transport-https -y
-apt install ca-certificates -y
-apt install dirmngr -y
-apt install gnupg -y
-apt install software-properties-common -y
+{
+    echo "[.] Téléchargement des dépendances..."
+    apt install nano screen curl git zip apt-transport-https ca-certificates dirmngr gnupg software-properties-common -y
+} || {
+    echo "[!] Une erreur est survenue lors du téléchargement des paquets ..."
+    exit 1
+}
 
-clear
+{
+    echo "[.] Ajout des depot Java 8..."
+    wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | apt-key add -
+    add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
+    apt update
 
-echo "Ajoue des depot Java 8..."
-wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | apt-key add -
-add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
-apt update
-clear
-echo "Téléchargement de Java 8..."
-apt install adoptopenjdk-8-hotspot -y
+} || {
+    echo "[!] Une erreur est survenue lors de l'ajout des dépôts Java 8..."
+    exit 1
+}
 
-clear
-echo "Initialisation en cours"
-clear
+{
+    echo "[.] Téléchargement de Java 8..."
+    apt install adoptopenjdk-8-hotspot -y
+} || {
+    echo "[!] Une erreur est survenue lors du téléchargement de Java 8..."
+    exit 1
+}
 
-echo "Que voulez-vous installer ou mettre à jour ?\n"
+echo "[?] Que voulez-vous installer ou mettre à jour ?\n"
 echo "1 - Vanilla\n"
 echo "2 - Snapshot\n"
 echo "3 - Spigot\n"
@@ -55,9 +61,7 @@ echo "14 - Quitter\n"
 echo "Taper le nombre qui correspond à ce que vous voulez installer et appuyer sur entrer."
 read installation
 case $installation in
-1)
-# Vanilla
-clear
+1) 
 echo "Installation du serveur : Vanilla"
 cd /home
 echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer et les autres sauvegardes écrasées s’il en existe ctrl + c pour annuler"
@@ -90,9 +94,9 @@ echo "API : DatapackAPI"
 echo "Dossier d'installation : /home/vanilla"
 echo "Fichier de démarrage de : start.sh"
 ;;
-2)
+2) 
 # Snapshot
-clear
+
 echo "Installation du serveur : snapshot"
 cd /home
 echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer et les autres sauvegardes écrasées s’il en existe ctrl + c pour annuler"
@@ -125,9 +129,9 @@ echo "API : DatapackAPI"
 echo "Dossier d'installation : /home/snapshot"
 echo "Fichier de démarrage de : start.sh"
 ;;
-3)
+3) 
 # Spigot
-clear
+
 echo "Installation du serveur : Spigot"
 cd /home
 echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer et les autres sauvegardes écrasées s’il en existe ctrl + c pour annuler"
@@ -169,7 +173,7 @@ echo "API : SpigotAPI"
 echo "Dossier d'instalation : /home/spigot"
 echo "Fichier de démarrage de : start.sh"
 ;;
-4)
+4) 
 # Bukkit
 clear
 echo "Instalation de : Bukkit"
@@ -213,7 +217,7 @@ echo "API : SpigotAPI"
 echo "Dossier d'instalation : /home/bukkit"
 echo "Fichier de démarrage de : start.sh"
 ;;
-5)
+5) 
 # PaperSpigot
 clear
 echo "Instalation de : PaperSpigot"
@@ -248,7 +252,7 @@ echo "API : SpigotAPI"
 echo "Dossier d'instalation : /home/paperspigot"
 echo "Fichier de démarrage de : start.sh"
 ;;
-6)
+6) 
 # Forge 1.15.2
 clear
 echo "Instalation de : Forge 1.15.2"
@@ -297,7 +301,7 @@ echo "API : Forge"
 echo "Dossier d'instalation : /home/forge-1.15.2"
 echo "Fichier de démarrage de : start.sh"
 ;;
-7)
+7) 
 # Forge 1.12.2
 clear
 echo "Instalation de : Forge 1.12.2"
@@ -346,7 +350,7 @@ echo "API : Forge"
 echo "Dossier d'instalation : /home/forge-1.12.2"
 echo "Fichier de démarrage de : start.sh"
 ;;
-8)
+8) 
 # Sponge
 clear
 echo "Instalation de : Sponge Forge"
@@ -407,7 +411,7 @@ echo "Dossier des mods : /home/forge/mods"
 echo "Dossier des plugins : /home/forge/mods/plugins"
 echo "Fichier de démarrage de : start.sh"
 ;;
-9)
+9) 
 # CatServer
 clear
 echo "Instalation de : CatServer"
@@ -449,9 +453,10 @@ echo "Dossier d'instalation : /home/catserver"
 echo "Dossier des mods : /home/catserver/mods"
 echo "Dossier des plugins : /home/catserver/plugins"
 echo "Fichier de démarrage de : start.sh"
+
 ;;
+10) 
 # Thermos
-10)
 clear
 echo "Instalation de : Thermos"
 cd /home
@@ -494,7 +499,7 @@ echo "Dossier des mods : /home/thermos/mods"
 echo "Dossier des plugins : /home/thermos/plugins"
 echo "Fichier de démarrage de : start.sh"
 ;;
-11)
+11) 
 # Bungeecord
 clear
 echo "Instalation de : BungeeCord"
@@ -529,7 +534,7 @@ echo "Dossier d'instalation : /home/bungeecord"
 echo "Dossier des plugins : /home/bungeecord/plugins"
 echo "Fichier de démarrage de : start.sh"
 ;;
-12)
+12) 
 # Débogage
 clear
 echo "Démarage du Débogage..."
@@ -615,8 +620,9 @@ echo "Si votre Problème n'est pas résolue aller voire"
 echo "https://github.com/zendrique/mc-script/issues"
 echo "Pour obtenir de l'aide"
 ;;
-13)
-# Info systéme
+13) 
+
+# Info système
 clear
 echo "Votre Système :"
 uname -a
@@ -630,6 +636,7 @@ echo "Suppression du script..."
 cd /home
 rm -f script.sh
 echo "Script par zendrique https://github.com/zendrique"
+echo "Contributeur Yadasko https://github.com/Yadasko:
 echo "Fermture..."
 break
 ;;
