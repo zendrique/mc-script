@@ -619,7 +619,7 @@ echo "Débogage terminer !"
 echo "Si votre Problème n'est pas résolue aller voire"
 echo "https://github.com/zendrique/mc-script/issues"
 echo "Pour obtenir de l'aide"
-;;>
+;;
 13) 
 
 # Info système
@@ -629,7 +629,7 @@ uname -a
 echo "contributeur : zendrique"
 echo "Se script est concue pour fonctionner avec les systémes d'exploitation utilisant comment gestionnaire de packet apt"
 echo "nous recommendons d'utiliser debian ou ubuntu."
-;;>
+;;
 14)
 # Quiter
 echo "Suppression du script..."
