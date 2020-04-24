@@ -636,7 +636,7 @@ echo "Suppression du script..."
 cd /home
 rm -f script.sh
 echo "Script par zendrique https://github.com/zendrique"
-echo "Contributeur Yadasko https://github.com/Yadasko:
+echo "Contributeur Yadasko https://github.com/Yadasko"
 echo "Fermture..."
 break
 ;;
