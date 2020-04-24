@@ -96,10 +96,10 @@ case $installation in
 ;;
 12) 
 <INSERT_debug>
-;;>
+;;
 13) 
 <INSERT_system_info>
-;;>
+;;
 14)
 # Quiter
 echo "Suppression du script..."
