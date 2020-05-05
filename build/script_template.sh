@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#Supporter pour la version 1.15.2 de minecraft, Snapshot 20w17a, prise ne charge de forge 1.12.2 et 1.15.2 et BungeeCord 1.15.2 - 1.8
 clear
 
 if [ "$EUID" -ne 0 ]; then 
@@ -6,18 +7,9 @@ if [ "$EUID" -ne 0 ]; then
     exit
 fi
 
-
-echo "[?] Voulez-vous mettre à jour votre système ? (1 ou 2)" 
-select yn in "Oui" "Non"; do
-    case $yn in
-        Oui ) apt update && apt upgrade -y; break;;
-        Non ) break;;
-    esac
-done
-
 {
     echo "[.] Téléchargement des dépendances..."
-    apt install nano screen curl git zip apt-transport-https ca-certificates dirmngr gnupg software-properties-common -y
+    apt install nano screen curl zip apt-transport-https ca-certificates dirmngr gnupg software-properties-common -y
 } || {
     echo "[!] Une erreur est survenue lors du téléchargement des paquets ..."
     exit 1
@@ -54,9 +46,13 @@ echo "8 - Sponge\n"
 echo "9 - CatServer\n"
 echo "10 - Thermos\n"
 echo "11 - Bungeecord\n"
-echo "12 - Débogage\n"
-echo "13 - Info Système\n"
-echo "14 - Quitter\n"
+echo "12 - Waterfall\n"
+echo "13 - Travertine\n"
+echo "14 - Dexacord\n"
+echo "15 - Débogage\n"
+echo "15 - Info Système\n"
+echo "16 - Quitter\n"
+echo "17 - Supprimer mc-script"
 echo "Taper le nombre qui correspond à ce que vous voulez installer et appuyer sur entrer."
 read installation
 case $installation in
@@ -93,23 +89,26 @@ case $installation in
 11) 
 <INSERT_bungeecord>
 ;;
-12) 
-<INSERT_debug>
+12)
+<INSERT_waterfall>
 ;;
-13) 
-<INSERT_system_info>
+13)
+<INSERT_travertine>
 ;;
 14)
-# Quiter
-echo "Suppression du script..."
-cd /home
-rm -f script.sh
-echo "Script par zendrique https://github.com/zendrique"
-echo "Fermture..."
+<INSERT_hexacord>
+;;
+15) 
+<INSERT_debug>
+;;
+16) 
+<INSERT_system_info>
+;;
+17)
 break
 ;;
-404)
-echo "404 Not found."
+18)
+<INSERT_remove>
 ;;
-*) echo "Saisie non valide"
+*) echo "404 Not found."
 esac

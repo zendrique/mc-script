@@ -15,7 +15,7 @@ rm -f server.jar
 rm -f start.sh
 rm -f eula.txt
 echo "Téléchargement du serveur"
-wget https://launcher.mojang.com/v1/objects/4d84832bdc7f62aa96b0d5d5a73b1272e8c474b5/server.jar
+wget https://launcher.mojang.com/v1/objects/0b7e36b084577fb26148c6341d590ac14606db21/server.jar
 touch eula.txt && echo "eula=true" >> eula.txt
 touch start.sh && echo "screen -d -m -S snapshot java -Xmx1024M -Xms1024M -jar server.jar nogui" >> start.sh
 chmod 777 start.sh
