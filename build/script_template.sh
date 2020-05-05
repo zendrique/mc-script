@@ -34,6 +34,8 @@ fi
     exit 1
 }
 
+clear
+
 echo "[?] Que voulez-vous installer ou mettre à jour ?\n"
 echo "1 - Vanilla\n"
 echo "2 - Snapshot\n"

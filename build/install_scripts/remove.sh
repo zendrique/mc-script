@@ -6,4 +6,4 @@ echo "Contributeur Yadasko https://github.com/Yadasko"
 rm -R mc-cript
 rm -f script.sh
 echo "Fermture..."
-break
+break;

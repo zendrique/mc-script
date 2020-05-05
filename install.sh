@@ -26,9 +26,12 @@ clear
 echo "[.] Téléchargement de mc-script"
 cd /home
 git clone https://github.com/zendrique/mc-script
+clear
 echo "[.] Compilation de mc-script"
 cd /home/mc-script
 bash build/build_standalone_script.sh
+mv script.sh /home
+clear
 echo "[.] Déméarage de mc-script"
+cd /home
 bash script.sh
-break; 
