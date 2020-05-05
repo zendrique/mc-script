@@ -19,9 +19,9 @@ echo "12 - Waterfall"
 echo "13 - Travertine"
 echo "14 - Hexacord"
 echo "15 - Débogage"
-echo "15 - Info Système"
-echo "16 - Quitter"
-echo "17 - Supprimer mc-script"
+echo "16 - Info Système"
+echo "17 - Quitter"
+echo "18 - Supprimer mc-script"
 read installation
 case $installation in
 1) 
