@@ -2,8 +2,6 @@
 #Supporter pour la version 1.15.2 de minecraft, Snapshot 20w17a, prise ne charge de forge 1.12.2 et 1.15.2 et BungeeCord 1.15.2 - 1.8
 clear
 
-clear
-
 echo "[?] Que voulez-vous installer ou mettre à jour ?"
 echo "Taper le nombre qui correspond à ce que vous voulez installer et appuyer sur entrer."
 echo "1 - Vanilla"
@@ -19,7 +17,7 @@ echo "10 - Thermos"
 echo "11 - Bungeecord"
 echo "12 - Waterfall"
 echo "13 - Travertine"
-echo "14 - Dexacord"
+echo "14 - Hexacord"
 echo "15 - Débogage"
 echo "15 - Info Système"
 echo "16 - Quitter"

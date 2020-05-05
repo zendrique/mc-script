@@ -32,7 +32,7 @@ rm -R buildtools
 cd /home
 chmod 777 -R spigot/
 clear
-echo "Terminer !\n"
+echo "Terminer !"
 echo "Pour démarer votre serveur faites la commande : cd /home/spigot && sh start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r spigot"
 echo "Detail de l'installation :"

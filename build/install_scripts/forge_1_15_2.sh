@@ -37,7 +37,7 @@ rm -f forge-installer.jar.log
 cd /home
 chmod 777 -R forge-1.15.2/
 clear
-echo "Terminer !\n"
+echo "Terminer !"
 echo "Pour démarer votre serveur faites la commande : cd /home/forge-1.15.2 && sh start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r forge-1.15.2"
 echo "Detail de l'installation :"

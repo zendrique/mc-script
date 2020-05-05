@@ -23,7 +23,7 @@ chmod 777 paperclip.jar
 cd /home
 chmod 777 -R paperspigot/
 clear
-echo "Terminer !\n"
+echo "Terminer !"
 echo "Pour démarer votre serveur faites la commande : cd /home/paperspigot && sh start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r paperspigot"
 echo "Detail de l'installation :"

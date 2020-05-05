@@ -3,6 +3,6 @@
 clear
 echo "Votre Système :"
 uname -a
-echo "contributeur : zendrique"
+echo "Contributeurs : Zendrique et Yadasko"
 echo "Se script est concue pour fonctionner avec les systémes d'exploitation utilisant comment gestionnaire de packet apt"
-echo "nous recommendons d'utiliser debian ou ubuntu."
+echo "Sous recommendons d'utiliser debian ou ubuntu."

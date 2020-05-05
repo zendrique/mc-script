@@ -21,7 +21,7 @@ chmod 777 server.jar
 cd /home
 chmod 777 -R vanilla/
 clear
-echo "Terminer !\n"
+echo "Terminer !"
 echo "Pour démarrer votre serveur faites la commande : cd /home/vanilla && sh start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r vanilla"
 echo "Détail de l'installation :"

@@ -47,7 +47,7 @@ chmod 777 -R plugins/
 cd /home
 chmod 777 -R sponge/
 clear
-echo "Terminer !\n"
+echo "Terminer !"
 echo "Pour démarer votre serveur faites la commande : cd /home/sponge && sh start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r sponge"
 echo "Detail de l'installation"

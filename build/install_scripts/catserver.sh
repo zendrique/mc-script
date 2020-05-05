@@ -29,7 +29,7 @@ mkdir mods
 cd /home
 chmod 777 -R catserver/
 clear
-echo "Terminer !\n"
+echo "Terminer !"
 echo "Pour démarer votre serveur faites la commande : cd /home/catserver && sh start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r catserver"
 echo "Detail de l'installation"

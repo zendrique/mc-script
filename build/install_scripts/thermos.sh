@@ -30,7 +30,7 @@ mkdir mods
 cd /home
 chmod 777 -R thermos/
 clear
-echo "Terminer !\n"
+echo "Terminer !"
 echo "Pour démarer votre serveur faites la commande : cd /home/thermos && sh start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r thermos"
 echo "Detail de l'installation"

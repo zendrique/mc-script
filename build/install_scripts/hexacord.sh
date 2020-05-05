@@ -23,7 +23,7 @@ mkdir plugins
 cd /home
 chmod 777 -R hexacord/
 clear
-echo "Terminer !\n"
+echo "Terminer !"
 echo "Pour démarer votre serveur faites la commande : cd /home/hexacord && sh start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r hexacord"
 echo "Detail de l'installation"

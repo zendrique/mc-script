@@ -22,7 +22,7 @@ mkdir plugins
 cd /home
 chmod 777 -R waterfall/
 clear
-echo "Terminer !\n"
+echo "Terminer !"
 echo "Pour démarer votre serveur faites la commande : cd /home/waterfall && sh start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r waterfall"
 echo "Detail de l'installation"

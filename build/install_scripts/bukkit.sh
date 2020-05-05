@@ -32,7 +32,7 @@ rm -R buildtools
 cd /home
 chmod 777 -R bukkit/
 clear
-echo "Terminer !\n"
+echo "Terminer !"
 echo "Pour démarer votre serveur faites la commande : cd /home/bukkit && sh start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r bukkit"
 echo "Detail de l'installation :"
