@@ -18,7 +18,7 @@ wget https://yivesmirror.com/files/hexacord/HexaCord-v258.jar
 mv HexaCord-*.jar HexaCord.jar
 clear
 echo "Installation de HexaCord..."
-touch start.sh && echo "screen -d -m -S hexacord java -jar hexacord.jar nogui" >> start.sh
+touch start.sh && echo "screen -d -m -S hexacord java -jar HexaCord.jar nogui" >> start.sh
 mkdir plugins
 cd /home
 chmod 777 -R hexacord/
