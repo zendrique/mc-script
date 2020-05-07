@@ -21,7 +21,8 @@ echo "14 - Hexacord"
 echo "15 - Débogage"
 echo "16 - Info Système"
 echo "17 - Quitter"
-echo "18 - Supprimer mc-script"
+echo "18 - Mettre à jour mc-script"
+echo "19 - Supprimer mc-script"
 read installation
 case $installation in
 1) 
@@ -76,6 +77,9 @@ case $installation in
 echo "Fermeture..."
 ;;
 18)
+<INSERT_update>
+;;
+19)
 <INSERT_remove>
 ;;
 *) echo "404 Not found."
