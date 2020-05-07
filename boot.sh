@@ -4,7 +4,6 @@ if [ "$EUID" -ne 0 ]; then
     exit
 fi
 apt install dos2unix -y
-echo "[.] Téléchargement de mc-script"
 cd /home
 git clone https://github.com/zendrique/mc-script
 mv /home/mc-script/installation.sh /home

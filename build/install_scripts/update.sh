@@ -3,7 +3,7 @@ clear
 echo "Démarage du programme.."
 echo "Vérification des composant élémantaire..."
 apt update && apt upgrade -y
-apt install nano screen curl git zip apt-transport-https ca-certificates dirmngr gnupg software-properties-common -y
+apt install nano screen curl git zip apt-transport-https ca-certificates dirmngr gnupg software-properties-common dos2unix -y
 wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | apt-key add -
 add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
 apt update
@@ -26,6 +26,11 @@ cd /home/mc-script
 bash build/build_standalone_script.sh
 mv script.sh /home
 clear
+echo "[.] Netoyage"
+rm -R mc-script
+rm -f installation.sh
+clear
 echo "[.] Démarage de mc-script"
 cd /home
+dos2unix script.sh
 bash script.sh

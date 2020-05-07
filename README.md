@@ -2,7 +2,7 @@ mc-script est script visant à aider les proprietaires de serveur minecraft peut
 mc-script télécharge automatiquement installe les logicles necessaires met à jour le serveur...
 mc-script fonctionne sur debian et ubuntu.
 
-Pour installer mc-script copier colle les commandew suivantew dans un terminale (demande un accet root)
+Pour installer mc-script copier colle les commandes suivante dans un terminale (demande un accet root)
 Vous devez disposer de packet wget
 
 1 : cd /home

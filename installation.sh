@@ -48,7 +48,12 @@ cd /home/mc-script
 bash build/build_standalone_script.sh
 mv script.sh /home
 clear
+echo "[.] Netoyage"
+rm -R mc-script
+rm -f installation.sh
+clear
 echo "[.] Démarage de mc-script"
 cd /home
+dos2unix script.sh
 bash script.sh
 esac
