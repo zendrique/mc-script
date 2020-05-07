@@ -74,7 +74,7 @@ case $installation in
 <INSERT_system_info>
 ;;
 17)
-echo "Fermeture..."
+<INSERT_fermeture>
 ;;
 18)
 <INSERT_update>

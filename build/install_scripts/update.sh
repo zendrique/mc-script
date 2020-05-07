@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+# update
 clear
 echo "Démarage du programme.."
 echo "Vérification des composant élémantaire..."
