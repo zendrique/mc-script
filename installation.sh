@@ -49,6 +49,7 @@ bash build/build_standalone_script.sh
 mv script.sh /home
 clear
 echo "[.] Netoyage"
+cd /home
 rm -R mc-script
 rm -f installation.sh
 clear
