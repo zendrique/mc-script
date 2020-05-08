@@ -50,11 +50,11 @@ mv script.sh /home
 clear
 echo "[.] Netoyage"
 cd /home
-rm -R mc-script
+rm -R mc-script/
 rm -f installation.sh
 clear
 echo "[.] Démarage de mc-script"
 cd /home
 dos2unix script.sh
 bash script.sh
-esac
+exit

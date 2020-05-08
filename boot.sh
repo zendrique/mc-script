@@ -10,4 +10,4 @@ mv /home/mc-script/installation.sh /home
 cd /home && dos2unix installation.sh
 rm -f boot.sh
 bash installation.sh
-esac
+exit

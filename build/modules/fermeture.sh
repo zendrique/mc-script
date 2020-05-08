@@ -1,0 +1,3 @@
+# fermeture
+echo "Fermeture..."
+exit
