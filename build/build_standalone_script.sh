@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-echo "[.] Building standalone script..."
+echo "[.] Building standalone mc-script..."
 
 SCRIPT_PATH="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 
-rm -f ${SCRIPT_PATH}/../script.sh &&
-cp ${SCRIPT_PATH}/script_template.sh ${SCRIPT_PATH}/mc-script.sh 
+rm -f ${SCRIPT_PATH}/../mc-script.sh &&
+cp ${SCRIPT_PATH}/mc-script_template.sh ${SCRIPT_PATH}/mc-script.sh 
 
 for file in ${SCRIPT_PATH}/modules/*
 do

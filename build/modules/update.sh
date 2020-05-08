@@ -24,7 +24,7 @@ clear
 echo "[.] Compilation de mc-script"
 cd /home/mc-script
 bash build/build_standalone_script.sh
-mv script.sh /home
+mv mc-script.sh /home
 clear
 echo "[.] Netoyage"
 cd /home
@@ -33,5 +33,5 @@ rm -f installation.sh
 clear
 echo "[.] Démarage de mc-script"
 cd /home
-dos2unix script.sh
-bash script.sh
+dos2unix mc-script.sh
+bash mc-script.sh
