@@ -1,14 +1,16 @@
-mc-script est script visant à aider les proprietaires de serveur minecraft peut ou pas experimenter, à crée fracilement un serveur minecraft.
-mc-script télécharge automatiquement installe les logicles necessaires met à jour le serveur...
-mc-script fonctionne sur debian et ubuntu.
+# Présentation
+Mc-script est script visant à aider les proprietaires de serveur minecraft peut ou pas experimenter, à crée fracilement un serveur minecraft.
+Mc-script télécharge automatiquement installe les logicles necessaires met à jour le serveur...
+Mc-script fonctionne sur debian et ubuntu.
 
-Pour installer mc-script copier colle les commandes suivante dans un terminale (demande un accet root)
-Vous devez disposer de packet wget
-
+# Installation
+Pour installer mc-script copier colle les commandes suivantes dans un terminale (demande un accet root)
+Vous devez disposer du packet : wget (sudo apt install wget)
+```bash
 1 : cd /home
 
-2: sudo wget https://github.com/zendrique/mc-script/releases/download/0.11/script.sh && sudo sh script.sh
-
+2 : sudo wget https://github.com/zendrique/mc-script/releases/download/0.11/script.sh && sudo sh script.sh
+```
 # Processus de build
 Pour plus de lisibilité et de maintenabilité, les sources du script ont étés séparées dans des fichiers différents.
 
@@ -29,5 +31,5 @@ L'ajout de nouveaux scripts ou types d'install n'est pas plus compliqué, mais n
 <INSERT_bukkit_v_XX>
 ;;
 ```
-2. Créer dans le dossier build/install_scripts le fichier correspondant.
+2. Créer dans le dossier build/modules le fichier correspondant.
 > Attention, le nom du fichier doit correspondre à ce qui a été mis à l'étape 1. Dans notre exemple, le fichier devra s'appeller bukkit_v_XX.sh !
