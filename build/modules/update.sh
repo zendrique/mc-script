@@ -10,7 +10,7 @@ apt update
 apt install adoptopenjdk-8-hotspot -y
 clear
 echo "Suppression de mc-script..."
-echo "Script par zendrique https://github.com/zendrique"
+echo "mc-script par zendrique https://github.com/zendrique"
 echo "Contributeur Yadasko https://github.com/Yadasko"
 cd /home
 rm -R mc-script

@@ -14,7 +14,7 @@ select yn in "Oui" "Non"; do
         Non ) break;;
     esac
 done
-
+clear
 {
     echo "[.] Téléchargement des dépendances..."
     apt install nano screen curl git zip apt-transport-https ca-certificates dirmngr gnupg software-properties-common -y
@@ -22,7 +22,7 @@ done
     echo "[!] Une erreur est survenue lors du téléchargement des paquets ..."
     exit 1
 }
-
+clear
 {
     echo "[.] Ajout des depot Java 8..."
     wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | apt-key add -
@@ -33,7 +33,7 @@ done
     echo "[!] Une erreur est survenue lors de l'ajout des dépôts Java 8..."
     exit 1
 }
-
+clear
 {
     echo "[.] Téléchargement de Java 8..."
     apt install adoptopenjdk-8-hotspot -y
