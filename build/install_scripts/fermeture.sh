@@ -1,3 +1,0 @@
-# fermeture
-echo "Fermeture..."
-exit
