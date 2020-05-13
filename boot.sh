@@ -3,7 +3,7 @@ if [ "$EUID" -ne 0 ]; then
     echo "[!] Veuillez lancer le script en root (via sudo)"
     exit
 fi
-clear && apt install dos2unix -y
+clear && apt install dos2unix git -y
 cd /home
 git clone https://github.com/zendrique/mc-script
 mv /home/mc-script/installation.sh /home
