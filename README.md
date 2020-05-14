@@ -14,9 +14,13 @@ Vous devez disposer du packet : wget (sudo apt install wget)
 ```
 # Version prise en charge :
 ```
-Minecraft 1.15.2
+Vanilla 1.15.2
 Snapshot 20w20b
 Forge 1.15.2 et 1.12.2
+spigot 1.15.2
+bukkit 1.15.2
+paper 1.15.2
+tuinity 1.15.2
 Sponge 1.12.2
 CatServer 1.12.2
 Thermos 1.7.10

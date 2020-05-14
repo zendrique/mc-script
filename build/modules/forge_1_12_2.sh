@@ -20,7 +20,7 @@ mkdir mods
 chmod 777 mods/
 chmod 777 -R mods/
 echo "Téléchargement de forge"
-wget https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.12.2-14.23.5.2847/forge-1.12.2-14.23.5.2847-installer.jar
+wget https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.12.2-14.23.5.2854/forge-1.12.2-14.23.5.2854-installer.jar
 clear
 mv forge-*-installer.jar forge-installer.jar
 echo "Installation de forge"

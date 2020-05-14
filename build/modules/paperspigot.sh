@@ -17,7 +17,7 @@ rm -f eula.txt
 echo "Téléchargement de paperspigot..."
 wget https://papermc.io/ci/job/Paper-1.15/lastSuccessfulBuild/artifact/paperclip.jar
 touch eula.txt && echo "eula=true" >> eula.txt
-touch start.sh && echo "screen -d -m -S paperspigot java -Xms3G -Xmx3G -XX:+UseConcMarkSweepGC -jar paperclip.jar nogui" >> start.sh
+touch start.sh && echo "screen -d -m -S paperspigot java -XX:+UseConcMarkSweepGC -jar paperclip.jar nogui" >> start.sh
 chmod 777 start.sh
 chmod 777 paperclip.jar
 cd /home

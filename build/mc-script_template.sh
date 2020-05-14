@@ -9,20 +9,21 @@ echo "2 - Snapshot"
 echo "3 - Spigot"
 echo "4 - Bukkit"
 echo "5 - PaperSpigot"
-echo "6 - Forge 1.15.2"
-echo "7 - Forge 1.12.2"
-echo "8 - Sponge"
-echo "9 - CatServer"
-echo "10 - Thermos"
-echo "11 - Bungeecord"
-echo "12 - Waterfall"
-echo "13 - Travertine"
-echo "14 - Hexacord"
-echo "15 - Débogage"
-echo "16 - Info Système"
-echo "17 - Quitter"
-echo "18 - Mettre à jour mc-script"
-echo "19 - Supprimer mc-script"
+echo "6 - tuinity"
+echo "7 - Forge 1.15.2"
+echo "8 - Forge 1.12.2"
+echo "9 - Sponge"
+echo "10 - CatServer"
+echo "11 - Thermos"
+echo "12 - Bungeecord"
+echo "13 - Waterfall"
+echo "14 - Travertine"
+echo "15 - Hexacord"
+echo "16 - Débogage"
+echo "17 - Info Système"
+echo "18 - Quitter"
+echo "19 - Mettre à jour mc-script"
+echo "20 - Supprimer mc-script"
 read installation
 case $installation in
 1) 
@@ -40,46 +41,49 @@ case $installation in
 5) 
 <INSERT_paperspigot>
 ;;
-6) 
-<INSERT_forge_1_15_2>
+6)
+<INSERT_tuinity>
 ;;
 7) 
-<INSERT_forge_1_12_2>
+<INSERT_forge_1_15_2>
 ;;
 8) 
-<INSERT_sponge>
+<INSERT_forge_1_12_2>
 ;;
 9) 
-<INSERT_catserver>
+<INSERT_sponge>
 ;;
 10) 
-<INSERT_thermos>
+<INSERT_catserver>
 ;;
 11) 
+<INSERT_thermos>
+;;
+12) 
 <INSERT_bungeecord>
 ;;
-12)
+13)
 <INSERT_waterfall>
 ;;
-13)
+14)
 <INSERT_travertine>
 ;;
-14)
+15)
 <INSERT_hexacord>
 ;;
-15) 
+16) 
 <INSERT_debug>
 ;;
-16) 
+17) 
 <INSERT_system_info>
 ;;
-17)
+18)
 <INSERT_fermeture>
 ;;
-18)
+19)
 <INSERT_update>
 ;;
-19)
+20)
 <INSERT_remove>
 ;;
 *) echo "404 Not found."

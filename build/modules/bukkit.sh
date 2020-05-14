@@ -24,7 +24,7 @@ mv craftbukkit-*.jar /home/bukkit
 cd /home/bukkit
 mv craftbukkit-* craftbukkit.jar
 touch eula.txt && echo "eula=true" >> eula.txt
-touch start.sh && echo "screen -d -m -S bukkit java -Xms3G -Xmx3G -XX:+UseConcMarkSweepGC -jar craftbukkit.jar nogui" >> start.sh
+touch start.sh && echo "screen -d -m -S bukkit java -XX:+UseConcMarkSweepGC -jar craftbukkit.jar nogui" >> start.sh
 chmod 777 start.sh
 chmod 777 craftbukkit.jar
 echo "Nettoyage..."

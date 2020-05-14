@@ -16,7 +16,7 @@ rm -f eula.txt
 rm -f catserver.jar
 rm -f catserver-*-universal.jar
 echo "Téléchargement de CatServer..."
-wget https://github.com/Luohuayu/CatServer/releases/download/20.05.05/CatServer-d2395e4-universal.jar
+wget https://github.com/Luohuayu/CatServer/releases/download/20.05.07/CatServer-ac735a0-universal.jar
 mv CatServer-*-universal.jar CatServer.jar
 chmod 777 CatServer.jar
 clear
