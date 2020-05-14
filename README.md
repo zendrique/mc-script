@@ -10,8 +10,20 @@ Vous devez disposer du packet : wget (sudo apt install wget)
 ```bash
 1 : cd /home
 
-2 : sudo wget https://github.com/zendrique/mc-script/releases/download/1.1/boot.sh && sudo bash boot.sh
+2 : sudo wget https://github.com/zendrique/mc-script/releases/download/1.0/boot.sh && sudo bash boot.sh
 ```
+# Version prise en charge :
+Minecraft 1.15.2
+Snapshot 20w20b
+Forge 1.15.2 et 1.12.2
+Sponge 1.12.2
+CatServer 1.12.2
+Thermos 1.7.10
+Bungeecord 1.8 - 1.15.2
+HexaCord 1.7.10 - 1.15.2
+Travertine 1.7.10
+Waterfall 1.8 - 1.15.2
+
 # Processus de build
 Pour plus de lisibilité et de maintenabilité, les sources du script ont étés séparées dans des fichiers différents.
 
