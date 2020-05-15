@@ -10,7 +10,7 @@ Vous devez disposer du packet : wget (sudo apt install wget)
 ```bash
 1 : cd /home
 
-2 : sudo wget https://github.com/zendrique/mc-script/releases/download/1.0/boot.sh && sudo bash boot.sh
+2 : sudo wget https://github.com/zendrique/mc-script/releases/download/1.1/boot.sh && sudo bash boot.sh
 ```
 # Version prise en charge :
 ```
@@ -23,6 +23,7 @@ paper 1.15.2
 tuinity 1.15.2
 Sponge 1.12.2
 CatServer 1.12.2
+Mohist 1.12.2
 Thermos 1.7.10
 Bungeecord 1.8 - 1.15.2
 HexaCord 1.7.10 - 1.15.2

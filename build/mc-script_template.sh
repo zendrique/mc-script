@@ -14,16 +14,17 @@ echo "7 - Forge 1.15.2"
 echo "8 - Forge 1.12.2"
 echo "9 - Sponge"
 echo "10 - CatServer"
-echo "11 - Thermos"
-echo "12 - Bungeecord"
-echo "13 - Waterfall"
-echo "14 - Travertine"
-echo "15 - Hexacord"
-echo "16 - Débogage"
-echo "17 - Info Système"
-echo "18 - Quitter"
-echo "19 - Mettre à jour mc-script"
-echo "20 - Supprimer mc-script"
+echo "11 - Mohist"
+echo "12 - Thermos"
+echo "13 - Bungeecord"
+echo "14 - Waterfall"
+echo "15 - Travertine"
+echo "16 - Hexacord"
+echo "17 - Débogage"
+echo "18 - Info Système"
+echo "19 - Quitter"
+echo "20 - Mettre à jour mc-script"
+echo "21 - Supprimer mc-script"
 read installation
 case $installation in
 1) 
@@ -56,34 +57,37 @@ case $installation in
 10) 
 <INSERT_catserver>
 ;;
-11) 
-<INSERT_thermos>
+11)
+<INSERT_monhist>
 ;;
 12) 
+<INSERT_thermos>
+;;
+13) 
 <INSERT_bungeecord>
 ;;
-13)
+14)
 <INSERT_waterfall>
 ;;
-14)
+15)
 <INSERT_travertine>
 ;;
-15)
+16)
 <INSERT_hexacord>
 ;;
-16) 
+17) 
 <INSERT_debug>
 ;;
-17) 
+18) 
 <INSERT_system_info>
 ;;
-18)
+19)
 <INSERT_fermeture>
 ;;
-19)
+20)
 <INSERT_update>
 ;;
-20)
+21)
 <INSERT_remove>
 ;;
 *) echo "404 Not found."

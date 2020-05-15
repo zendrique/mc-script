@@ -4,7 +4,7 @@ echo "Instalation de : CatServer"
 cd /home
 echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer et les autres sauvegardes écrasées s’il en existe ctrl + c pour annuler"
 sleep 4
-rm -f CatServer-backup.zip
+rm -f catServer-backup.zip
 zip -r catserver-backup.zip catserver/
 clear
 mkdir catserver

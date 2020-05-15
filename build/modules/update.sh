@@ -1,6 +1,6 @@
 # update
 clear
-echo "Démarage du programme.."
+echo "Démarage du programme..."
 echo "Vérification des composant élémantaire..."
 apt update && apt upgrade -y
 apt install nano screen curl git zip apt-transport-https ca-certificates dirmngr gnupg software-properties-common dos2unix -y
