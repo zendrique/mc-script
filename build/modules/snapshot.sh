@@ -15,7 +15,7 @@ rm -f server.jar
 rm -f start.sh
 rm -f eula.txt
 echo "Téléchargement du serveur"
-wget https://launcher.mojang.com/v1/objects/03b8fa357937d0bdb6650ec8cc74506ec2fd91a7/server.jar
+wget https://launcher.mojang.com/v1/objects/c4a62eb36917aaa06dc8e20a2a35264d5fda123b/server.jar
 touch eula.txt && echo "eula=true" >> eula.txt
 touch start.sh && echo "screen -d -m -S snapshot java -jar server.jar nogui" >> start.sh
 chmod 777 start.sh
@@ -27,7 +27,7 @@ echo "Terminer !"
 echo "Pour démarrer votre serveur faites la commande : cd /home/snapshot && sh start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r snapshot"
 echo "Détail de l'installation :"
-echo "Version du serveur : 20W21a"
+echo "Version du serveur : 20W22a"
 echo "API : DatapackAPI"
 echo "Dossier d'installation : /home/snapshot"
 echo "Fichier de démarrage de : start.sh"
