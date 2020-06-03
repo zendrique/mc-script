@@ -22,6 +22,16 @@ chmod 777 start.sh
 chmod 777 paperclip.jar
 cd /home
 chmod 777 -R paperspigot/
+rm -f info-paperspigot.txt
+touch info-paperspigot.txt
+echo "Terminer !" >> paperspigot.txt
+echo "Pour démarer votre serveur faites la commande : cd /home/paperspigot && sh start.sh" >> info-paperspigot.txt
+echo "Pour accéder à votre console taper la commande : screen -r paperspigot" >> info-paperspigot.txt
+echo "Detail de l'installation :" >> info-paperspigot.txt
+echo "Version du serveur : 1.15.2" >> info-paperspigot.txt
+echo "API : SpigotAPI" >> info-paperspigot.txt
+echo "Dossier d'instalation : /home/paperspigot" >> info-paperspigot.txt
+echo "Fichier de démarrage de : start.sh" >> info-paperspigot.txt
 clear
 echo "Terminer !"
 echo "Pour démarer votre serveur faites la commande : cd /home/paperspigot && sh start.sh"
@@ -31,3 +41,4 @@ echo "Version du serveur : 1.15.2"
 echo "API : SpigotAPI"
 echo "Dossier d'instalation : /home/paperspigot"
 echo "Fichier de démarrage de : start.sh"
+echo "Un fichier info-paperspigot.txt dans /home a été crée contenant les information afficher si dessue."

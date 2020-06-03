@@ -1,5 +1,4 @@
 # Snapshot
-
 echo "Installation du serveur : snapshot"
 cd /home
 echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer et les autres sauvegardes écrasées s’il en existe ctrl + c pour annuler"
@@ -22,6 +21,15 @@ chmod 777 start.sh
 chmod 777 server.jar
 cd /home
 chmod 777 -R snapshot/
+rm -f info-snapshot.txt
+touch info-snapshot.txt
+echo "Pour démarrer votre serveur faites la commande : cd /home/snapshot && sh start.sh" >> info-snapshot.txt
+echo "Pour accéder à votre console taper la commande : screen -r snapshot" >> info-snapshot.txt
+echo "Détail de l'installation :" >> info-snapshot.txt
+echo "Version du serveur : 20W22a" >> info-snapshot.txt
+echo "API : DatapackAPI" >> info-snapshot.txt
+echo "Dossier d'installation : /home/snapshot" >> info-snapshot.txt
+echo "Fichier de démarrage de : start.sh" >> info-snapshot.txt
 clear
 echo "Terminer !"
 echo "Pour démarrer votre serveur faites la commande : cd /home/snapshot && sh start.sh"
@@ -31,3 +39,4 @@ echo "Version du serveur : 20W22a"
 echo "API : DatapackAPI"
 echo "Dossier d'installation : /home/snapshot"
 echo "Fichier de démarrage de : start.sh"
+echo "Un fichier info-snapshot.txt dans /home a été crée contenant les information afficher si dessue."

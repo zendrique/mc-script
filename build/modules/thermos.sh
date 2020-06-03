@@ -29,6 +29,17 @@ mkdir plugins
 mkdir mods
 cd /home
 chmod 777 -R thermos/
+rm -f info-thermos.txt
+touch info-thermos.txt
+echo "Pour démarer votre serveur faites la commande : cd /home/thermos && sh start.sh" >> info-thermos.txt
+echo "Pour accéder à votre console taper la commande : screen -r thermos" >> info-thermos.txt
+echo "Detail de l'installation" >> info-thermos.txt
+echo "Version du serveur : 1.7.10" >> info-thermos.txt
+echo "API : SpigotAPI, Forge" >> info-thermos.txt
+echo "Dossier d'instalation : /home/thermos" >> info-thermos.txt
+echo "Dossier des mods : /home/thermos/mods" >> info-thermos.txt
+echo "Dossier des plugins : /home/thermos/plugins" >> info-thermos.txt
+echo "Fichier de démarrage de : start.sh" >> info-thermos.txt
 clear
 echo "Terminer !"
 echo "Pour démarer votre serveur faites la commande : cd /home/thermos && sh start.sh"
@@ -40,3 +51,4 @@ echo "Dossier d'instalation : /home/thermos"
 echo "Dossier des mods : /home/thermos/mods"
 echo "Dossier des plugins : /home/thermos/plugins"
 echo "Fichier de démarrage de : start.sh"
+echo "Un fichier info-thermos.txt dans /home a été crée contenant les information afficher si dessue."

@@ -38,13 +38,13 @@ Pour **build le script**, il faut :
 1. Avoir cloné le dépôt
 2. Se rendre à la racine du dépôt
 3. `bash build/build_standalone_script.sh`
-4. Le script va remplacer toutes les occurences de "<INSERT_XXX>" avec le contenu du fichier builds/install_scripts/XXX.sh.
+4. Le script va remplacer toutes les occurences de "<INSERT_XXX>" avec le contenu du fichier builds/modules/XXX.sh.
 5. Le nouveau script pourra être retrouvé à la racine du dépot.
 
 # Ajout de nouveaux scripts
 L'ajout de nouveaux scripts ou types d'install n'est pas plus compliqué, mais nécessite plusieurs étapes :
 
-1. Dans le fichier build/script_template.sh, ajouter une nouvelle option au 'case', et suivre le modèle des autres options. Exemple :
+1. Dans le fichier build/mc-script_template.sh, ajouter une nouvelle option au 'case', et suivre le modèle des autres options. Exemple :
 ```bash
 20) 
 <INSERT_bukkit_v_XX>

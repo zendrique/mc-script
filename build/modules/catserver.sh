@@ -16,7 +16,7 @@ rm -f eula.txt
 rm -f catserver.jar
 rm -f catserver-*-universal.jar
 echo "Téléchargement de CatServer..."
-wget https://github.com/Luohuayu/CatServer/releases/download/20.05.07/CatServer-ac735a0-universal.jar
+wget https://github.com/Luohuayu/CatServer/releases/download/20.06.01/CatServer-de043b8-universal.jar
 mv CatServer-*-universal.jar CatServer.jar
 chmod 777 CatServer.jar
 clear
@@ -28,6 +28,16 @@ mkdir plugins
 mkdir mods
 cd /home
 chmod 777 -R catserver/
+rm -f info-catserver.txt
+echo "Pour démarer votre serveur faites la commande : cd /home/catserver && sh start.sh" >> info-catserver.txt
+echo "Pour accéder à votre console taper la commande : screen -r catserver" >> info-catserver.txt
+echo "Detail de l'installation" >> info-catserver.txt
+echo "Version du serveur : 1.12.2" >> info-catserver.txt
+echo "API : SpigotAPI, Forge" >> info-catserver.txt
+echo "Dossier d'instalation : /home/catserver" >> info-catserver.txt
+echo "Dossier des mods : /home/catserver/mods" >> info-catserver.txt
+echo "Dossier des plugins : /home/catserver/plugins" >> info-catserver.txt
+echo "Fichier de démarrage de : start.sh" >> info-catserver.txt
 clear
 echo "Terminer !"
 echo "Pour démarer votre serveur faites la commande : cd /home/catserver && sh start.sh"
@@ -39,4 +49,4 @@ echo "Dossier d'instalation : /home/catserver"
 echo "Dossier des mods : /home/catserver/mods"
 echo "Dossier des plugins : /home/catserver/plugins"
 echo "Fichier de démarrage de : start.sh"
-
+echo "Un fichier info-catserver.txt dans /home a été crée contenant les information afficher si dessue."

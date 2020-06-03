@@ -20,7 +20,7 @@ mkdir mods
 chmod 777 mods/
 chmod 777 -R mods/
 echo "Téléchargement de forge"
-wget https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.15.2-31.1.87/forge-1.15.2-31.1.87-installer.jar
+wget https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.15.2-31.2.5/forge-1.15.2-31.2.5-installer.jar
 mv forge-*-installer.jar forge-installer.jar
 clear
 echo "Installation de forge 1.15.2"
@@ -36,6 +36,15 @@ rm -f forge-*-installer.jar.log
 rm -f forge-installer.jar.log
 cd /home
 chmod 777 -R forge-1.15.2/
+rm -f info-forge-1.15.2.txt
+touch info-forge-1.15.2.txt
+echo "Pour démarer votre serveur faites la commande : cd /home/forge-1.15.2 && sh start.sh" >> info-forge-1.15.2.txt
+echo "Pour accéder à votre console taper la commande : screen -r forge-1.15.2" >> info-forge-1.15.2.txt
+echo "Detail de l'installation :" >> info-forge-1.15.2.txt
+echo "Version du serveur : 1.15.2" >> info-forge-1.15.2.txt
+echo "API : Forge" >> info-forge-1.15.2.txt
+echo "Dossier d'instalation : /home/forge-1.15.2" >> info-forge-1.15.2.txt
+echo "Fichier de démarrage de : start.sh" >> info-forge-1.15.2.txt
 clear
 echo "Terminer !"
 echo "Pour démarer votre serveur faites la commande : cd /home/forge-1.15.2 && sh start.sh"
@@ -45,3 +54,4 @@ echo "Version du serveur : 1.15.2"
 echo "API : Forge"
 echo "Dossier d'instalation : /home/forge-1.15.2"
 echo "Fichier de démarrage de : start.sh"
+echo "Un fichier info-forge-1.15.2.txt dans /home a été crée contenant les information afficher si dessue."

@@ -21,6 +21,16 @@ touch start.sh && echo "screen -d -m -S waterfall java -jar Waterfall.jar nogui"
 mkdir plugins
 cd /home
 chmod 777 -R waterfall/
+rm -f info-waterfall.txt
+touch info-waterfall.txt
+echo "Pour démarer votre serveur faites la commande : cd /home/waterfall && sh start.sh" >> info-waterfall.txt
+echo "Pour accéder à votre console taper la commande : screen -r waterfall" >> info-waterfall.txt
+echo "Detail de l'installation" >> info-waterfall.txt
+echo "Version du proxy : 1.8 - 1.15.2" >> info-waterfall.txt
+echo "API : BungeeCord" >> info-waterfall.txt
+echo "Dossier d'instalation : /home/waterfall" >> info-waterfall.txt
+echo "Dossier des plugins : /home/waterfall/plugins" >> info-waterfall.txt
+echo "Fichier de démarrage de : start.sh" >> info-waterfall.txt
 clear
 echo "Terminer !"
 echo "Pour démarer votre serveur faites la commande : cd /home/waterfall && sh start.sh"
@@ -31,3 +41,4 @@ echo "API : BungeeCord"
 echo "Dossier d'instalation : /home/waterfall"
 echo "Dossier des plugins : /home/waterfall/plugins"
 echo "Fichier de démarrage de : start.sh"
+echo "Un fichier info-waterfall.txt dans /home a été crée contenant les information afficher si dessue."

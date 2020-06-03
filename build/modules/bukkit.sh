@@ -31,6 +31,15 @@ echo "Nettoyage..."
 rm -R buildtools
 cd /home
 chmod 777 -R bukkit/
+rm -f info-bukkit.txt
+touch info-bukkit.txt
+echo "Pour démarer votre serveur faites la commande : cd /home/bukkit && sh start.sh" >> info-bukkit.txt
+echo "Pour accéder à votre console taper la commande : screen -r bukkit" >> info-bukkit.txt
+echo "Detail de l'installation :" >> info-bukkit.txt
+echo "Version du serveur : 1.15.2" >> info-bukkit.txt
+echo "API : SpigotAPI" >> info-bukkit.txt
+echo "Dossier d'instalation : /home/bukkit" >> info-bukkit.txt
+echo "Fichier de démarrage de : start.sh" >> info-bukkit.txt
 clear
 echo "Terminer !"
 echo "Pour démarer votre serveur faites la commande : cd /home/bukkit && sh start.sh"
@@ -40,3 +49,5 @@ echo "Version du serveur : 1.15.2"
 echo "API : SpigotAPI"
 echo "Dossier d'instalation : /home/bukkit"
 echo "Fichier de démarrage de : start.sh"
+echo "Un fichier info-bukkit.txt dans /home a été crée contenant les information afficher si dessue."
+

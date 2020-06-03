@@ -20,6 +20,15 @@ chmod 777 start.sh
 chmod 777 server.jar
 cd /home
 chmod 777 -R vanilla/
+rm -f info-vanilla.txt
+touch info-vanilla.txt
+echo "Pour démarrer votre serveur faites la commande : cd /home/vanilla && sh start.sh" >> info-vanilla.txt
+echo "Pour accéder à votre console taper la commande : screen -r vanilla" >> info-vanilla.txt
+echo "Détail de l'installation :" >> info-vanilla.txt
+echo "Version du serveur : 1.15.2" >> info-vanilla.txt
+echo "API : DatapackAPI" >> info-vanilla.txt
+echo "Dossier d'installation : /home/vanilla" >> info-vanilla.txt
+echo "Fichier de démarrage de : start.sh" >> info-vanilla.txt
 clear
 echo "Terminer !"
 echo "Pour démarrer votre serveur faites la commande : cd /home/vanilla && sh start.sh"
@@ -29,3 +38,4 @@ echo "Version du serveur : 1.15.2"
 echo "API : DatapackAPI"
 echo "Dossier d'installation : /home/vanilla"
 echo "Fichier de démarrage de : start.sh"
+echo "Un fichier info-vanilla.txt dans /home a été crée contenant les information afficher si dessue."

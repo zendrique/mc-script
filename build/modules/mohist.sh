@@ -15,7 +15,7 @@ rm -f start.sh
 rm -f eula.txt
 rm -f mohist.jar
 echo "Téléchargement de mohist..."
-wget https://ci.codemc.io/job/Mohist-Community/job/Mohist-1.12.2/521/artifact/build/distributions/Mohist-1.12.2-a99a910-server.jar
+wget https://ci.codemc.io/job/Mohist-Community/job/Mohist-1.12.2/528/artifact/build/distributions/Mohist-1.12.2-2541029-server.jar
 mv Mohist-*-*-server.jar mohist.jar
 chmod 777 mohist.jar
 clear
@@ -27,6 +27,17 @@ mkdir plugins
 mkdir mods
 cd /home
 chmod 777 -R mohist/
+rm -f info-mohist.txt
+touch info-mohist.txt
+echo "Pour démarer votre serveur faites la commande : cd /home/mohist && sh start.sh" >> info-mohist.txt
+echo "Pour accéder à votre console taper la commande : screen -r mohist" >> info-mohist.txt
+echo "Detail de l'installation" >> info-mohist.txt
+echo "Version du serveur : 1.12.2" >> info-mohist.txt
+echo "API : SpigotAPI, Forge" >> info-mohist.txt
+echo "Dossier d'instalation : /home/mohist" >> info-mohist.txt
+echo "Dossier des mods : /home/mohist/mods" >> info-mohist.txt
+echo "Dossier des plugins : /home/mohist/plugins" >> info-mohist.txt
+echo "Fichier de démarrage de : start.sh" >> info-mohist.txt
 clear
 echo "Terminer !"
 echo "Pour démarer votre serveur faites la commande : cd /home/mohist && sh start.sh"
@@ -38,3 +49,4 @@ echo "Dossier d'instalation : /home/mohist"
 echo "Dossier des mods : /home/mohist/mods"
 echo "Dossier des plugins : /home/mohist/plugins"
 echo "Fichier de démarrage de : start.sh"
+echo "Un fichier info-mohist.txt dans /home a été crée contenant les information afficher si dessue."

@@ -31,6 +31,15 @@ echo "Nettoyage..."
 rm -R buildtools
 cd /home
 chmod 777 -R spigot/
+rm -f info-spigot.txt
+touch info-spigot.txt
+echo "Pour démarer votre serveur faites la commande : cd /home/spigot && sh start.sh" >> info-spigot.txt
+echo "Pour accéder à votre console taper la commande : screen -r spigot" >> info-spigot.txt
+echo "Detail de l'installation :" >> info-spigot.txt
+echo "Version du serveur : 1.15.2" >> info-spigot.txt
+echo "API : SpigotAPI" >> info-spigot.txt
+echo "Dossier d'instalation : /home/spigot" >> info-spigot.txt
+echo "Fichier de démarrage de : start.sh" >> info-spigot.txt
 clear
 echo "Terminer !"
 echo "Pour démarer votre serveur faites la commande : cd /home/spigot && sh start.sh"
@@ -40,3 +49,4 @@ echo "Version du serveur : 1.15.2"
 echo "API : SpigotAPI"
 echo "Dossier d'instalation : /home/spigot"
 echo "Fichier de démarrage de : start.sh"
+echo "Un fichier info-spigot.txt dans /home a été crée contenant les information afficher si dessue."

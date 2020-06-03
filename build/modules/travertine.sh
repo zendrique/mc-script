@@ -21,6 +21,16 @@ touch start.sh && echo "screen -d -m -S travertine java -jar Travertine.jar nogu
 mkdir plugins
 cd /home
 chmod 777 -R travertine/
+rm -f info-travertine.txt
+touch info-travertine.txt
+echo "Pour démarer votre serveur faites la commande : cd /home/travertine && sh start.sh" >> info-travertine.txt
+echo "Pour accéder à votre console taper la commande : screen -r travertine" info-travertine.txt
+echo "Detail de l'installation" info-travertine.txt
+echo "Version du proxy : 1.7.10" info-travertine.txt
+echo "API : BungeeCord" info-travertine.txt
+echo "Dossier d'instalation : /home/travertine" info-travertine.txt
+echo "Dossier des plugins : /home/travertine/plugins" info-travertine.txt
+echo "Fichier de démarrage de : start.sh" info-travertine.txt
 clear
 echo "Terminer !"
 echo "Pour démarer votre serveur faites la commande : cd /home/travertine && sh start.sh"
@@ -31,3 +41,4 @@ echo "API : BungeeCord"
 echo "Dossier d'instalation : /home/travertine"
 echo "Dossier des plugins : /home/travertine/plugins"
 echo "Fichier de démarrage de : start.sh"
+echo "Un fichier info-travertine.txt dans /home a été crée contenant les information afficher si dessue."
