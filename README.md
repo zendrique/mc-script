@@ -10,7 +10,7 @@ Vous devez disposer du packet : wget (sudo apt install wget)
 ```bash
 1 : cd /home
 
-2 : sudo wget https://github.com/zendrique/mc-script/releases/download/1.1/boot.sh && sudo bash boot.sh
+2 : sudo wget https://github.com/zendrique/mc-script/releases/download/1.2/boot.sh && sudo bash boot.sh
 ```
 # Version prise en charge :
 ```
