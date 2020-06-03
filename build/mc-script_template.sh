@@ -58,7 +58,7 @@ case $installation in
 <INSERT_catserver>
 ;;
 11)
-<INSERT_monhist>
+<INSERT_mohist>
 ;;
 12) 
 <INSERT_thermos>
