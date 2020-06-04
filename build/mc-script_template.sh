@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 clear
 
+if [ "$EUID" -ne 0 ]; then 
+    echo "[!] Veuillez lancer le script en root (via sudo)"
+    exit
+fi
+
 echo "[?] Que voulez-vous installer ou mettre à jour ?"
 echo "Taper le nombre qui correspond à ce que vous voulez installer et appuyer sur entrer."
 echo "1 - Vanilla"
