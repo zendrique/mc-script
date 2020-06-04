@@ -49,7 +49,7 @@ chmod 777 -R sponge/
 chmod 777 -R sponge/*
 rm -f info-sponge.txt
 touch info-sponge.txt
-echo "Pour démarer votre serveur faites la commande : cd /home/sponge && sh start.sh" >> info-sponge.txt
+echo "Pour démarer votre serveur faites la commande : sh /home/sponge/start.sh" >> info-sponge.txt
 echo "Pour accéder à votre console taper la commande : screen -r sponge" >> info-sponge.txt
 echo "Detail de l'installation" >> info-sponge.txt
 echo "Version du serveur : 1.12.2" >> info-sponge.txt
@@ -60,7 +60,7 @@ echo "Dossier des plugins : /home/forge/mods/plugins" >> info-sponge.txt
 echo "Fichier de démarrage de : start.sh" >> info-sponge.txt
 clear
 echo "Terminer !"
-echo "Pour démarer votre serveur faites la commande : cd /home/sponge && sh start.sh"
+echo "Pour démarer votre serveur faites la commande : sh /home/sponge/start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r sponge"
 echo "Detail de l'installation"
 echo "Version du serveur : 1.12.2"

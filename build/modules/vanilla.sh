@@ -24,7 +24,7 @@ chmod 777 -R vanilla/
 chmod 777 -R vanilla/*
 rm -f info-vanilla.txt
 touch info-vanilla.txt
-echo "Pour démarrer votre serveur faites la commande : cd /home/vanilla && sh start.sh" >> info-vanilla.txt
+echo "Pour démarrer votre serveur faites la commande : sh /home/vanilla/start.sh" >> info-vanilla.txt
 echo "Pour accéder à votre console taper la commande : screen -r vanilla" >> info-vanilla.txt
 echo "Détail de l'installation :" >> info-vanilla.txt
 echo "Version du serveur : 1.15.2" >> info-vanilla.txt
@@ -33,7 +33,7 @@ echo "Dossier d'installation : /home/vanilla" >> info-vanilla.txt
 echo "Fichier de démarrage de : start.sh" >> info-vanilla.txt
 clear
 echo "Terminer !"
-echo "Pour démarrer votre serveur faites la commande : cd /home/vanilla && sh start.sh"
+echo "Pour démarrer votre serveur faites la commande : sh /home/vanilla/start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r vanilla"
 echo "Détail de l'installation :"
 echo "Version du serveur : 1.15.2"

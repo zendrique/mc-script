@@ -39,7 +39,7 @@ chmod 777 -R forge-1.15.2/
 chmod 777 -R forge-1.15.2/*
 rm -f info-forge-1.15.2.txt
 touch info-forge-1.15.2.txt
-echo "Pour démarer votre serveur faites la commande : cd /home/forge-1.15.2 && sh start.sh" >> info-forge-1.15.2.txt
+echo "Pour démarer votre serveur faites la commande : sh /home/forge-1.15.2/start.sh" >> info-forge-1.15.2.txt
 echo "Pour accéder à votre console taper la commande : screen -r forge-1.15.2" >> info-forge-1.15.2.txt
 echo "Detail de l'installation :" >> info-forge-1.15.2.txt
 echo "Version du serveur : 1.15.2" >> info-forge-1.15.2.txt
@@ -48,7 +48,7 @@ echo "Dossier d'instalation : /home/forge-1.15.2" >> info-forge-1.15.2.txt
 echo "Fichier de démarrage de : start.sh" >> info-forge-1.15.2.txt
 clear
 echo "Terminer !"
-echo "Pour démarer votre serveur faites la commande : cd /home/forge-1.15.2 && sh start.sh"
+echo "Pour démarer votre serveur faites la commande : sh /home/forge-1.15.2/start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r forge-1.15.2"
 echo "Detail de l'installation :"
 echo "Version du serveur : 1.15.2"

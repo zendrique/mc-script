@@ -93,5 +93,6 @@ case $installation in
 22)
 <INSERT_remove>
 ;;
-*) echo "404 Not found. 'bash /home/mc-script.sh' pour redémarrer le script"
+*) 
+<INSERT_saisie_invalide>
 esac

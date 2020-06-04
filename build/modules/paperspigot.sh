@@ -26,7 +26,7 @@ chmod 777 -R paperspigot/*
 rm -f info-paperspigot.txt
 touch info-paperspigot.txt
 echo "Terminer !" >> paperspigot.txt
-echo "Pour démarer votre serveur faites la commande : cd /home/paperspigot && sh start.sh" >> info-paperspigot.txt
+echo "Pour démarer votre serveur faites la commande : sh /home/paperspigot/start.sh" >> info-paperspigot.txt
 echo "Pour accéder à votre console taper la commande : screen -r paperspigot" >> info-paperspigot.txt
 echo "Detail de l'installation :" >> info-paperspigot.txt
 echo "Version du serveur : 1.15.2" >> info-paperspigot.txt
@@ -35,7 +35,7 @@ echo "Dossier d'instalation : /home/paperspigot" >> info-paperspigot.txt
 echo "Fichier de démarrage de : start.sh" >> info-paperspigot.txt
 clear
 echo "Terminer !"
-echo "Pour démarer votre serveur faites la commande : cd /home/paperspigot && sh start.sh"
+echo "Pour démarer votre serveur faites la commande : sh /home/paperspigot/start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r paperspigot"
 echo "Detail de l'installation :"
 echo "Version du serveur : 1.15.2"

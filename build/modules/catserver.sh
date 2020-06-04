@@ -31,7 +31,7 @@ cd /home
 chmod 777 -R catserver/
 chmod 777 -R catserver/*
 rm -f info-catserver.txt
-echo "Pour démarer votre serveur faites la commande : cd /home/catserver && sh start.sh" >> info-catserver.txt
+echo "Pour démarer votre serveur faites la commande : sh /home/catserver/start.sh" >> info-catserver.txt
 echo "Pour accéder à votre console taper la commande : screen -r catserver" >> info-catserver.txt
 echo "Detail de l'installation" >> info-catserver.txt
 echo "Version du serveur : 1.12.2" >> info-catserver.txt
@@ -42,7 +42,7 @@ echo "Dossier des plugins : /home/catserver/plugins" >> info-catserver.txt
 echo "Fichier de démarrage de : start.sh" >> info-catserver.txt
 clear
 echo "Terminer !"
-echo "Pour démarer votre serveur faites la commande : cd /home/catserver && sh start.sh"
+echo "Pour démarer votre serveur faites la commande : sh /home/catserver/start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r catserver"
 echo "Detail de l'installation"
 echo "Version du serveur : 1.12.2"

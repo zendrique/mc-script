@@ -26,7 +26,7 @@ chmod 777 -R bungeecord/
 chmod 777 -R bungeecord/*
 rm -f info-bungeecord.txt
 touch info-bungeecord.txt
-echo "Pour démarer votre serveur faites la commande : cd /home/bungeecord && sh start.sh" >> info-bungeecord.txt
+echo "Pour démarer votre serveur faites la commande : sh /home/bungeecord/start.sh" >> info-bungeecord.txt
 echo "Pour accéder à votre console taper la commande : screen -r bungeecord" >> info-bungeecord.txt
 echo "Detail de l'installation" >> info-bungeecord.txt
 echo "Version du proxy : 1.8 - 1.15.2" >> info-bungeecord.txt
@@ -36,7 +36,7 @@ echo "Dossier des plugins : /home/bungeecord/plugins" >> info-bungeecord.txt
 echo "Fichier de démarrage de : start.sh" >> info-bungeecord.txt
 clear
 echo "Terminer !"
-echo "Pour démarer votre serveur faites la commande : cd /home/bungeecord && sh start.sh"
+echo "Pour démarer votre serveur faites la commande : sh /home/bungeecord/start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r bungeecord"
 echo "Detail de l'installation"
 echo "Version du proxy : 1.8 - 1.15.2"

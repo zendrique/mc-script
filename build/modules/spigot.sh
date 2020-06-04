@@ -34,7 +34,7 @@ chmod 777 -R spigot/
 chmod 777 -R spigot/*
 rm -f info-spigot.txt
 touch info-spigot.txt
-echo "Pour démarer votre serveur faites la commande : cd /home/spigot && sh start.sh" >> info-spigot.txt
+echo "Pour démarer votre serveur faites la commande : sh /home/spigot/start.sh" >> info-spigot.txt
 echo "Pour accéder à votre console taper la commande : screen -r spigot" >> info-spigot.txt
 echo "Detail de l'installation :" >> info-spigot.txt
 echo "Version du serveur : 1.15.2" >> info-spigot.txt
@@ -43,7 +43,7 @@ echo "Dossier d'instalation : /home/spigot" >> info-spigot.txt
 echo "Fichier de démarrage de : start.sh" >> info-spigot.txt
 clear
 echo "Terminer !"
-echo "Pour démarer votre serveur faites la commande : cd /home/spigot && sh start.sh"
+echo "Pour démarer votre serveur faites la commande : sh /home/spigot/start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r spigot"
 echo "Detail de l'installation :"
 echo "Version du serveur : 1.15.2"

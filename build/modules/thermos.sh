@@ -34,7 +34,7 @@ chmod 777 -R thermos/
 chmod 777 -R thermos/*
 rm -f info-thermos.txt
 touch info-thermos.txt
-echo "Pour démarer votre serveur faites la commande : cd /home/thermos && sh start.sh" >> info-thermos.txt
+echo "Pour démarer votre serveur faites la commande : sh /home/thermos/start.sh" >> info-thermos.txt
 echo "Pour accéder à votre console taper la commande : screen -r thermos" >> info-thermos.txt
 echo "Detail de l'installation" >> info-thermos.txt
 echo "Version du serveur : 1.7.10" >> info-thermos.txt
@@ -45,7 +45,7 @@ echo "Dossier des plugins : /home/thermos/plugins" >> info-thermos.txt
 echo "Fichier de démarrage de : start.sh" >> info-thermos.txt
 clear
 echo "Terminer !"
-echo "Pour démarer votre serveur faites la commande : cd /home/thermos && sh start.sh"
+echo "Pour démarer votre serveur faites la commande : sh /home/thermos/start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r thermos"
 echo "Detail de l'installation"
 echo "Version du serveur : 1.7.10"

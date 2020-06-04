@@ -25,7 +25,7 @@ chmod 777 -R tuinity/
 chmod 777 -R tuinity/*
 rm -f info-tuinity.txt
 touch info-tuinity.txt
-echo "Pour démarer votre serveur faites la commande : cd /home/tuinity && sh start.sh" >> info-tuinity.txt
+echo "Pour démarer votre serveur faites la commande : sh /home/tuinity/start.sh" >> info-tuinity.txt
 echo "Pour accéder à votre console taper la commande : screen -r tuinity" >> info-tuinity.txt
 echo "Detail de l'installation :" >> info-tuinity.txt
 echo "Version du serveur : 1.15.2" >> info-tuinity.txt
@@ -34,7 +34,7 @@ echo "Dossier d'instalation : /home/tuinity" >> info-tuinity.txt
 echo "Fichier de démarrage de : start.sh" >> info-tuinity.txt
 clear
 echo "Terminer !"
-echo "Pour démarer votre serveur faites la commande : cd /home/tuinity && sh start.sh"
+echo "Pour démarer votre serveur faites la commande : sh /home/tuinity/start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r tuinity"
 echo "Detail de l'installation :"
 echo "Version du serveur : 1.15.2"

@@ -25,7 +25,7 @@ chmod 777 -R snapshot/
 chmod 77 -R snapshot/*
 rm -f info-snapshot.txt
 touch info-snapshot.txt
-echo "Pour démarrer votre serveur faites la commande : cd /home/snapshot && sh start.sh" >> info-snapshot.txt
+echo "Pour démarrer votre serveur faites la commande : sh /home/snapshot/start.sh" >> info-snapshot.txt
 echo "Pour accéder à votre console taper la commande : screen -r snapshot" >> info-snapshot.txt
 echo "Détail de l'installation :" >> info-snapshot.txt
 echo "Version du serveur : 1.16 pre release 1" >> info-snapshot.txt
@@ -34,7 +34,7 @@ echo "Dossier d'installation : /home/snapshot" >> info-snapshot.txt
 echo "Fichier de démarrage de : start.sh" >> info-snapshot.txt
 clear
 echo "Terminer !"
-echo "Pour démarrer votre serveur faites la commande : cd /home/snapshot && sh start.sh"
+echo "Pour démarrer votre serveur faites la commande : sh /home/snapshot/start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r snapshot"
 echo "Détail de l'installation :"
 echo "Version du serveur : 1.16 pre release 1"

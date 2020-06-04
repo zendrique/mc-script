@@ -34,7 +34,7 @@ chmod 777 -R bukkit/
 chmod 777 -R bukkit/*
 rm -f info-bukkit.txt
 touch info-bukkit.txt
-echo "Pour démarer votre serveur faites la commande : cd /home/bukkit && sh start.sh" >> info-bukkit.txt
+echo "Pour démarer votre serveur faites la commande : sh /home/bukkit/start.sh" >> info-bukkit.txt
 echo "Pour accéder à votre console taper la commande : screen -r bukkit" >> info-bukkit.txt
 echo "Detail de l'installation :" >> info-bukkit.txt
 echo "Version du serveur : 1.15.2" >> info-bukkit.txt
@@ -43,7 +43,7 @@ echo "Dossier d'instalation : /home/bukkit" >> info-bukkit.txt
 echo "Fichier de démarrage de : start.sh" >> info-bukkit.txt
 clear
 echo "Terminer !"
-echo "Pour démarer votre serveur faites la commande : cd /home/bukkit && sh start.sh"
+echo "Pour démarer votre serveur faites la commande : sh /home/bukkit/start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r bukkit"
 echo "Detail de l'installation :"
 echo "Version du serveur : 1.15.2"

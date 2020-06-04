@@ -27,7 +27,7 @@ chmod 777 -R hexacord/
 chmod 777 -R hexacord/*
 rm -f info-hexacord.txt
 touch info-hexacord.txt
-echo "Pour démarer votre serveur faites la commande : cd /home/hexacord && sh start.sh" >> info-hexacord.txt
+echo "Pour démarer votre serveur faites la commande : sh /home/hexacord/start.sh" >> info-hexacord.txt
 echo "Pour accéder à votre console taper la commande : screen -r hexacord" >> info-hexacord.txt
 echo "Detail de l'installation" >> info-hexacord.txt
 echo "Version du proxy : 1.7.10 - 1.15.2" >> info-hexacord.txt
@@ -37,7 +37,7 @@ echo "Dossier des plugins : /home/hexacord/plugins" >> info-hexacord.txt
 echo "Fichier de démarrage de : start.sh" >> info-hexacord.txt
 clear
 echo "Terminer !"
-echo "Pour démarer votre serveur faites la commande : cd /home/hexacord && sh start.sh"
+echo "Pour démarer votre serveur faites la commande : sh /home/hexacord/start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r hexacord"
 echo "Detail de l'installation"
 echo "Version du proxy : 1.7.10 - 1.15.2"
