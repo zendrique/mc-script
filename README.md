@@ -15,7 +15,7 @@ Vous devez disposer du packet : wget (sudo apt install wget)
 # Version prise en charge :
 ```
 Vanilla 1.15.2
-Snapshot 20w22a
+Snapshot 1.16 pre release 1
 Forge 1.15.2 et 1.12.2
 spigot 1.15.2
 bukkit 1.15.2

@@ -17,7 +17,7 @@ done
 clear
 {
     echo "[.] Téléchargement des dépendances..."
-    apt install nano screen curl git zip apt-transport-https ca-certificates dirmngr gnupg software-properties-common -y
+    apt install nano screen git zip apt-transport-https ca-certificates dirmngr gnupg software-properties-common -y
 } || {
     echo "[!] Une erreur est survenue lors du téléchargement des paquets ..."
     exit 1

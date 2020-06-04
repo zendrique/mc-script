@@ -1,3 +1,4 @@
+# Vanilla
 echo "Installation du serveur : Vanilla"
 cd /home
 echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer et les autres sauvegardes écrasées s’il en existe ctrl + c pour annuler"

@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-#Supporter pour la version 1.15.2 de minecraft, Snapshot 20w17a, prise ne charge de forge 1.12.2 et 1.15.2 et BungeeCord 1.15.2 - 1.8
 clear
 
 echo "[?] Que voulez-vous installer ou mettre à jour ?"
@@ -20,11 +19,12 @@ echo "13 - Bungeecord"
 echo "14 - Waterfall"
 echo "15 - Travertine"
 echo "16 - Hexacord"
-echo "17 - Débogage"
-echo "18 - Info Système"
-echo "19 - Quitter"
-echo "20 - Mettre à jour mc-script"
-echo "21 - Supprimer mc-script"
+echo "17 - ModPack"
+echo "18 - Débogage"
+echo "19 - Info Système"
+echo "20 - Quitter"
+echo "21 - Mettre à jour mc-script"
+echo "22 - Supprimer mc-script"
 read installation
 case $installation in
 1) 
@@ -75,20 +75,23 @@ case $installation in
 16)
 <INSERT_hexacord>
 ;;
-17) 
-<INSERT_debug>
+17)
+<INSERT_modPack>
 ;;
 18) 
+<INSERT_debug>
+;;
+19) 
 <INSERT_system_info>
 ;;
-19)
+20)
 <INSERT_fermeture>
 ;;
-20)
+21)
 <INSERT_update>
 ;;
-21)
+22)
 <INSERT_remove>
 ;;
-*) echo "404 Not found."
+*) echo "404 Not found. 'bash /home/mc-script.sh' pour redémarrer le script"
 esac
