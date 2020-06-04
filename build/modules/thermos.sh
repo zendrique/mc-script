@@ -25,10 +25,13 @@ unzip libraries.zip
 rm -f libraries.zip
 touch eula.txt && echo "eula=true" >> eula.txt
 touch start.sh && echo "screen -d -m -S thermos java -jar Thermos.jar nogui" >> start.sh
+chmod 777 Thermos.jar
+chmod 777 start.sh
 mkdir plugins
 mkdir mods
 cd /home
 chmod 777 -R thermos/
+chmod 777 -R thermos/*
 rm -f info-thermos.txt
 touch info-thermos.txt
 echo "Pour démarer votre serveur faites la commande : cd /home/thermos && sh start.sh" >> info-thermos.txt

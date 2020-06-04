@@ -18,6 +18,7 @@ echo "Téléchargement de mohist..."
 wget https://ci.codemc.io/job/Mohist-Community/job/Mohist-1.12.2/528/artifact/build/distributions/Mohist-1.12.2-2541029-server.jar
 mv Mohist-*-*-server.jar mohist.jar
 chmod 777 mohist.jar
+chmod 777 start.sh
 clear
 echo "Installation de mohist..."
 touch eula.txt && echo "eula=true" >> eula.txt
@@ -27,6 +28,7 @@ mkdir plugins
 mkdir mods
 cd /home
 chmod 777 -R mohist/
+chmod 777 -R mohist/*
 rm -f info-mohist.txt
 touch info-mohist.txt
 echo "Pour démarer votre serveur faites la commande : cd /home/mohist && sh start.sh" >> info-mohist.txt

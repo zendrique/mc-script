@@ -19,8 +19,11 @@ clear
 echo "Installation de BungeeCord..."
 touch start.sh && echo "screen -d -m -S bungeecord java -jar BungeeCord.jar nogui" >> start.sh
 mkdir plugins
+chmod 777 BungeeCord.jar
+chmod 777 start.sh
 cd /home
 chmod 777 -R bungeecord/
+chmod 777 -R bungeecord/*
 rm -f info-bungeecord.txt
 touch info-bungeecord.txt
 echo "Pour démarer votre serveur faites la commande : cd /home/bungeecord && sh start.sh" >> info-bungeecord.txt

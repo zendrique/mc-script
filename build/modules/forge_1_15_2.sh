@@ -36,6 +36,7 @@ rm -f forge-*-installer.jar.log
 rm -f forge-installer.jar.log
 cd /home
 chmod 777 -R forge-1.15.2/
+chmod 777 -R forge-1.15.2/*
 rm -f info-forge-1.15.2.txt
 touch info-forge-1.15.2.txt
 echo "Pour démarer votre serveur faites la commande : cd /home/forge-1.15.2 && sh start.sh" >> info-forge-1.15.2.txt

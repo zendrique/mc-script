@@ -24,10 +24,12 @@ echo "Installation de catserver..."
 touch eula.txt && echo "eula=true" >> eula.txt
 touch start.sh && echo "screen -d -m -S catserver java -jar CatServer.jar nogui" >> start.sh
 chmod 777 start.sh
+chmod 777 CatServer.jar
 mkdir plugins
 mkdir mods
 cd /home
 chmod 777 -R catserver/
+chmod 777 -R catserver/*
 rm -f info-catserver.txt
 echo "Pour démarer votre serveur faites la commande : cd /home/catserver && sh start.sh" >> info-catserver.txt
 echo "Pour accéder à votre console taper la commande : screen -r catserver" >> info-catserver.txt

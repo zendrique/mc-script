@@ -18,9 +18,12 @@ wget https://papermc.io/ci/job/Travertine/lastSuccessfulBuild/artifact/Travertin
 clear
 echo "Installation de Travertine..."
 touch start.sh && echo "screen -d -m -S travertine java -jar Travertine.jar nogui" >> start.sh
+chmod 777 Travertine.jar
+chmod 777 start.sh
 mkdir plugins
 cd /home
 chmod 777 -R travertine/
+chmod 777 -R travertine/*
 rm -f info-travertine.txt
 touch info-travertine.txt
 echo "Pour démarer votre serveur faites la commande : cd /home/travertine && sh start.sh" >> info-travertine.txt

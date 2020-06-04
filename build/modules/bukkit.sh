@@ -31,6 +31,7 @@ echo "Nettoyage..."
 rm -R buildtools
 cd /home
 chmod 777 -R bukkit/
+chmod 777 -R bukkit/*
 rm -f info-bukkit.txt
 touch info-bukkit.txt
 echo "Pour démarer votre serveur faites la commande : cd /home/bukkit && sh start.sh" >> info-bukkit.txt

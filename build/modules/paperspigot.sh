@@ -22,6 +22,7 @@ chmod 777 start.sh
 chmod 777 paperclip.jar
 cd /home
 chmod 777 -R paperspigot/
+chmod 777 -R paperspigot/*
 rm -f info-paperspigot.txt
 touch info-paperspigot.txt
 echo "Terminer !" >> paperspigot.txt

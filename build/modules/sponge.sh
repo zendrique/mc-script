@@ -46,6 +46,7 @@ chmod 777 plugins/
 chmod 777 -R plugins/
 cd /home
 chmod 777 -R sponge/
+chmod 777 -R sponge/*
 rm -f info-sponge.txt
 touch info-sponge.txt
 echo "Pour démarer votre serveur faites la commande : cd /home/sponge && sh start.sh" >> info-sponge.txt

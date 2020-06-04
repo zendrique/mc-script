@@ -31,6 +31,7 @@ echo "Nettoyage..."
 rm -R buildtools
 cd /home
 chmod 777 -R spigot/
+chmod 777 -R spigot/*
 rm -f info-spigot.txt
 touch info-spigot.txt
 echo "Pour démarer votre serveur faites la commande : cd /home/spigot && sh start.sh" >> info-spigot.txt

@@ -1,4 +1,5 @@
 # Snapshot
+clear
 echo "Installation du serveur : snapshot"
 cd /home
 echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer et les autres sauvegardes écrasées s’il en existe ctrl + c pour annuler"
@@ -21,6 +22,7 @@ chmod 777 start.sh
 chmod 777 server.jar
 cd /home
 chmod 777 -R snapshot/
+chmod 77 -R snapshot/*
 rm -f info-snapshot.txt
 touch info-snapshot.txt
 echo "Pour démarrer votre serveur faites la commande : cd /home/snapshot && sh start.sh" >> info-snapshot.txt

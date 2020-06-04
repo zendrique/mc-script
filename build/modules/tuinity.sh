@@ -22,6 +22,7 @@ chmod 777 start.sh
 chmod 777 tuinity-paperclip.jar
 cd /home
 chmod 777 -R tuinity/
+chmod 777 -R tuinity/*
 rm -f info-tuinity.txt
 touch info-tuinity.txt
 echo "Pour démarer votre serveur faites la commande : cd /home/tuinity && sh start.sh" >> info-tuinity.txt

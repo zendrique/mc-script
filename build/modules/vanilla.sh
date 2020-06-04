@@ -21,6 +21,7 @@ chmod 777 start.sh
 chmod 777 server.jar
 cd /home
 chmod 777 -R vanilla/
+chmod 777 -R vanilla/*
 rm -f info-vanilla.txt
 touch info-vanilla.txt
 echo "Pour démarrer votre serveur faites la commande : cd /home/vanilla && sh start.sh" >> info-vanilla.txt

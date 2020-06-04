@@ -20,8 +20,11 @@ clear
 echo "Installation de HexaCord..."
 touch start.sh && echo "screen -d -m -S hexacord java -jar HexaCord.jar nogui" >> start.sh
 mkdir plugins
+chmod 777 HexaCord.jar
+chmod 777 start.sh
 cd /home
 chmod 777 -R hexacord/
+chmod 777 -R hexacord/*
 rm -f info-hexacord.txt
 touch info-hexacord.txt
 echo "Pour démarer votre serveur faites la commande : cd /home/hexacord && sh start.sh" >> info-hexacord.txt

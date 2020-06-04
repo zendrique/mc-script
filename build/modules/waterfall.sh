@@ -18,9 +18,12 @@ wget https://papermc.io/ci/job/Waterfall/lastSuccessfulBuild/artifact/Waterfall-
 clear
 echo "Installation de Waterfall..."
 touch start.sh && echo "screen -d -m -S waterfall java -jar Waterfall.jar nogui" >> start.sh
+chmod 777 Waterfall.jar
+chmod 777 start.sh
 mkdir plugins
 cd /home
 chmod 777 -R waterfall/
+chmod 777 -R waterfall/*
 rm -f info-waterfall.txt
 touch info-waterfall.txt
 echo "Pour démarer votre serveur faites la commande : cd /home/waterfall && sh start.sh" >> info-waterfall.txt

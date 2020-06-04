@@ -19,6 +19,7 @@ rm -f eula.txt
 touch eula.txt && echo "eula=true" >> eula.txt
 cd /home
 chmod 777 -R modPack/
+chmod 777 -R modPack/*
 clear
 echo "Terminer !"
 echo "Le fihier à été télécharger et décompresser dans le répertoire /home/modPack"
