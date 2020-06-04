@@ -100,4 +100,5 @@ case $installation in
 ;;
 *) 
 <INSERT_saisie_invalide>
+;;
 esac
