@@ -66,22 +66,42 @@ touch start.sh && echo "screen -d -m -S thermos java -jar Thermos.jar nogui" >> 
 cd /home/bungeecord
 rm -f eula.txt
 rm -f start.sh
+touch eula.txt && echo "eula=true" >> eula.txt
 touch start.sh && echo "screen -d -m -S bungeecord java -jar BungeeCord.jar nogui" >> start.sh
 
 cd /home/waterfall
 rm -f eula.txt
 rm -f start.sh
+touch eula.txt && echo "eula=true" >> eula.txt
 touch start.sh && echo "screen -d -m -S waterfall java -jar Waterfall.jar nogui" >> start.sh
 
 cd /home/travertine
 rm -f eula.txt
 rm -f start.sh
+touch eula.txt && echo "eula=true" >> eula.txt
 touch start.sh && echo "screen -d -m -S travertine java -jar Travertine.jar nogui" >> start.sh
 
 cd /home/hexacord
 rm -f eula.txt
 rm -f start.sh
+touch eula.txt && echo "eula=true" >> eula.txt
 touch start.sh && echo "screen -d -m -S hexacord java -jar HexaCord.jar nogui" >> start.sh
+
+cd /home/modPack
+rm -f eula.txt
+touch eula.txt && echo "eula=true" >> eula.txt
+
+cd /home/mohist
+rm -f eula.txt
+rm -f start.sh
+touch eula.txt && echo "eula=true" >> eula.txt
+touch start.sh && echo "screen -d -m -S mohist java -jar mohist.jar nogui" >> start.sh
+
+cd /home/tuinity
+rm -f eula.txt
+rm -f start.sh
+touch eula.txt && echo "eula=true" >> eula.txt
+touch start.sh && echo "screen -d -m -S tuinity java -XX:+UseConcMarkSweepGC -jar tuinity-paperclip.jar nogui" >> start.sh
 
 clear
 echo "Vérification des permissions..."
@@ -128,6 +148,16 @@ chmod 777 -R travertine/
 
 chmod 777 hexacord
 chmod 777 -R hexacord/
+
+chmod 777 modPack
+chmod 777 -R hexacord/
+
+chmod 777 mohist
+chmod 777 -R mohist/
+
+chmod 777 tuinity
+chmod 777 -R tuinity/
+
 clear
 echo "Débogage terminer !"
 echo "Si votre Problème n'est pas résolue aller voire"
