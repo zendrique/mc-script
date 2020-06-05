@@ -51,4 +51,3 @@ echo "API : SpigotAPI"
 echo "Dossier d'instalation : /home/bukkit"
 echo "Fichier de démarrage de : start.sh"
 echo "Un fichier info-bukkit.txt dans /home a été crée contenant les information afficher si dessue."
-

@@ -1,4 +1,3 @@
-
 # Info système
 clear
 echo "Votre Système :"
