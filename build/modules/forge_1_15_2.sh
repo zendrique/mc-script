@@ -22,20 +22,19 @@ mkdir mods
 chmod 777 mods/
 chmod 777 -R mods/
 echo "Téléchargement de forge"
-wget https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.15.2-31.2.5/forge-1.15.2-31.2.5-installer.jar
+wget https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.15.2-31.2.9/forge-1.15.2-31.2.9-installer.jar
 mv forge-*-installer.jar forge-installer.jar
 clear
 echo "Installation de forge 1.15.2"
 java -jar forge-installer.jar --installServer
+rm -f forge-installer.jar
+mv forge-*.jar forge.jar
 touch eula.txt && echo "eula=true" >> eula.txt
 touch start.sh && echo "screen -d -m -S forge-1.15.2 java -jar forge.jar nogui" >> start.sh
-mv forge-*.*.jar forge.jar
 chmod 777 start.sh
 chmod 777 forge.jar
 echo "Nettoyage..."
-rm -f forge-installer.jar
-rm -f forge-*-installer.jar.log
-rm -f forge-installer.jar.log
+rm -f installer.log
 cd /home
 chmod 777 -R $dossier/
 chmod 777 -R $dossier/*

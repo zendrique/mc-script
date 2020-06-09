@@ -24,6 +24,7 @@ mv forge-*-installer.jar forge-installer.jar
 clear
 echo "Installation de forge"
 java -jar forge-installer.jar --installServer
+rm -f forge-installer.jar
 mv forge-*.jar forge.jar
 touch eula.txt && echo "eula=true" >> eula.txt
 touch start.sh && echo "screen -d -m -S sponge java -jar forge.jar nogui" >> start.sh
@@ -31,9 +32,7 @@ chmod 777 start.sh
 chmod 777 forge.jar
 clear
 echo "Nettoyage..."
-rm -f forge-installer.jar
-rm -f forge-*-installer.jar.log
-rm -f forge-installer.jar.log
+rm -f installer.log
 echo "Instalation de sponge..."
 mkdir mods
 chmod 777 mods/
