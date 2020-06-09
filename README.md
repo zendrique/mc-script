@@ -2,7 +2,7 @@
 Mc-script est script visant à aider les proprietaires de serveur minecraft peut ou pas experimenter, à crée fracilement un serveur minecraft.
 Mc-script peut également aider les personnes plus competantes à eccelérer le déploiment et l'installation de leurs machine et serveur grace à sa suite utilitaire.
 Mc-script télécharge automatiquement installe les logicles necessaires met à jour le serveur...
-Mc-script fonctionne sur debian et ubuntu.
+Pour exectuer Mc-script nous recommendons d'utiliser Debian.
 
 # Installation
 Pour installer mc-script copier colle les commandes suivantes dans un terminale (demande un accet root)
@@ -17,8 +17,8 @@ Vous devez disposer du packet : wget (sudo apt install wget)
 Vanilla 1.15.2
 Snapshot 1.16 pre release 2
 Forge 1.15.2 et 1.12.2
-spigot 1.15.2
-bukkit 1.15.2
+spigot
+bukkit
 paper 1.15.2
 tuinity 1.15.2
 Sponge 1.12.2
@@ -29,7 +29,18 @@ Bungeecord 1.8 - 1.15.2
 HexaCord 1.7.10 - 1.15.2
 Travertine 1.7.10
 Waterfall 1.8 - 1.15.2
+autre
 ```
+# Version Spigot et Bukkit
+Les version prise en charge par mc-script sont les version prise ne charge par BuildTools
+Plus d'info > https://www.spigotmc.org/wiki/buildtools/
+
+# Fonctiion Autre
+La fonction autre vous permet d'utiliser mc-script pour installer un serveur non prise en charge
+A noter que il est possible qui vous devriez faire des operation manuelle avenet de pourvoire commancer à tuliser votre serveur
+Cette fonction est notament utilise pour installer un version de sipogt, bukkit, paperspigot,... non prise en charge par mc-script
+Cette fonction n'inclue pas la prise en charge de forge !
+
 # Processus de build
 Pour plus de lisibilité et de maintenabilité, les sources du script ont étés séparées dans des fichiers différents.
 

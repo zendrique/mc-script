@@ -24,7 +24,7 @@ mv forge-*-installer.jar forge-installer.jar
 clear
 echo "Installation de forge"
 java -jar forge-installer.jar --installServer
-mv forge-*-universal.jar forge.jar
+mv forge-*.jar forge.jar
 touch eula.txt && echo "eula=true" >> eula.txt
 touch start.sh && echo "screen -d -m -S sponge java -jar forge.jar nogui" >> start.sh
 chmod 777 start.sh
