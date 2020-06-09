@@ -1,4 +1,5 @@
 # Vanilla
+clear
 echo "Installation du serveur : Vanilla"
 cd /home
 echo "Dans quel dossier voulez-vous installer votre serveur ? (ex: serveur1)"

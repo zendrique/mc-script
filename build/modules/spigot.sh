@@ -1,4 +1,5 @@
 # Spigot
+clear
 echo "Installation du serveur : Spigot"
 cd /home
 echo "Dans quel dossier voulez-vous installer votre serveur ? (ex: serveur1)"

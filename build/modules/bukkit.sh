@@ -12,7 +12,7 @@ clear
 mkdir $dossier
 chmod 777 $dossier/
 chmod 777 -R $dossier/
-cd bukkit
+cd $dossier
 rm -f craftbukkit.jar
 rm -f start.sh
 rm -f eula.txt

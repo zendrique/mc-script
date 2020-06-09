@@ -33,6 +33,7 @@ chmod 777 forge.jar
 clear
 echo "Nettoyage..."
 rm -f installer.log
+rm -f forge-installer.jar.log
 echo "Instalation de sponge..."
 mkdir mods
 chmod 777 mods/

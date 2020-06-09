@@ -25,7 +25,7 @@ echo "14 - Waterfall"
 echo "15 - Travertine"
 echo "16 - Hexacord"
 echo "17 - ModPack"
-echo "18 - Autre"
+echo "18 - OpenMod"
 echo "19 - Débogage"
 echo "20 - Info Système"
 echo "21 - Quitter"
@@ -85,7 +85,7 @@ case $installation in
 <INSERT_modPack>
 ;;
 18)
-<INSERT_autre>
+<INSERT_openMod>
 ;;
 19) 
 <INSERT_debug>
