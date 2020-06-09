@@ -27,7 +27,7 @@ chmod 777 -R $dossier/
 chmod 77 -R $dossier/*
 rm -f info-snapshot.txt
 touch info-snapshot.txt
-echo "Pour démarrer votre serveur faites la commande : sh /home/"$dossier"/start.sh" >> info-snapshot.txt
+echo "Pour démarrer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-snapshot.txt
 echo "Pour accéder à votre console taper la commande : screen -r snapshot" >> info-snapshot.txt
 echo "Détail de l'installation :" >> info-snapshot.txt
 echo "Version du serveur : 1.16 pre release 2" >> info-snapshot.txt
@@ -36,7 +36,7 @@ echo "Dossier d'installation : /home/"$dossier >> info-snapshot.txt
 echo "Fichier de démarrage de : start.sh" >> info-snapshot.txt
 clear
 echo "Terminer !"
-echo "Pour démarrer votre serveur faites la commande : sh /home/"$dossier"/start.sh"
+echo "Pour démarrer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r snapshot"
 echo "Détail de l'installation :"
 echo "Version du serveur : 1.16 pre release 2"

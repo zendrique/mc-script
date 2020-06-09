@@ -21,7 +21,7 @@ echo "Téléchargement de BuildTools..."
 wget https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
 git config --global --unset core.autocrlf
 clear
-echo "Pour connaitrer les versions prise ne hcarge reférer vous à cette page :"
+echo "Pour connaitrer les versions prise ne charge reférer vous à cette page :"
 echo "https://www.spigotmc.org/wiki/buildtools/"
 echo "Quel version voulez-vous installer ? (ex: 1.12.2)"
 read version
@@ -40,7 +40,7 @@ chmod 777 -R $dossier/
 chmod 777 -R $dossier/*
 rm -f info-spigot.txt
 touch info-spigot.txt
-echo "Pour démarer votre serveur faites la commande : sh /home/"$dossier"/start.sh" >> info-spigot.txt
+echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-spigot.txt
 echo "Pour accéder à votre console taper la commande : screen -r spigot" >> info-spigot.txt
 echo "Detail de l'installation :" >> info-spigot.txt
 echo "Version du serveur :" $version >> info-spigot.txt
@@ -49,7 +49,7 @@ echo "Dossier d'instalation : /home/"$dossier >> info-spigot.txt
 echo "Fichier de démarrage de : start.sh" >> info-spigot.txt
 clear
 echo "Terminer !"
-echo "Pour démarer votre serveur faites la commande : sh /home/"$dossier"/start.sh"
+echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r spigot"
 echo "Detail de l'installation :"
 echo "Version du serveur :" $version

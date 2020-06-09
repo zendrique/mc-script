@@ -35,11 +35,11 @@ autre
 Les version prise en charge par mc-script sont les version prise ne charge par BuildTools
 Plus d'info > https://www.spigotmc.org/wiki/buildtools/
 
-# Fonctiion Autre
-La fonction autre vous permet d'utiliser mc-script pour installer un serveur non prise en charge
-A noter que il est possible qui vous devriez faire des operation manuelle avenet de pourvoire commancer à tuliser votre serveur
-Cette fonction est notament utilise pour installer un version de sipogt, bukkit, paperspigot,... non prise en charge par mc-script
-Cette fonction n'inclue pas la prise en charge de forge !
+# Fonction Autre
+La fonction autre vous permet d'utiliser mc-script pour installer un serveur non prise en charge.
+A noter que il est possible qui vous devriez faire des operations manuelle avent de pourvoire commencer à utliser votre serveur.
+Cette fonction est notament utilise pour installer une version de sipogt, bukkit, paperspigot,... Non prise en charge par mc-script.
+Cette fonction n'inclue pas la prise en charge de forge et sponge mais incule le certain fork !
 
 # Processus de build
 Pour plus de lisibilité et de maintenabilité, les sources du script ont étés séparées dans des fichiers différents.

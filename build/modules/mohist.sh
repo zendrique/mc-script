@@ -33,7 +33,7 @@ chmod 777 -R $dossier/
 chmod 777 -R $dossier/*
 rm -f info-mohist.txt
 touch info-mohist.txt
-echo "Pour démarer votre serveur faites la commande : sh /home/"$dossier"/start.sh" >> info-mohist.txt
+echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-mohist.txt
 echo "Pour accéder à votre console taper la commande : screen -r mohist" >> info-mohist.txt
 echo "Detail de l'installation" >> info-mohist.txt
 echo "Version du serveur : 1.12.2" >> info-mohist.txt
@@ -44,7 +44,7 @@ echo "Dossier des plugins : /home/"$dossier"/plugins" >> info-mohist.txt
 echo "Fichier de démarrage de : start.sh" >> info-mohist.txt
 clear
 echo "Terminer !"
-echo "Pour démarer votre serveur faites la commande : sh /home/"$dossier"/start.sh"
+echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r mohist"
 echo "Detail de l'installation"
 echo "Version du serveur : 1.12.2"

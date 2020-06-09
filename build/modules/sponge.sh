@@ -50,7 +50,7 @@ chmod 777 -R $dossier/
 chmod 777 -R $dossier/*
 rm -f info-sponge.txt
 touch info-sponge.txt
-echo "Pour démarer votre serveur faites la commande : sh /home/"$dossier"/start.sh" >> info-sponge.txt
+echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-sponge.txt
 echo "Pour accéder à votre console taper la commande : screen -r sponge" >> info-sponge.txt
 echo "Detail de l'installation" >> info-sponge.txt
 echo "Version du serveur : 1.12.2" >> info-sponge.txt
@@ -61,7 +61,7 @@ echo "Dossier des plugins : /home/"$dossier"/mods/plugins" >> info-sponge.txt
 echo "Fichier de démarrage de : start.sh" >> info-sponge.txt
 clear
 echo "Terminer !"
-echo "Pour démarer votre serveur faites la commande : sh /home/"$dossier"/start.sh"
+echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r sponge"
 echo "Detail de l'installation"
 echo "Version du serveur : 1.12.2"

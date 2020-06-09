@@ -28,7 +28,7 @@ chmod 777 -R $dossier/
 chmod 777 -R $dossier/*
 rm -f info-travertine.txt
 touch info-travertine.txt
-echo "Pour démarer votre serveur faites la commande : sh /home/"$dossier"/start.sh" >> info-travertine.txt
+echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-travertine.txt
 echo "Pour accéder à votre console taper la commande : screen -r travertine" info-travertine.txt
 echo "Detail de l'installation" info-travertine.txt
 echo "Version du proxy : 1.7.10" info-travertine.txt
@@ -38,7 +38,7 @@ echo "Dossier des plugins : /home/"$dossier"/plugins" info-travertine.txt
 echo "Fichier de démarrage de : start.sh" info-travertine.txt
 clear
 echo "Terminer !"
-echo "Pour démarer votre serveur faites la commande : sh /home/"$dossier"/start.sh"
+echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r travertine"
 echo "Detail de l'installation"
 echo "Version du proxy : 1.7.10"

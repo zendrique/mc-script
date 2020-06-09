@@ -26,7 +26,7 @@ chmod 777 -R $dossier/
 chmod 777 -R $dossier/*
 rm -f info-vanilla.txt
 touch info-vanilla.txt
-echo "Pour démarrer votre serveur faites la commande : sh /home/"$dossier"/start.sh" >> info-vanilla.txt
+echo "Pour démarrer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-vanilla.txt
 echo "Pour accéder à votre console taper la commande : screen -r vanilla" >> info-vanilla.txt
 echo "Détail de l'installation :" >> info-vanilla.txt
 echo "Version du serveur : 1.15.2" >> info-vanilla.txt
@@ -35,7 +35,7 @@ echo "Dossier d'installation : /home/"$dossier >> info-vanilla.txt
 echo "Fichier de démarrage de : start.sh" >> info-vanilla.txt
 clear
 echo "Terminer !"
-echo "Pour démarrer votre serveur faites la commande : sh /home/"$dossier"/start.sh"
+echo "Pour démarrer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r vanilla"
 echo "Détail de l'installation :"
 echo "Version du serveur : 1.15.2"

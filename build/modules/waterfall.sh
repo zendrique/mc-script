@@ -28,7 +28,7 @@ chmod 777 -R $dossier/
 chmod 777 -R $dossier/*
 rm -f info-waterfall.txt
 touch info-waterfall.txt
-echo "Pour démarer votre serveur faites la commande : sh /home/"$dossier"/start.sh" >> info-waterfall.txt
+echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-waterfall.txt
 echo "Pour accéder à votre console taper la commande : screen -r waterfall" >> info-waterfall.txt
 echo "Detail de l'installation" >> info-waterfall.txt
 echo "Version du proxy : 1.8 - 1.15.2" >> info-waterfall.txt
@@ -38,7 +38,7 @@ echo "Dossier des plugins : /home/"$dossier"/plugins" >> info-waterfall.txt
 echo "Fichier de démarrage de : start.sh" >> info-waterfall.txt
 clear
 echo "Terminer !"
-echo "Pour démarer votre serveur faites la commande : sh /home/"$dossier"/start.sh"
+echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r waterfall"
 echo "Detail de l'installation"
 echo "Version du proxy : 1.8 - 1.15.2"

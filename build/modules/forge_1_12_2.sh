@@ -34,13 +34,14 @@ touch start.sh && echo "screen -d -m -S forge-1.12.2 java -jar forge.jar nogui" 
 chmod 777 start.sh
 chmod 777 forge.jar
 echo "Nettoyage..."
-rm -r installer.log
+rm -f installer.log
+rm -f forge-installer.jar.log
 cd /home
 chmod 777 -R $dossier/
 chmod 777 -R $dossier/*
 rm -f info-forge-1.12.2.txt
 touch info-forge-1.12.2.txt
-echo "Pour démarer votre serveur faites la commande : sh /home/"$dossier"/start.sh" >> info-forge-1.12.2.txt
+echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-forge-1.12.2.txt
 echo "Pour accéder à votre console taper la commande : screen -r forge-1.12.2" >> info-forge-1.12.2.txt
 echo "Detail de l'installation" >> info-forge-1.12.2.txt
 echo "Version du serveur : 1.12.2" >> info-forge-1.12.2.txt
@@ -49,7 +50,7 @@ echo "Dossier d'instalation : /home/"$dossier >> info-forge-1.12.2.txt
 echo "Fichier de démarrage de : start.sh" >> info-forge-1.12.2.txt
 clear
 echo "Terminer !"
-echo "Pour démarer votre serveur faites la commande : sh /home/"$dossier"/start.sh"
+echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r forge-1.12.2"
 echo "Detail de l'installation"
 echo "Version du serveur : 1.12.2"

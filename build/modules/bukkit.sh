@@ -22,7 +22,7 @@ echo "Téléchargement de BuildTools..."
 wget https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
 git config --global --unset core.autocrlf
 clear
-echo "Pour connaitrer les versions prise ne hcarge reférer vous à cette page :"
+echo "Pour connaitrer les versions prise ne charge reférer vous à cette page :"
 echo "https://www.spigotmc.org/wiki/buildtools/"
 echo "Quel version voulez-vous installer ? (ex: 1.12.2)"
 read version
@@ -41,7 +41,7 @@ chmod 777 -R $dossier/
 chmod 777 -R $dossier/*
 rm -f info-bukkit.txt
 touch info-bukkit.txt
-echo "Pour démarer votre serveur faites la commande : sh /home/"$dossier"/start.sh" >> info-bukkit.txt
+echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-bukkit.txt
 echo "Pour accéder à votre console taper la commande : screen -r bukkit" >> info-bukkit.txt
 echo "Detail de l'installation :" >> info-bukkit.txt
 echo "Version du serveur :" $version >> info-bukkit.txt
@@ -50,7 +50,7 @@ echo "Dossier d'instalation : /home/"$dossier >> info-bukkit.txt
 echo "Fichier de démarrage de : start.sh" >> info-bukkit.txt
 clear
 echo "Terminer !"
-echo "Pour démarer votre serveur faites la commande : sh /home/"$dossier"/start.sh"
+echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r bukkit"
 echo "Detail de l'installation :"
 echo "Version du serveur :" $version
