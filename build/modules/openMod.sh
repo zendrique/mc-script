@@ -18,8 +18,8 @@ rm -f eula.txt
 rm -f start.sh
 touch eula.txt && echo "eula=true" >> eula.txt
 touch start.sh && echo "screen -d -m -S" $dossier "java -XX:+UseConcMarkSweepGC -jar" $dossier".jar nogui" >> start.sh
-touch info-$dossier.txt
 cd /home
+touch info-$dossier.txt
 chmod 777 -R $dossier/
 chmod 777 -R $dossier/*
 echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-$dossier.txt
