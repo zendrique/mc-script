@@ -2,15 +2,17 @@
 clear
 echo "Instalation de : Sponge Forge"
 cd /home
+echo "Dans quel dossier voulez-vous installer votre serveur ? (ex: serveur1)"
+read dossier
 echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer et les autres sauvegardes écrasées s’il en existe ctrl + c pour annuler"
 sleep 4
 rm -f sponge-backup.zip
-zip -r sponge-backup.zip sponge/
+zip -r sponge-backup.zip $dossier/
 clear
-mkdir sponge
-chmod 777 sponge/
-chmod 777 -R sponge/
-cd sponge
+mkdir $dossier
+chmod 777 $dossier/
+chmod 777 -R $dossier/
+cd $dossier
 rm -f start.sh
 rm -f eula.txt
 rm -f forge.jar
@@ -45,28 +47,28 @@ mkdir plugins
 chmod 777 plugins/
 chmod 777 -R plugins/
 cd /home
-chmod 777 -R sponge/
-chmod 777 -R sponge/*
+chmod 777 -R $dossier/
+chmod 777 -R $dossier/*
 rm -f info-sponge.txt
 touch info-sponge.txt
-echo "Pour démarer votre serveur faites la commande : sh /home/sponge/start.sh" >> info-sponge.txt
+echo "Pour démarer votre serveur faites la commande : sh /home/"$dossier"/start.sh" >> info-sponge.txt
 echo "Pour accéder à votre console taper la commande : screen -r sponge" >> info-sponge.txt
 echo "Detail de l'installation" >> info-sponge.txt
 echo "Version du serveur : 1.12.2" >> info-sponge.txt
 echo "API : Sponge Forge, Forge" >> info-sponge.txt
-echo "Dossier d'instalation : /home/forge" >> info-sponge.txt
-echo "Dossier des mods : /home/forge/mods" >> info-sponge.txt
-echo "Dossier des plugins : /home/forge/mods/plugins" >> info-sponge.txt
+echo "Dossier d'instalation : /home/"$dossier >> info-sponge.txt
+echo "Dossier des mods : /home/"$dossier"/mods" >> info-sponge.txt
+echo "Dossier des plugins : /home/"$dossier"/mods/plugins" >> info-sponge.txt
 echo "Fichier de démarrage de : start.sh" >> info-sponge.txt
 clear
 echo "Terminer !"
-echo "Pour démarer votre serveur faites la commande : sh /home/sponge/start.sh"
+echo "Pour démarer votre serveur faites la commande : sh /home/"$dossier"/start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r sponge"
 echo "Detail de l'installation"
 echo "Version du serveur : 1.12.2"
 echo "API : Sponge Forge, Forge"
-echo "Dossier d'instalation : /home/forge"
-echo "Dossier des mods : /home/forge/mods"
-echo "Dossier des plugins : /home/forge/mods/plugins"
+echo "Dossier d'instalation : /home/"$dossier
+echo "Dossier des mods : /home/$dossier/mods"
+echo "Dossier des plugins : /home/$dossier/mods/plugins"
 echo "Fichier de démarrage de : start.sh"
 echo "Un fichier info-sponge.txt dans /home a été crée contenant les information afficher si dessue."

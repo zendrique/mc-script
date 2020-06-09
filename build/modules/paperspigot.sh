@@ -2,15 +2,17 @@
 clear
 echo "Instalation de : PaperSpigot"
 cd /home
+echo "Dans quel dossier voulez-vous installer votre serveur ? (ex: serveur1)"
+read dossier
 echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer et les autres sauvegardes écrasées s’il en existe ctrl + c pour annuler"
 sleep 4
 rm -f paperspigot-backup.zip
-zip -r paperspigot-backup.zip paperspigot/
+zip -r paperspigot-backup.zip $dossier/
 clear
-mkdir paperspigot
-chmod 777 paperspigot/
-chmod 777 -R paperspigot/
-cd paperspigot
+mkdir $dossier
+chmod 777 $dossier/
+chmod 777 -R $dossier/
+cd $dossier
 rm -f paperclip.jar
 rm -f start.sh
 rm -f eula.txt
@@ -21,25 +23,25 @@ touch start.sh && echo "screen -d -m -S paperspigot java -XX:+UseConcMarkSweepGC
 chmod 777 start.sh
 chmod 777 paperclip.jar
 cd /home
-chmod 777 -R paperspigot/
-chmod 777 -R paperspigot/*
+chmod 777 -R $dossier/
+chmod 777 -R $dossier/*
 rm -f info-paperspigot.txt
 touch info-paperspigot.txt
 echo "Terminer !" >> paperspigot.txt
-echo "Pour démarer votre serveur faites la commande : sh /home/paperspigot/start.sh" >> info-paperspigot.txt
+echo "Pour démarer votre serveur faites la commande : sh /home/"$dossier"/start.sh" >> info-paperspigot.txt
 echo "Pour accéder à votre console taper la commande : screen -r paperspigot" >> info-paperspigot.txt
 echo "Detail de l'installation :" >> info-paperspigot.txt
 echo "Version du serveur : 1.15.2" >> info-paperspigot.txt
 echo "API : SpigotAPI" >> info-paperspigot.txt
-echo "Dossier d'instalation : /home/paperspigot" >> info-paperspigot.txt
+echo "Dossier d'instalation : /home/"$dossier >> info-paperspigot.txt
 echo "Fichier de démarrage de : start.sh" >> info-paperspigot.txt
 clear
 echo "Terminer !"
-echo "Pour démarer votre serveur faites la commande : sh /home/paperspigot/start.sh"
+echo "Pour démarer votre serveur faites la commande : sh /home/"$dossier"/start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r paperspigot"
 echo "Detail de l'installation :"
 echo "Version du serveur : 1.15.2"
 echo "API : SpigotAPI"
-echo "Dossier d'instalation : /home/paperspigot"
+echo "Dossier d'instalation : /home/$dossier"
 echo "Fichier de démarrage de : start.sh"
 echo "Un fichier info-paperspigot.txt dans /home a été crée contenant les information afficher si dessue."
