@@ -34,6 +34,7 @@ touch eula.txt && echo "eula=true" >> eula.txt
 touch start.sh && echo "screen -d -m -S bukkit java -XX:+UseConcMarkSweepGC -jar craftbukkit.jar nogui" >> start.sh
 chmod 777 start.sh
 chmod 777 craftbukkit.jar
+clear
 echo "Nettoyage..."
 rm -R buildtools
 cd /home
