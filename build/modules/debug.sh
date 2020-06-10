@@ -24,5 +24,6 @@ echo "Si votre Problème n'est pas résolue aller voire"
 echo "https://github.com/zendrique/mc-script/issues"
 echo "Pour obtenir de l'aide"
 echo "Retour au menue dans 20 secondes"
+sleep 20
 sudo bash /home/mc-script.sh
 exit
