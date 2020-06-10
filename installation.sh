@@ -6,6 +6,15 @@ if [ "$EUID" -ne 0 ]; then
     exit
 fi
 
+echo "[!] Mc-script sous liense GPL-3"
+echo "[?] En utilisant mc-script vous acctpeter la charte d'utilisation de mojange (eula) ? (1 ou 2)" 
+select yn in "Oui" "Non"; do
+    case $yn in
+        Oui ) break;;
+        Non ) rm -R /home/mc-script && rm -f /home/installation.sh
+                exit;;
+    esac
+done
 
 echo "[?] Voulez-vous mettre à jour votre système ? (1 ou 2)" 
 select yn in "Oui" "Non"; do
