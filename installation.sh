@@ -15,7 +15,7 @@ select yn in "Oui" "Non"; do
                 exit;;
     esac
 done
-
+clear
 echo "[?] Voulez-vous mettre à jour votre système ? (1 ou 2)" 
 select yn in "Oui" "Non"; do
     case $yn in
