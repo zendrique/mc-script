@@ -6,8 +6,8 @@ if [ "$EUID" -ne 0 ]; then
     exit
 fi
 
-echo "[!] Mc-script sous liense GPL-3"
-echo "[?] En utilisant mc-script vous acctpeter la charte d'utilisation de mojange (eula) ? (1 ou 2)" 
+echo "[!] Mc-script sous lience GPL-3"
+echo "[?] En utilisant mc-script vous acceptez la charte d'utilisation de Mojang Studio (eula) ? (1 ou 2)" 
 select yn in "Oui" "Non"; do
     case $yn in
         Oui ) break;;
