@@ -182,4 +182,4 @@ echo "Génration des structures :" $structures
 echo "Gamemode :" $gamemode
 echo "Dificulté :" $difficulty
 echo "Fly :" $fly
-echo "Information sauvegarder dans info-"$dossier".txt
+echo "Information sauvegarder dans info-"$dossier".txt"
