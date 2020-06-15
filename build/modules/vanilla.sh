@@ -25,15 +25,15 @@ chmod 777 server.jar
 cd /home
 chmod 777 -R $dossier/
 chmod 777 -R $dossier/*
-rm -f info-vanilla.txt
-touch info-vanilla.txt
-echo "Pour démarrer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-vanilla.txt
-echo "Pour accéder à votre console taper la commande : screen -r vanilla" >> info-vanilla.txt
-echo "Détail de l'installation :" >> info-vanilla.txt
-echo "Version du serveur : 1.15.2" >> info-vanilla.txt
-echo "API : DatapackAPI" >> info-vanilla.txt
-echo "Dossier d'installation : /home/"$dossier >> info-vanilla.txt
-echo "Fichier de démarrage de : start.sh" >> info-vanilla.txt
+rm -f info-$dossier.txt
+touch info-$dossier.txt
+echo "Pour démarrer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-$dossier.txt
+echo "Pour accéder à votre console taper la commande : screen -r vanilla" >> info-$dossier.txt
+echo "Détail de l'installation :" >> info-$dossier.txt
+echo "Version du serveur : 1.15.2" >> info-$dossier.txt
+echo "API : DatapackAPI" >> info-$dossier.txt
+echo "Dossier d'installation : /home/"$dossier >> info-$dossier.txt
+echo "Fichier de démarrage de : start.sh" >> info-$dossier.txt
 clear
 echo "Terminer !"
 echo "Pour démarrer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh"
@@ -43,4 +43,4 @@ echo "Version du serveur : 1.15.2"
 echo "API : DatapackAPI"
 echo "Dossier d'installation : /home/"$dossier
 echo "Fichier de démarrage de : start.sh"
-echo "Un fichier info-vanilla.txt dans /home a été crée contenant les information afficher si dessue."
+echo "Un fichier info-"$dossier".txt dans /home a été crée contenant les information afficher si dessue."

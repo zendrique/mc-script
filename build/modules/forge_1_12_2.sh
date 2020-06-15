@@ -39,15 +39,15 @@ rm -f forge-installer.jar.log
 cd /home
 chmod 777 -R $dossier/
 chmod 777 -R $dossier/*
-rm -f info-forge-1.12.2.txt
-touch info-forge-1.12.2.txt
-echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-forge-1.12.2.txt
-echo "Pour accéder à votre console taper la commande : screen -r forge-1.12.2" >> info-forge-1.12.2.txt
-echo "Detail de l'installation" >> info-forge-1.12.2.txt
-echo "Version du serveur : 1.12.2" >> info-forge-1.12.2.txt
-echo "API : Forge" >> info-forge-1.12.2.txt
-echo "Dossier d'instalation : /home/"$dossier >> info-forge-1.12.2.txt
-echo "Fichier de démarrage de : start.sh" >> info-forge-1.12.2.txt
+rm -f info-$dossier.txt
+touch info-$dossier.txt
+echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-$dossier.txt
+echo "Pour accéder à votre console taper la commande : screen -r forge-1.12.2" >> info-$dossier.txt
+echo "Detail de l'installation" >> info-$dossier.txt
+echo "Version du serveur : 1.12.2" >> info-$dossier.txt
+echo "API : Forge" >> info-$dossier.txt
+echo "Dossier d'instalation : /home/"$dossier >> info-$dossier.txt
+echo "Fichier de démarrage de : start.sh" >> info-$dossier.txt
 clear
 echo "Terminer !"
 echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh"
@@ -57,4 +57,4 @@ echo "Version du serveur : 1.12.2"
 echo "API : Forge"
 echo "Dossier d'instalation : /home/"$dossier
 echo "Fichier de démarrage de : start.sh"
-echo "Un fichier info-forge-1.12.2.txt dans /home a été crée contenant les information afficher si dessue."
+echo "Un fichier info-"$dossier".txt dans /home a été crée contenant les information afficher si dessue."

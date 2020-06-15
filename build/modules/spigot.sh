@@ -39,15 +39,15 @@ rm -R buildtools
 cd /home
 chmod 777 -R $dossier/
 chmod 777 -R $dossier/*
-rm -f info-spigot.txt
-touch info-spigot.txt
-echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-spigot.txt
-echo "Pour accéder à votre console taper la commande : screen -r spigot" >> info-spigot.txt
-echo "Detail de l'installation :" >> info-spigot.txt
-echo "Version du serveur :" $version >> info-spigot.txt
-echo "API : SpigotAPI" >> info-spigot.txt
-echo "Dossier d'instalation : /home/"$dossier >> info-spigot.txt
-echo "Fichier de démarrage de : start.sh" >> info-spigot.txt
+rm -f info-$dossier.txt
+touch info-$dossier.txt
+echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-$dossier.txt
+echo "Pour accéder à votre console taper la commande : screen -r spigot" >> info-$dossier.txt
+echo "Detail de l'installation :" >> info-$dossier.txt
+echo "Version du serveur :" $version >> info-$dossier.txt
+echo "API : SpigotAPI" >> info-$dossier.txt
+echo "Dossier d'instalation : /home/"$dossier >> info-$dossier.txt
+echo "Fichier de démarrage de : start.sh" >> info-$dossier.txt
 clear
 echo "Terminer !"
 echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh"
@@ -57,4 +57,4 @@ echo "Version du serveur :" $version
 echo "API : SpigotAPI"
 echo "Dossier d'instalation : /home/"$dossier
 echo "Fichier de démarrage de : start.sh"
-echo "Un fichier info-spigot.txt dans /home a été crée contenant les information afficher si dessue."
+echo "Un fichier info-"$dossier".txt dans /home a été crée contenant les information afficher si dessue."

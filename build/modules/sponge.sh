@@ -49,17 +49,17 @@ chmod 777 -R plugins/
 cd /home
 chmod 777 -R $dossier/
 chmod 777 -R $dossier/*
-rm -f info-sponge.txt
-touch info-sponge.txt
-echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-sponge.txt
-echo "Pour accéder à votre console taper la commande : screen -r sponge" >> info-sponge.txt
-echo "Detail de l'installation" >> info-sponge.txt
-echo "Version du serveur : 1.12.2" >> info-sponge.txt
-echo "API : Sponge Forge, Forge" >> info-sponge.txt
-echo "Dossier d'instalation : /home/"$dossier >> info-sponge.txt
-echo "Dossier des mods : /home/"$dossier"/mods" >> info-sponge.txt
-echo "Dossier des plugins : /home/"$dossier"/mods/plugins" >> info-sponge.txt
-echo "Fichier de démarrage de : start.sh" >> info-sponge.txt
+rm -f info-$dossier.txt
+touch info-$dossier.txt
+echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-$dossier.txt
+echo "Pour accéder à votre console taper la commande : screen -r sponge" >> info-$dossier.txt
+echo "Detail de l'installation" >> info-$dossier.txt
+echo "Version du serveur : 1.12.2" >> info-$dossier.txt
+echo "API : Sponge Forge, Forge" >> info-$dossier.txt
+echo "Dossier d'instalation : /home/"$dossier >> info-$dossier.txt
+echo "Dossier des mods : /home/"$dossier"/mods" >> info-$dossier.txt
+echo "Dossier des plugins : /home/"$dossier"/mods/plugins" >> info-$dossier.txt
+echo "Fichier de démarrage de : start.sh" >> info-$dossier.txt
 clear
 echo "Terminer !"
 echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh"
@@ -71,4 +71,4 @@ echo "Dossier d'instalation : /home/"$dossier
 echo "Dossier des mods : /home/$dossier/mods"
 echo "Dossier des plugins : /home/$dossier/mods/plugins"
 echo "Fichier de démarrage de : start.sh"
-echo "Un fichier info-sponge.txt dans /home a été crée contenant les information afficher si dessue."
+echo "Un fichier info-"$dossier".txt dans /home a été crée contenant les information afficher si dessue."

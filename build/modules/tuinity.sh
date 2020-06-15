@@ -25,15 +25,15 @@ chmod 777 tuinity-paperclip.jar
 cd /home
 chmod 777 -R $dossier/
 chmod 777 -R $dossier/*
-rm -f info-tuinity.txt
-touch info-tuinity.txt
-echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-tuinity.txt
-echo "Pour accéder à votre console taper la commande : screen -r tuinity" >> info-tuinity.txt
-echo "Detail de l'installation :" >> info-tuinity.txt
-echo "Version du serveur : 1.15.2" >> info-tuinity.txt
-echo "API : SpigotAPI" >> info-tuinity.txt
-echo "Dossier d'instalation : /home/"$dossier >> info-tuinity.txt
-echo "Fichier de démarrage de : start.sh" >> info-tuinity.txt
+rm -f info-$dossier.txt
+touch info-$dossier.txt
+echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-$dossier.txt
+echo "Pour accéder à votre console taper la commande : screen -r tuinity" >> info-$dossier.txt
+echo "Detail de l'installation :" >> info-$dossier.txt
+echo "Version du serveur : 1.15.2" >> info-$dossier.txt
+echo "API : SpigotAPI" >> info-$dossier.txt
+echo "Dossier d'instalation : /home/"$dossier >> info-$dossier.txt
+echo "Fichier de démarrage de : start.sh" >> info-$dossier.txt
 clear
 echo "Terminer !"
 echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh"
@@ -43,4 +43,4 @@ echo "Version du serveur : 1.15.2"
 echo "API : SpigotAPI"
 echo "Dossier d'instalation : /home/"$dossier
 echo "Fichier de démarrage de : start.sh"
-echo "Un fichier info-tuinity.txt dans /home a été crée contenant les information afficher si dessue."
+echo "Un fichier info-"$dossier".txt dans /home a été crée contenant les information afficher si dessue."

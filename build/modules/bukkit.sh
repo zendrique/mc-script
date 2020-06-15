@@ -40,15 +40,15 @@ rm -R buildtools
 cd /home
 chmod 777 -R $dossier/
 chmod 777 -R $dossier/*
-rm -f info-bukkit.txt
-touch info-bukkit.txt
-echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-bukkit.txt
-echo "Pour accéder à votre console taper la commande : screen -r bukkit" >> info-bukkit.txt
-echo "Detail de l'installation :" >> info-bukkit.txt
-echo "Version du serveur :" $version >> info-bukkit.txt
-echo "API : SpigotAPI" >> info-bukkit.txt
-echo "Dossier d'instalation : /home/"$dossier >> info-bukkit.txt
-echo "Fichier de démarrage de : start.sh" >> info-bukkit.txt
+rm -f info-$dossier.txt
+touch info-$dossier.txt
+echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-$dossier.txt
+echo "Pour accéder à votre console taper la commande : screen -r bukkit" >> info-$dossier.txt
+echo "Detail de l'installation :" >> info-$dossier.txt
+echo "Version du serveur :" $version >> info-$dossier.txt
+echo "API : SpigotAPI" >> info-$dossier.txt
+echo "Dossier d'instalation : /home/"$dossier >> info-$dossier.txt
+echo "Fichier de démarrage de : start.sh" >> info-$dossier.txt
 clear
 echo "Terminer !"
 echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh"
@@ -58,4 +58,4 @@ echo "Version du serveur :" $version
 echo "API : SpigotAPI"
 echo "Dossier d'instalation : /home/"$dossier
 echo "Fichier de démarrage de : start.sh"
-echo "Un fichier info-bukkit.txt dans /home a été crée contenant les information afficher si dessue."
+echo "Un fichier info-"$dossier".txt dans /home a été crée contenant les information afficher si dessue."

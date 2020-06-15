@@ -27,16 +27,16 @@ chmod 777 start.sh
 cd /home
 chmod 777 -R $dossier/
 chmod 777 -R $dossier/*
-rm -f info-hexacord.txt
-touch info-hexacord.txt
-echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-hexacord.txt
-echo "Pour accéder à votre console taper la commande : screen -r hexacord" >> info-hexacord.txt
-echo "Detail de l'installation" >> info-hexacord.txt
-echo "Version du proxy : 1.7.10 - 1.15.2" >> info-hexacord.txt
-echo "API : BungeeCord" >> info-hexacord.txt
-echo "Dossier d'instalation : /home/"$dossier >> info-hexacord.txt
-echo "Dossier des plugins : /home/"$dossier"/plugins" >> info-hexacord.txt
-echo "Fichier de démarrage de : start.sh" >> info-hexacord.txt
+rm -f info-$dossier.txt
+touch info-$dossier.txt
+echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-$dossier.txt
+echo "Pour accéder à votre console taper la commande : screen -r hexacord" >> info-$dossier.txt
+echo "Detail de l'installation" >> info-$dossier.txt
+echo "Version du proxy : 1.7.10 - 1.15.2" >> info-$dossier.txt
+echo "API : BungeeCord" >> info-$dossier.txt
+echo "Dossier d'instalation : /home/"$dossier >> info-$dossier.txt
+echo "Dossier des plugins : /home/"$dossier"/plugins" >> info-$dossier.txt
+echo "Fichier de démarrage de : start.sh" >> info-$dossier.txt
 clear
 echo "Terminer !"
 echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh"
@@ -47,4 +47,4 @@ echo "API : BungeeCord"
 echo "Dossier d'instalation : /home/"$dossier
 echo "Dossier des plugins : /home/"$dossier"/plugins"
 echo "Fichier de démarrage de : start.sh"
-echo "Un fichier info-hexacord.txt dans /home a été crée contenant les information afficher si dessue."
+echo "Un fichier info-"$dossier".txt dans /home a été crée contenant les information afficher si dessue."

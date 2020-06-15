@@ -26,16 +26,16 @@ chmod 777 start.sh
 cd /home
 chmod 777 -R $dossier/
 chmod 777 -R $dossier/*
-rm -f info-bungeecord.txt
-touch info-bungeecord.txt
-echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-bungeecord.txt
-echo "Pour accéder à votre console taper la commande : screen -r bungeecord" >> info-bungeecord.txt
-echo "Detail de l'installation" >> info-bungeecord.txt
-echo "Version du proxy : 1.8 - 1.15.2" >> info-bungeecord.txt
-echo "API : BungeeCord" >> info-bungeecord.txt
-echo "Dossier d'instalation : /home/"$dossier >> info-bungeecord.txt
-echo "Dossier des plugins : /home/"$dossier"/plugins" >> info-bungeecord.txt
-echo "Fichier de démarrage de : start.sh" >> info-bungeecord.txt
+rm -f info-$dossier.txt
+touch info-$dossier.txt
+echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-$dossier.txt
+echo "Pour accéder à votre console taper la commande : screen -r bungeecord" >> info-$dossier.txt
+echo "Detail de l'installation" >> info-$dossier.txt
+echo "Version du proxy : 1.8 - 1.15.2" >> info-$dossier.txt
+echo "API : BungeeCord" >> info-$dossier.txt
+echo "Dossier d'instalation : /home/"$dossier >> info-$dossier.txt
+echo "Dossier des plugins : /home/"$dossier"/plugins" >> info-$dossier.txt
+echo "Fichier de démarrage de : start.sh" >> info-$dossier.txt
 clear
 echo "Terminer !"
 echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh"
@@ -46,4 +46,4 @@ echo "API : BungeeCord"
 echo "Dossier d'instalation : /home/"$dossier
 echo "Dossier des plugins : /home/"$dossier"/plugins"
 echo "Fichier de démarrage de : start.sh"
-echo "Un fichier info-bungeecord.txt dans /home a été crée contenant les information afficher si dessue."
+echo "Un fichier info-"$dossier".txt dans /home a été crée contenant les information afficher si dessue."

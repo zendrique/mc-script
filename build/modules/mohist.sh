@@ -31,17 +31,17 @@ mkdir mods
 cd /home
 chmod 777 -R $dossier/
 chmod 777 -R $dossier/*
-rm -f info-mohist.txt
-touch info-mohist.txt
-echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-mohist.txt
-echo "Pour accéder à votre console taper la commande : screen -r mohist" >> info-mohist.txt
-echo "Detail de l'installation" >> info-mohist.txt
-echo "Version du serveur : 1.12.2" >> info-mohist.txt
-echo "API : SpigotAPI, Forge" >> info-mohist.txt
-echo "Dossier d'instalation : /home/"$dossier >> info-mohist.txt
-echo "Dossier des mods : /home/"$dossier"/mods" >> info-mohist.txt
-echo "Dossier des plugins : /home/"$dossier"/plugins" >> info-mohist.txt
-echo "Fichier de démarrage de : start.sh" >> info-mohist.txt
+rm -f info-$dossier.txt
+touch info-$dossier.txt
+echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-$dossier.txt
+echo "Pour accéder à votre console taper la commande : screen -r mohist" >> info-$dossier.txt
+echo "Detail de l'installation" >> info-$dossier.txt
+echo "Version du serveur : 1.12.2" >> info-$dossier.txt
+echo "API : SpigotAPI, Forge" >> info-$dossier.txt
+echo "Dossier d'instalation : /home/"$dossier >> info-$dossier.txt
+echo "Dossier des mods : /home/"$dossier"/mods" >> info-$dossier.txt
+echo "Dossier des plugins : /home/"$dossier"/plugins" >> info-$dossier.txt
+echo "Fichier de démarrage de : start.sh" >> info-$dossier.txt
 clear
 echo "Terminer !"
 echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh"
@@ -53,4 +53,4 @@ echo "Dossier d'instalation : /home/"$dossier
 echo "Dossier des mods : /home/"$dossier"/mods"
 echo "Dossier des plugins : /home/"$dossier"/plugins"
 echo "Fichier de démarrage de : start.sh"
-echo "Un fichier info-mohist.txt dans /home a été crée contenant les information afficher si dessue."
+echo "Un fichier info-"$dossier".txt dans /home a été crée contenant les information afficher si dessue."

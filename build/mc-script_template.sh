@@ -26,11 +26,12 @@ echo "15 - Travertine"
 echo "16 - Hexacord"
 echo "17 - ModPack"
 echo "18 - OpenMod"
-echo "19 - Débogage"
-echo "20 - Info Système"
-echo "21 - Quitter"
-echo "22 - Mettre à jour mc-script"
-echo "23 - Supprimer mc-script"
+echo "19 - Préconfigurer votre serveur"
+echo "20 - Débogage"
+echo "21 - Info Système"
+echo "22 - Quitter"
+echo "23 - Mettre à jour mc-script"
+echo "24 - Supprimer mc-script"
 read installation
 case $installation in
 1) 
@@ -87,19 +88,22 @@ case $installation in
 18)
 <INSERT_openMod>
 ;;
-19) 
-<INSERT_debug>
+19)
+<INSERT_pre_conf_serveur>
 ;;
 20) 
+<INSERT_debug>
+;;
+21) 
 <INSERT_system_info>
 ;;
-21)
+22)
 <INSERT_fermeture>
 ;;
-22)
+23)
 <INSERT_update>
 ;;
-23)
+24)
 <INSERT_remove>
 ;;
 *) 

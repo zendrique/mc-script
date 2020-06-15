@@ -25,15 +25,15 @@ chmod 777 server.jar
 cd /home
 chmod 777 -R $dossier/
 chmod 77 -R $dossier/*
-rm -f info-snapshot.txt
-touch info-snapshot.txt
-echo "Pour démarrer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-snapshot.txt
-echo "Pour accéder à votre console taper la commande : screen -r snapshot" >> info-snapshot.txt
-echo "Détail de l'installation :" >> info-snapshot.txt
-echo "Version du serveur : 1.16 pre release 5" >> info-snapshot.txt
-echo "API : DatapackAPI" >> info-snapshot.txt
-echo "Dossier d'installation : /home/"$dossier >> info-snapshot.txt
-echo "Fichier de démarrage de : start.sh" >> info-snapshot.txt
+rm -f info-$dossier.txt
+touch info-$dossier.txt
+echo "Pour démarrer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-$dossier.txt
+echo "Pour accéder à votre console taper la commande : screen -r snapshot" >> info-$dossier.txt
+echo "Détail de l'installation :" >> info-$dossier.txt
+echo "Version du serveur : 1.16 pre release 5" >> info-$dossier.txt
+echo "API : DatapackAPI" >> info-$dossier.txt
+echo "Dossier d'installation : /home/"$dossier >> info-$dossier.txt
+echo "Fichier de démarrage de : start.sh" >> info-$dossier.txt
 clear
 echo "Terminer !"
 echo "Pour démarrer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh"
@@ -43,4 +43,4 @@ echo "Version du serveur : 1.16 pre release 5"
 echo "API : DatapackAPI"
 echo "Dossier d'installation : /home/"$dossier
 echo "Fichier de démarrage de : start.sh"
-echo "Un fichier info-snapshot.txt dans /home a été crée contenant les information afficher si dessue."
+echo "Un fichier info-"$dossier".txt dans /home a été crée contenant les information afficher si dessue."

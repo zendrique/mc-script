@@ -26,16 +26,16 @@ mkdir plugins
 cd /home
 chmod 777 -R $dossier/
 chmod 777 -R $dossier/*
-rm -f info-waterfall.txt
-touch info-waterfall.txt
-echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-waterfall.txt
-echo "Pour accéder à votre console taper la commande : screen -r waterfall" >> info-waterfall.txt
-echo "Detail de l'installation" >> info-waterfall.txt
-echo "Version du proxy : 1.8 - 1.15.2" >> info-waterfall.txt
-echo "API : BungeeCord" >> info-waterfall.txt
-echo "Dossier d'instalation : /home/"$dossier >> info-waterfall.txt
-echo "Dossier des plugins : /home/"$dossier"/plugins" >> info-waterfall.txt
-echo "Fichier de démarrage de : start.sh" >> info-waterfall.txt
+rm -f info-$dossier.txt
+touch info-$dossier.txt
+echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-$dossier.txt
+echo "Pour accéder à votre console taper la commande : screen -r waterfall" >> info-$dossier.txt
+echo "Detail de l'installation" >> info-$dossier.txt
+echo "Version du proxy : 1.8 - 1.15.2" >> info-$dossier.txt
+echo "API : BungeeCord" >> info-$dossier.txt
+echo "Dossier d'instalation : /home/"$dossier >> info-$dossier.txt
+echo "Dossier des plugins : /home/"$dossier"/plugins" >> info-$dossier.txt
+echo "Fichier de démarrage de : start.sh" >> info-$dossier.txt
 clear
 echo "Terminer !"
 echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh"
@@ -46,4 +46,4 @@ echo "API : BungeeCord"
 echo "Dossier d'instalation : /home/"$dossier
 echo "Dossier des plugins : /home/"$dossier"/plugins"
 echo "Fichier de démarrage de : start.sh"
-echo "Un fichier info-waterfall.txt dans /home a été crée contenant les information afficher si dessue."
+echo "Un fichier info-"$dossier".txt dans /home a été crée contenant les information afficher si dessue."

@@ -19,6 +19,7 @@ rm -f start.sh
 touch eula.txt && echo "eula=true" >> eula.txt
 touch start.sh && echo "screen -d -m -S" $dossier "java -XX:+UseConcMarkSweepGC -jar" $dossier".jar nogui" >> start.sh
 cd /home
+rm -f info-$dossier.txt
 touch info-$dossier.txt
 chmod 777 -R $dossier/
 chmod 777 -R $dossier/*
@@ -34,4 +35,4 @@ echo "Pour accéder à votre console taper la commande : screen -r" $dossier
 echo "Detail de l'installation :"
 echo "Dossier d'instalation : /home/"$dossier
 echo "Fichier de démarrage de : start.sh"
-echo "Un fichier info-bukkit.txt dans /home a été crée contenant les information afficher si dessue."
+echo "Un fichier info-"$dossier".txt dans /home a été crée contenant les information afficher si dessue."

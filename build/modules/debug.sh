@@ -18,7 +18,7 @@ chmod 777 -R $dossier/
 chmod 777 -R $dossier/*
 
 echo "Débogage terminer !"
-echo "Vous pouvez essayer relencer une installer du script pour essayer de corriger votre probléme"
+echo "Vous pouvez essayer relencer une installer du script pour essayer de corriger votre problème"
 echo "(note : une backup sera crée pour éviter de perdre vos fichier en cas de rpobléme)."
 echo "Si votre Problème n'est pas résolue aller voire"
 echo "https://github.com/zendrique/mc-script/issues"

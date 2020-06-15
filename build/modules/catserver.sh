@@ -32,16 +32,17 @@ mkdir mods
 cd /home
 chmod 777 -R $dossier/
 chmod 777 -R $dossier/*
-rm -f info-catserver.txt
-echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-catserver.txt
-echo "Pour accéder à votre console taper la commande : screen -r catserver" >> info-catserver.txt
-echo "Detail de l'installation" >> info-catserver.txt
-echo "Version du serveur : 1.12.2" >> info-catserver.txt
-echo "API : SpigotAPI, Forge" >> info-catserver.txt
-echo "Dossier d'instalation : /home/"$dossier >> info-catserver.txt
-echo "Dossier des mods : /home/"$dossier"/mods" >> info-catserver.txt
-echo "Dossier des plugins : /home/"$dossier"/plugins" >> info-catserver.txt
-echo "Fichier de démarrage de : start.sh" >> info-catserver.txt
+rm -f info-$dossier.txt
+touch info-$dossier.txt
+echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-$dossier.txt
+echo "Pour accéder à votre console taper la commande : screen -r catserver" >> info-$dossier.txt
+echo "Detail de l'installation" >> info-$dossier.txt
+echo "Version du serveur : 1.12.2" >> info-$dossier.txt
+echo "API : SpigotAPI, Forge" >> info-$dossier.txt
+echo "Dossier d'instalation : /home/"$dossier >> info-$dossier.txt
+echo "Dossier des mods : /home/"$dossier"/mods" >> info-$dossier.txt
+echo "Dossier des plugins : /home/"$dossier"/plugins" >> info-$dossier.txt
+echo "Fichier de démarrage de : start.sh" >> info-$dossier.txt
 clear
 echo "Terminer !"
 echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh"
@@ -53,4 +54,4 @@ echo "Dossier d'instalation : /home/"$dossier""
 echo "Dossier des mods : /home/"$dossier"/mods"
 echo "Dossier des plugins : /home/"$dossier"/plugins"
 echo "Fichier de démarrage de : start.sh"
-echo "Un fichier info-catserver.txt dans /home a été crée contenant les information afficher si dessue."
+echo "Un fichier info-"$dossier".txt dans /home a été crée contenant les information afficher si dessue."
