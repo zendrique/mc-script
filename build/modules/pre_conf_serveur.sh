@@ -2,7 +2,7 @@
 clear
 echo "Quel est le nom du dossier ou se trouve le serveur à configurer ?"
 read dossier
-cd $dossier
+cd /home/$dossier
 clear
 echo "Votre configuration actuelle sera supprimer voulez-vous continuer ? (1 ou 2)" 
 select crack in "Oui" "Non"; do
