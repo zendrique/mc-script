@@ -17,7 +17,7 @@ rm -f start.sh
 rm -f eula.txt
 rm -f mohist.jar
 echo "Téléchargement de mohist..."
-wget https://ci.codemc.io/job/Mohist-Community/job/Mohist-1.12.2/528/artifact/build/distributions/Mohist-1.12.2-2541029-server.jar
+wget https://ci.codemc.io/job/Mohist-Community/job/Mohist-1.12.2/557/artifact/build/distributions/Mohist-1.12.2-b704e64-server.jar
 mv Mohist-*-*-server.jar mohist.jar
 chmod 777 mohist.jar
 chmod 777 start.sh
