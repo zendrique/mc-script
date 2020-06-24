@@ -14,7 +14,7 @@ Vous devez disposer du packet : wget (sudo apt install wget)
 ```
 # Version prise en charge :
 ```
-Vanilla 1.16
+Vanilla 1.16.1
 Snapshot 1.16 release candidate 1
 Forge 1.15.2 et 1.12.2
 spigot
@@ -32,13 +32,13 @@ Waterfall 1.8 - 1.15.2
 OpenMod
 ```
 # Version Spigot et Bukkit
-Les version prise en charge par mc-script sont les version prise ne charge par BuildTools
+Les version prise en charge par mc-script sont les version prises en charge par BuildTools.
 Plus d'info > https://www.spigotmc.org/wiki/buildtools/
 
 # Fonction OpenMod
 La fonction OpenMod vous permet d'utiliser mc-script pour installer un serveur non prise en charge.
 A noter que il est possible qui vous devriez faire des operations manuelle avent de pourvoire commencer à utliser votre serveur.
-Cette fonction est notament utilise pour installer une version de sipogt, bukkit, paperspigot,... Non prise en charge par mc-script.
+Cette fonction est notament utilise pour installer une version de spigot, bukkit, paperspigot,... Non prise en charge par mc-script.
 Cette fonction n'inclue pas la prise en charge de forge et sponge mais incule certain de ces fork !
 
 # Processus de build
