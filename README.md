@@ -33,7 +33,7 @@ OpenMod
 ```
 # Version Spigot et Bukkit
 Les version prise en charge par mc-script sont les version prises en charge par BuildTools.
-Plus d'info > https://www.spigotmc.org/wiki/buildtools/ (Spigot & Bukkit 1.16.1 pris en charge)
+Plus d'info > https://www.spigotmc.org/wiki/buildtools/ (Spigot & Bukkit 1.16.1 prises en charge)
 
 # Fonction OpenMod
 La fonction OpenMod vous permet d'utiliser mc-script pour installer un serveur non prise en charge.
