@@ -29,7 +29,7 @@ read version
 java -jar BuildTools.jar --rev $version --compile craftbukkit
 mv craftbukkit-*.jar /home/$dossier
 cd /home/$dossier
-mv craftbukkit-* craftbukkit.jar
+mv craftbukkit-*.jar craftbukkit.jar
 touch eula.txt && echo "eula=true" >> eula.txt
 touch start.sh && echo "screen -d -m -S bukkit java -XX:+UseConcMarkSweepGC -jar craftbukkit.jar nogui" >> start.sh
 chmod 777 start.sh

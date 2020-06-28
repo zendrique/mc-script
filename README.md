@@ -19,7 +19,7 @@ Snapshot 1.16 release candidate 1
 Forge 1.15.2 et 1.12.2
 spigot
 bukkit
-paper 1.15.2
+paper 1.16.1
 tuinity 1.15.2
 Sponge 1.12.2
 CatServer 1.12.2
@@ -29,11 +29,12 @@ Bungeecord 1.8 - 1.16.1
 HexaCord 1.7.10 - 1.15.2
 Travertine 1.7.10
 Waterfall 1.8 - 1.16.1
+Mad-Pack
 OpenMod
 ```
 # Version Spigot et Bukkit
 Les version prise en charge par mc-script sont les version prises en charge par BuildTools.
-Plus d'info > https://www.spigotmc.org/wiki/buildtools/ (Spigot & Bukkit 1.16.1 prises en charge)
+Plus d'info > https://www.spigotmc.org/wiki/buildtools/
 
 # Fonction OpenMod
 La fonction OpenMod vous permet d'utiliser mc-script pour installer un serveur non prise en charge.
