@@ -1,4 +1,11 @@
 # Pre conf serveur
+echo "Voulez-vous effectuer une pre-configuration de notre serveur ? (1 ou 2)" 
+select crack in "Oui" "Non"; do
+    case $crack in
+        Oui ) break;;
+        Non ) exit break;;
+        esac
+done
 clear
 echo "Quel est le nom du dossier ou se trouve le serveur à configurer ?"
 read dossier
