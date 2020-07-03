@@ -6,10 +6,10 @@ if [ "$EUID" -ne 0 ]; then
     exit
 fi
 
-echo "[!] Mc-script sous lience GPL-3"
+echo "[!] Mc-script sous licence GPL-3"
 echo "[?] En utilisant mc-script vous acceptez la charte d'utilisation de Mojang Studio (eula) ? (1 ou 2)" 
-select yn in "Oui" "Non"; do
-    case $yn in
+select licence in "Oui" "Non"; do
+    case $licence in
         Oui ) break;;
         Non ) rm -R /home/mc-script && rm -f /home/installation.sh
                 exit;;
@@ -26,7 +26,7 @@ done
 clear
 {
     echo "[.] Téléchargement des dépendances..."
-    apt install nano screen git zip apt-transport-https ca-certificates dirmngr gnupg software-properties-common -y
+    apt install nano screen git zip apt-transport-https ca-certificates dirmngr gnupg software-properties-common cron -y
 } || {
     echo "[!] Une erreur est survenue lors du téléchargement des paquets ..."
     exit 1

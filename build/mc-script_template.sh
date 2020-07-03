@@ -26,84 +26,98 @@ echo "15 - Travertine"
 echo "16 - Hexacord"
 echo "17 - ModPack"
 echo "18 - OpenMod"
-echo "19 - Préconfigurer votre serveur (Bêta peux ne pas fonctionner !)"
-echo "20 - Débogage"
-echo "21 - Info Système"
-echo "22 - Quitter"
-echo "23 - Mettre à jour mc-script"
-echo "24 - Supprimer mc-script"
+echo "19 - Débogage"
+echo "20 - Info Système"
+echo "21 - Quitter"
+echo "22 - Mettre à jour mc-script"
+echo "23 - Supprimer mc-script"
 read installation
 case $installation in
 1) 
 <INSERT_vanilla>
+<INSERT_fini>
 ;;
 2) 
 <INSERT_snapshot>
+<INSERT_fini>
 ;;
 3) 
 <INSERT_spigot>
+<INSERT_fini>
 ;;
 4) 
 <INSERT_bukkit>
+<INSERT_fini>
 ;;
 5) 
 <INSERT_paperspigot>
+<INSERT_fini>
 ;;
 6)
 <INSERT_tuinity>
+<INSERT_fini>
 ;;
 7) 
 <INSERT_forge_1_15_2>
+<INSERT_fini>
 ;;
 8) 
 <INSERT_forge_1_12_2>
+<INSERT_fini>
 ;;
 9) 
 <INSERT_sponge>
+<INSERT_fini>
 ;;
 10) 
 <INSERT_catserver>
+<INSERT_fini>
 ;;
 11)
 <INSERT_mohist>
+<INSERT_fini>
 ;;
 12) 
 <INSERT_thermos>
+<INSERT_fini>
 ;;
 13) 
 <INSERT_bungeecord>
+<INSERT_fini>
 ;;
 14)
 <INSERT_waterfall>
+<INSERT_fini>
 ;;
 15)
 <INSERT_travertine>
+<INSERT_fini>
 ;;
 16)
 <INSERT_hexacord>
+<INSERT_fini>
 ;;
 17)
 <INSERT_modPack>
+<INSERT_fini>
 ;;
 18)
 <INSERT_openMod>
+<INSERT_fini>
 ;;
-19)
-<INSERT_pre_conf_serveur>
-;;
-20) 
+19) 
 <INSERT_debug>
 ;;
-21) 
+20) 
 <INSERT_system_info>
 ;;
-22)
+21)
 <INSERT_fermeture>
 ;;
-23)
+22)
 <INSERT_update>
 ;;
-24)
+23)
 <INSERT_remove>
 ;;
 *) 

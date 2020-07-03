@@ -31,7 +31,7 @@ mv spigot-*.jar /home/$dossier
 cd /home/$dossier
 mv spigot-*.jar spigot.jar
 touch eula.txt && echo "eula=true" >> eula.txt
-touch start.sh && echo "screen -d -m -S spigot java -XX:+UseConcMarkSweepGC -jar spigot.jar nogui" >> start.sh
+touch start.sh && echo "screen -d -m -S "$dossier" java -XX:+UseConcMarkSweepGC -jar spigot.jar nogui" >> start.sh
 chmod 777 start.sh
 chmod 777 spigot.jar
 echo "Nettoyage..."
@@ -42,7 +42,7 @@ chmod 777 -R $dossier/*
 rm -f info-$dossier.txt
 touch info-$dossier.txt
 echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-$dossier.txt
-echo "Pour accéder à votre console taper la commande : screen -r spigot" >> info-$dossier.txt
+echo "Pour accéder à votre console taper la commande : screen -r" $dossier >> info-$dossier.txt
 echo "Detail de l'installation :" >> info-$dossier.txt
 echo "Version du serveur :" $version >> info-$dossier.txt
 echo "API : SpigotAPI" >> info-$dossier.txt
@@ -51,7 +51,7 @@ echo "Fichier de démarrage de : start.sh" >> info-$dossier.txt
 clear
 echo "Terminer !"
 echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh"
-echo "Pour accéder à votre console taper la commande : screen -r spigot"
+echo "Pour accéder à votre console taper la commande : screen -r" $dossier
 echo "Detail de l'installation :"
 echo "Version du serveur :" $version
 echo "API : SpigotAPI"

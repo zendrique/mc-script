@@ -19,7 +19,7 @@ rm -f eula.txt
 echo "Téléchargement du serveur"
 wget https://launcher.mojang.com/v1/objects/7213e5ba8fe8d352141cf3dde907c26c43480092/server.jar
 touch eula.txt && echo "eula=true" >> eula.txt
-touch start.sh && echo "screen -d -m -S snapshot java -jar server.jar nogui" >> start.sh
+touch start.sh && echo "screen -d -m -S "$dossier" java -jar server.jar nogui" >> start.sh
 chmod 777 start.sh
 chmod 777 server.jar
 cd /home
@@ -28,7 +28,7 @@ chmod 77 -R $dossier/*
 rm -f info-$dossier.txt
 touch info-$dossier.txt
 echo "Pour démarrer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-$dossier.txt
-echo "Pour accéder à votre console taper la commande : screen -r snapshot" >> info-$dossier.txt
+echo "Pour accéder à votre console taper la commande : screen -r" $dossier >> info-$dossier.txt
 echo "Détail de l'installation :" >> info-$dossier.txt
 echo "Version du serveur : 1.16 release candidate 1" >> info-$dossier.txt
 echo "API : DatapackAPI" >> info-$dossier.txt
@@ -37,7 +37,7 @@ echo "Fichier de démarrage de : start.sh" >> info-$dossier.txt
 clear
 echo "Terminer !"
 echo "Pour démarrer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh"
-echo "Pour accéder à votre console taper la commande : screen -r snapshot"
+echo "Pour accéder à votre console taper la commande : screen -r" $dossier
 echo "Détail de l'installation :"
 echo "Version du serveur : 1.16 release candidate 1"
 echo "API : DatapackAPI"

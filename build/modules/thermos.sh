@@ -26,7 +26,7 @@ mv Thermos-1.7.10-*-server.jar Thermos.jar
 unzip libraries.zip
 rm -f libraries.zip
 touch eula.txt && echo "eula=true" >> eula.txt
-touch start.sh && echo "screen -d -m -S thermos java -jar Thermos.jar nogui" >> start.sh
+touch start.sh && echo "screen -d -m -S "$dossier" java -jar Thermos.jar nogui" >> start.sh
 chmod 777 Thermos.jar
 chmod 777 start.sh
 mkdir plugins
@@ -37,7 +37,7 @@ chmod 777 -R $dossier/*
 rm -f info-$dossier.txt
 touch info-$dossier.txt
 echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-$dossier.txt
-echo "Pour accéder à votre console taper la commande : screen -r thermos" >> info-$dossier.txt
+echo "Pour accéder à votre console taper la commande : screen -r" $dossier >> info-$dossier.txt
 echo "Detail de l'installation" >> info-$dossier.txt
 echo "Version du serveur : 1.7.10" >> info-$dossier.txt
 echo "API : SpigotAPI, Forge" >> info-$dossier.txt
@@ -48,7 +48,7 @@ echo "Fichier de démarrage de : start.sh" >> info-$dossier.txt
 clear
 echo "Terminer !"
 echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh"
-echo "Pour accéder à votre console taper la commande : screen -r thermos"
+echo "Pour accéder à votre console taper la commande : screen -r" $dossier
 echo "Detail de l'installation"
 echo "Version du serveur : 1.7.10"
 echo "API : SpigotAPI, Forge"

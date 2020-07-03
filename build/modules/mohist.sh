@@ -24,7 +24,7 @@ chmod 777 start.sh
 clear
 echo "Installation de mohist..."
 touch eula.txt && echo "eula=true" >> eula.txt
-touch start.sh && echo "screen -d -m -S mohist java -jar mohist.jar nogui" >> start.sh
+touch start.sh && echo "screen -d -m -S "$dossier" java -jar mohist.jar nogui" >> start.sh
 chmod 777 start.sh
 mkdir plugins
 mkdir mods
@@ -34,7 +34,7 @@ chmod 777 -R $dossier/*
 rm -f info-$dossier.txt
 touch info-$dossier.txt
 echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-$dossier.txt
-echo "Pour accéder à votre console taper la commande : screen -r mohist" >> info-$dossier.txt
+echo "Pour accéder à votre console taper la commande : screen -r" $dossier >> info-$dossier.txt
 echo "Detail de l'installation" >> info-$dossier.txt
 echo "Version du serveur : 1.12.2" >> info-$dossier.txt
 echo "API : SpigotAPI, Forge" >> info-$dossier.txt
@@ -45,7 +45,7 @@ echo "Fichier de démarrage de : start.sh" >> info-$dossier.txt
 clear
 echo "Terminer !"
 echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh"
-echo "Pour accéder à votre console taper la commande : screen -r mohist"
+echo "Pour accéder à votre console taper la commande : screen -r" $dossier
 echo "Detail de l'installation"
 echo "Version du serveur : 1.12.2"
 echo "API : SpigotAPI, Forge"

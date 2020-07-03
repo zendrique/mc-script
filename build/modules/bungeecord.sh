@@ -19,7 +19,7 @@ rm -f eula.txt
 wget https://ci.md-5.net/job/BungeeCord/lastSuccessfulBuild/artifact/bootstrap/target/BungeeCord.jar
 clear
 echo "Installation de BungeeCord..."
-touch start.sh && echo "screen -d -m -S bungeecord java -jar BungeeCord.jar nogui" >> start.sh
+touch start.sh && echo "screen -d -m -S "$dossier" java -jar BungeeCord.jar nogui" >> start.sh
 mkdir plugins
 chmod 777 BungeeCord.jar
 chmod 777 start.sh
@@ -29,7 +29,7 @@ chmod 777 -R $dossier/*
 rm -f info-$dossier.txt
 touch info-$dossier.txt
 echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-$dossier.txt
-echo "Pour accéder à votre console taper la commande : screen -r bungeecord" >> info-$dossier.txt
+echo "Pour accéder à votre console taper la commande : screen -r" $dossier >> info-$dossier.txt
 echo "Detail de l'installation" >> info-$dossier.txt
 echo "Version du proxy : 1.8 - 1.16.1" >> info-$dossier.txt
 echo "API : BungeeCord" >> info-$dossier.txt
@@ -39,7 +39,7 @@ echo "Fichier de démarrage de : start.sh" >> info-$dossier.txt
 clear
 echo "Terminer !"
 echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh"
-echo "Pour accéder à votre console taper la commande : screen -r bungeecord"
+echo "Pour accéder à votre console taper la commande : screen -r" $dossier
 echo "Detail de l'installation"
 echo "Version du proxy : 1.8 - 1.16.1"
 echo "API : BungeeCord"

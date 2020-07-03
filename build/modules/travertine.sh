@@ -19,7 +19,7 @@ rm -f eula.txt
 wget https://papermc.io/ci/job/Travertine/lastSuccessfulBuild/artifact/Travertine-Proxy/bootstrap/target/Travertine.jar
 clear
 echo "Installation de Travertine..."
-touch start.sh && echo "screen -d -m -S travertine java -jar Travertine.jar nogui" >> start.sh
+touch start.sh && echo "screen -d -m -S "$dossier" java -jar Travertine.jar nogui" >> start.sh
 chmod 777 Travertine.jar
 chmod 777 start.sh
 mkdir plugins
@@ -29,7 +29,7 @@ chmod 777 -R $dossier/*
 rm -f info-$dossier.txt
 touch info-$dossier.txt
 echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-$dossier.txt
-echo "Pour accéder à votre console taper la commande : screen -r travertine" info-$dossier.txt
+echo "Pour accéder à votre console taper la commande : screen -r" $dossier info-$dossier.txt
 echo "Detail de l'installation" info-$dossier.txt
 echo "Version du proxy : 1.7.10" info-$dossier.txt
 echo "API : BungeeCord" info-$dossier.txt
@@ -39,7 +39,7 @@ echo "Fichier de démarrage de : start.sh" info-$dossier.txt
 clear
 echo "Terminer !"
 echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh"
-echo "Pour accéder à votre console taper la commande : screen -r travertine"
+echo "Pour accéder à votre console taper la commande : screen -r" $dossier
 echo "Detail de l'installation"
 echo "Version du proxy : 1.7.10"
 echo "API : BungeeCord"

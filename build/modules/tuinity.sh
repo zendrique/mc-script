@@ -19,7 +19,7 @@ rm -f eula.txt
 echo "Téléchargement de tuinity..."
 wget https://ci.codemc.io/job/Spottedleaf/job/Tuinity/lastSuccessfulBuild/artifact/tuinity-paperclip.jar
 touch eula.txt && echo "eula=true" >> eula.txt
-touch start.sh && echo "screen -d -m -S tuinity java -XX:+UseConcMarkSweepGC -jar tuinity-paperclip.jar nogui" >> start.sh
+touch start.sh && echo "screen -d -m -S "$dossier" java -XX:+UseConcMarkSweepGC -jar tuinity-paperclip.jar nogui" >> start.sh
 chmod 777 start.sh
 chmod 777 tuinity-paperclip.jar
 cd /home
@@ -28,7 +28,7 @@ chmod 777 -R $dossier/*
 rm -f info-$dossier.txt
 touch info-$dossier.txt
 echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-$dossier.txt
-echo "Pour accéder à votre console taper la commande : screen -r tuinity" >> info-$dossier.txt
+echo "Pour accéder à votre console taper la commande : screen -r" $dossier >> info-$dossier.txt
 echo "Detail de l'installation :" >> info-$dossier.txt
 echo "Version du serveur : 1.15.2" >> info-$dossier.txt
 echo "API : SpigotAPI" >> info-$dossier.txt
@@ -37,7 +37,7 @@ echo "Fichier de démarrage de : start.sh" >> info-$dossier.txt
 clear
 echo "Terminer !"
 echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh"
-echo "Pour accéder à votre console taper la commande : screen -r tuinity"
+echo "Pour accéder à votre console taper la commande : screen -r" $dossier
 echo "Detail de l'installation :"
 echo "Version du serveur : 1.15.2"
 echo "API : SpigotAPI"
