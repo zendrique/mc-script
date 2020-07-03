@@ -9,8 +9,8 @@ done
 cd /home/$dossier
 clear
 echo "Votre configuration actuelle sera supprimer voulez-vous continuer ? (1 ou 2)" 
-select crack in "Oui" "Non"; do
-    case $crack in
+select validation in "Oui" "Non"; do
+    case $validation in
         Oui ) break;;
         Non ) exit break;;
         esac
@@ -142,8 +142,9 @@ done
 chmod 777 /home/$dossier/server.properties
 chmod 777 /home/$dossier/spigot.yml
 chmod 777 /home/$dossier/bukkit.yml
-clear
 cd /home
+rm -Rf $crack $bungeecord $pvp $nether $end $commandBlock $whiteList $structures $gamemode $difficulty $fly
+clear
 echo "Voici votre confuguration :" >> info-$dossier.txt
 echo "Dossier du serveur :" >> $dossier info-$dossier.txt
 echo "Port de votre serveur :" >> $port info-$dossier.txt
