@@ -14,23 +14,22 @@ echo "3 - Spigot"
 echo "4 - Bukkit"
 echo "5 - PaperSpigot"
 echo "6 - tuinity"
-echo "7 - Forge 1.15.2"
-echo "8 - Forge 1.12.2"
-echo "9 - Sponge"
-echo "10 - CatServer"
-echo "11 - Mohist"
-echo "12 - Thermos"
-echo "13 - Bungeecord"
-echo "14 - Waterfall"
-echo "15 - Travertine"
-echo "16 - Hexacord"
-echo "17 - ModPack"
-echo "18 - OpenMod"
-echo "19 - Débogage"
-echo "20 - Info Système"
-echo "21 - Quitter"
-echo "22 - Mettre à jour mc-script"
-echo "23 - Supprimer mc-script"
+echo "7 - Forge"
+echo "8 - Sponge"
+echo "9 - CatServer"
+echo "10 - Mohist"
+echo "11 - Thermos"
+echo "12 - Bungeecord"
+echo "13 - Waterfall"
+echo "14 - Travertine"
+echo "15 - Hexacord"
+echo "16 - ModPack"
+echo "17 - OpenMod"
+echo "18 - Débogage"
+echo "19 - Info Système"
+echo "20 - Quitter"
+echo "21 - Mettre à jour mc-script"
+echo "22 - Supprimer mc-script"
 read installation
 case $installation in
 1) 
@@ -58,66 +57,63 @@ case $installation in
 <INSERT_fini>
 ;;
 7) 
-<INSERT_forge_1_15_2>
+<INSERT_forge>
 <INSERT_fini>
+;;
 ;;
 8) 
-<INSERT_forge_1_12_2>
-<INSERT_fini>
-;;
-9) 
 <INSERT_sponge>
 <INSERT_fini>
 ;;
-10) 
+9) 
 <INSERT_catserver>
 <INSERT_fini>
 ;;
-11)
+10)
 <INSERT_mohist>
 <INSERT_fini>
 ;;
-12) 
+11) 
 <INSERT_thermos>
 <INSERT_fini>
 ;;
-13) 
+12) 
 <INSERT_bungeecord>
 <INSERT_fini>
 ;;
-14)
+13)
 <INSERT_waterfall>
 <INSERT_fini>
 ;;
-15)
+14)
 <INSERT_travertine>
 <INSERT_fini>
 ;;
-16)
+15)
 <INSERT_hexacord>
 <INSERT_fini>
 ;;
-17)
+16)
 <INSERT_modPack>
 <INSERT_fini>
 ;;
-18)
+17)
 <INSERT_openMod>
 <INSERT_fini>
 ;;
-19) 
+18) 
 <INSERT_debug>
 ;;
-20) 
+19) 
 <INSERT_system_info>
 ;;
-21)
+20)
 <INSERT_fermeture>
 ;;
-22)
+21)
 <INSERT_update>
 ;;
-23)
+22)
 <INSERT_remove>
 ;;
 *) 

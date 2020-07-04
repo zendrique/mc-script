@@ -6,8 +6,8 @@ echo "Dans quel dossier voulez-vous installer votre serveur ? (ex: serveur1)"
 read dossier
 echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer et les autres sauvegardes écrasées s’il en existe ctrl + c pour annuler"
 sleep 4
-rm -f waterfall.zip
-zip -r waterfall.zip $dossier/
+rm -f $dossier-backup.zip
+zip -r $dossier-backup.zip $dossier/
 clear
 mkdir $dossier
 chmod 777 $dossier/

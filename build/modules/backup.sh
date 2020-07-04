@@ -1,4 +1,5 @@
 # Backup
+# Module non compiler car en développement !
 echo "Voulez-vous crée une sauvegarde automatique de votre serveur une fois par jour ?"
 select backup in "Oui" "Non"; do
     case $backup in
