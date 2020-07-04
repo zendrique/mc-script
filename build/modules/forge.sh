@@ -64,8 +64,7 @@ select version in "1.15.2" "1.12.2" "1.10.2" "autre"; do
         echo "Dossier d'instalation : /home/"$dossier
         echo "Dossier des mods : /home/"$dossier"/mods"
         echo "Fichier de démarrage de : start.sh"
-        echo "Un fichier info-"$dossier".txt dans /home a été crée contenant les information afficher si dessue."
-        break;;
+        echo "Un fichier info-"$dossier".txt dans /home a été crée contenant les information afficher si dessue." break;;
 
         1.12.2 ) 
         clear
@@ -126,8 +125,7 @@ select version in "1.15.2" "1.12.2" "1.10.2" "autre"; do
         echo "API : Forge"
         echo "Dossier d'instalation : /home/"$dossier
         echo "Fichier de démarrage de : start.sh"
-        echo "Un fichier info-"$dossier".txt dans /home a été crée contenant les information afficher si dessue."
-        break;;
+        echo "Un fichier info-"$dossier".txt dans /home a été crée contenant les information afficher si dessue." break;;
 
         1.10.2 ) 
         clear
@@ -188,8 +186,7 @@ select version in "1.15.2" "1.12.2" "1.10.2" "autre"; do
         echo "API : Forge"
         echo "Dossier d'instalation : /home/"$dossier
         echo "Fichier de démarrage de : start.sh"
-        echo "Un fichier info-"$dossier".txt dans /home a été crée contenant les information afficher si dessue."
-        break;;
+        echo "Un fichier info-"$dossier".txt dans /home a été crée contenant les information afficher si dessue." break;;
 
         autre ) 
         clear
@@ -251,7 +248,6 @@ select version in "1.15.2" "1.12.2" "1.10.2" "autre"; do
         echo "API : Forge"
         echo "Dossier d'instalation : /home/"$dossier
         echo "Fichier de démarrage de : start.sh"
-        echo "Un fichier info-"$dossier".txt dans /home a été crée contenant les information afficher si dessue."
-        break;;
+        echo "Un fichier info-"$dossier".txt dans /home a été crée contenant les information afficher si dessue." break;;
         esac
 done
