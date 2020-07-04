@@ -60,7 +60,6 @@ case $installation in
 <INSERT_forge>
 <INSERT_fini>
 ;;
-;;
 8) 
 <INSERT_sponge>
 <INSERT_fini>

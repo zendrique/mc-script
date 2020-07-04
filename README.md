@@ -16,7 +16,7 @@ Vous devez disposer du packet : wget (sudo apt install wget)
 ```
 Vanilla 1.16.1
 Snapshot 1.16 release candidate 1
-Forge 1.15.2 et 1.12.2
+Forge toutes versions
 spigot
 bukkit
 paper 1.16.1
