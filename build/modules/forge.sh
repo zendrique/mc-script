@@ -1,6 +1,6 @@
 # Forge
 clear
-echo "Quel version de forge voulez-vous installer ? ? (1, 2, 3 uo 4)" 
+echo "Quel version de forge voulez-vous installer ? (1, 2, 3 uo 4)" 
 select version in "1.15.2" "1.12.2" "1.10.2" "autre"; do
     case $version in
         1.15.2 ) 
@@ -211,12 +211,13 @@ select version in "1.15.2" "1.12.2" "1.10.2" "autre"; do
         mkdir mods
         chmod 777 mods/
         chmod 777 -R mods/
+        clear
         echo "Merci d'indiquer le lien de tléchargement direct de l'installateur non windows de forge."
         read lien
         wget $lien
         mv forge-*-installer.jar forge-installer.jar
         clear
-        echo "Installation de forge 1.12.2"
+        echo "Installation de forge"
         java -jar forge-installer.jar --installServer
         rm -f forge-installer.jar
         mv forge-*.jar forge.jar

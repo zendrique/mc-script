@@ -15,7 +15,7 @@ Vous devez disposer du packet : wget (sudo apt install wget)
 # Version prise en charge :
 ```
 Vanilla 1.16.1
-Snapshot 1.16 release candidate 1
+Snapshot 20w27a
 Forge toutes versions
 spigot
 bukkit
