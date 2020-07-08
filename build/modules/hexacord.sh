@@ -1,6 +1,6 @@
 # HexaCord
 
-version_hexacord=1.7.10 - 1.15.1
+version_hexacord="1.7.10 - 1.16.1"
 hexacord_download=https://github.com/HexagonMC/BungeeCord/releases/download/v262/BungeeCord.jar
 
 clear
