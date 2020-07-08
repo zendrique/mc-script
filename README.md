@@ -15,7 +15,7 @@ Vous devez disposer du packet : wget (sudo apt install wget)
 # Version prise en charge :
 ```
 Vanilla 1.16.1
-Snapshot 20w27a
+Snapshot 20w28a
 Forge toutes versions
 spigot
 bukkit
@@ -26,7 +26,7 @@ CatServer 1.12.2
 Mohist 1.12.2
 Thermos 1.7.10
 Bungeecord 1.8 - 1.16.1
-HexaCord 1.7.10 - 1.15.2
+HexaCord 1.7.10 - 1.16.1
 Travertine 1.7.10
 Waterfall 1.8 - 1.16.1
 Mad-Pack

@@ -1,4 +1,8 @@
 # Waterfall
+
+version_waterfall=1.8 - 1.16.1
+waterfall_download=https://papermc.io/ci/job/Waterfall/lastSuccessfulBuild/artifact/Waterfall-Proxy/bootstrap/target/Waterfall.jar
+
 clear
 echo "Instalation de : Waterfall"
 cd /home
@@ -16,7 +20,7 @@ cd $dossier
 rm -f Waterfall.jar
 rm -f start.sh
 rm -f eula.txt
-wget https://papermc.io/ci/job/Waterfall/lastSuccessfulBuild/artifact/Waterfall-Proxy/bootstrap/target/Waterfall.jar
+wget $waterfall_download
 clear
 echo "Installation de Waterfall..."
 touch start.sh && echo "screen -d -m -S "$dossier" java -jar Waterfall.jar nogui" >> start.sh
@@ -31,7 +35,7 @@ touch info-$dossier.txt
 echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-$dossier.txt
 echo "Pour accéder à votre console taper la commande : screen -r" $dossier >> info-$dossier.txt
 echo "Detail de l'installation" >> info-$dossier.txt
-echo "Version du proxy : 1.8 - 1.16.1" >> info-$dossier.txt
+echo "Version du proxy :" $version_waterfall >> info-$dossier.txt
 echo "API : BungeeCord" >> info-$dossier.txt
 echo "Dossier d'instalation : /home/"$dossier >> info-$dossier.txt
 echo "Dossier des plugins : /home/"$dossier"/plugins" >> info-$dossier.txt
@@ -41,7 +45,7 @@ echo "Terminer !"
 echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r" $dossier
 echo "Detail de l'installation"
-echo "Version du proxy : 1.8 - 1.16.1"
+echo "Version du proxy :" $version_waterfall
 echo "API : BungeeCord"
 echo "Dossier d'instalation : /home/"$dossier
 echo "Dossier des plugins : /home/"$dossier"/plugins"

@@ -1,4 +1,8 @@
 # CatServer
+
+version_CatServer=1.12.2
+CatServer_download=https://github.com/Luohuayu/CatServer/releases/download/20.07.05/CatServer-8d44800-universal.jar
+
 clear
 echo "Instalation de : CatServer"
 cd /home
@@ -18,7 +22,7 @@ rm -f eula.txt
 rm -f catserver.jar
 rm -f catserver-*-universal.jar
 echo "Téléchargement de CatServer..."
-wget https://github.com/Luohuayu/CatServer/releases/download/20.06.20/CatServer-a54e4d8-universal.jar
+wget $CatServer_download
 mv CatServer-*-universal.jar CatServer.jar
 chmod 777 CatServer.jar
 clear
@@ -37,7 +41,7 @@ touch info-$dossier.txt
 echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-$dossier.txt
 echo "Pour accéder à votre console taper la commande : screen -r" $dossier >> info-$dossier.txt
 echo "Detail de l'installation" >> info-$dossier.txt
-echo "Version du serveur : 1.12.2" >> info-$dossier.txt
+echo "Version du serveur :" $version_CatServer >> info-$dossier.txt
 echo "API : SpigotAPI, Forge" >> info-$dossier.txt
 echo "Dossier d'instalation : /home/"$dossier >> info-$dossier.txt
 echo "Dossier des mods : /home/"$dossier"/mods" >> info-$dossier.txt
@@ -48,7 +52,7 @@ echo "Terminer !"
 echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r" $dossier
 echo "Detail de l'installation"
-echo "Version du serveur : 1.12.2"
+echo "Version du serveur :" $version_CatServer
 echo "API : SpigotAPI, Forge"
 echo "Dossier d'instalation : /home/"$dossier""
 echo "Dossier des mods : /home/"$dossier"/mods"

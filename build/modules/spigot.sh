@@ -1,4 +1,7 @@
 # Spigot
+
+spigot_download=https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
+
 clear
 echo "Installation du serveur : Spigot"
 cd /home
@@ -19,7 +22,7 @@ rm -f eula.txt
 mkdir buildtools
 cd buildtools
 echo "Téléchargement de BuildTools..."
-wget https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
+wget $spigot_download
 git config --global --unset core.autocrlf
 clear
 echo "Pour connaitrer les versions prise ne charge reférer vous à cette page :"

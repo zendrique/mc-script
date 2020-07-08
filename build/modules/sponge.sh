@@ -1,4 +1,9 @@
 # Sponge
+
+version_sponge=1.12.2
+sponge_download=https://repo.spongepowered.org/maven/org/spongepowered/spongeforge/1.12.2-2838-7.2.3/spongeforge-1.12.2-2838-7.2.3.jar
+forge_sponge_download=https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.12.2-14.23.5.2854/forge-1.12.2-14.23.5.2854-installer.jar
+
 clear
 echo "Instalation de : Sponge Forge"
 cd /home
@@ -19,7 +24,7 @@ rm -f forge.jar
 rm -f forge-*.jar
 rm -R libraries
 echo "Téléchargement de forge"
-wget https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.12.2-14.23.5.2854/forge-1.12.2-14.23.5.2854-installer.jar
+wget $forge_sponge_download
 mv forge-*-installer.jar forge-installer.jar
 clear
 echo "Installation de forge"
@@ -40,7 +45,7 @@ chmod 777 mods/
 chmod 777 -R mods/
 cd mods
 rm -f spongeforge-*.jar
-wget https://repo.spongepowered.org/maven/org/spongepowered/spongeforge/1.12.2-2838-7.2.2/spongeforge-1.12.2-2838-7.2.2.jar
+wget $sponge_download
 mv spongeforge-*.jar sponge.jar
 chmod 777 sponge.jar
 mkdir plugins
@@ -54,7 +59,7 @@ touch info-$dossier.txt
 echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-$dossier.txt
 echo "Pour accéder à votre console taper la commande : screen -r" $dossier >> info-$dossier.txt
 echo "Detail de l'installation" >> info-$dossier.txt
-echo "Version du serveur : 1.12.2" >> info-$dossier.txt
+echo "Version du serveur :" $version_sponge >> info-$dossier.txt
 echo "API : Sponge Forge, Forge" >> info-$dossier.txt
 echo "Dossier d'instalation : /home/"$dossier >> info-$dossier.txt
 echo "Dossier des mods : /home/"$dossier"/mods" >> info-$dossier.txt
@@ -65,7 +70,7 @@ echo "Terminer !"
 echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r" $dossier
 echo "Detail de l'installation"
-echo "Version du serveur : 1.12.2"
+echo "Version du serveur :" $version_sponge
 echo "API : Sponge Forge, Forge"
 echo "Dossier d'instalation : /home/"$dossier
 echo "Dossier des mods : /home/$dossier/mods"

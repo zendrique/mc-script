@@ -8,8 +8,6 @@ select start in "Oui" "Non"; do
         esac
 done
 cd /home/$dossier
-mkdir temp
-cd temp
 clear
 echo "Votre configuration actuelle sera supprimer voulez-vous continuer ? (1 ou 2)" 
 select validation in "Oui" "Non"; do
@@ -145,10 +143,9 @@ done
 chmod 777 /home/$dossier/server.properties
 chmod 777 /home/$dossier/spigot.yml
 chmod 777 /home/$dossier/bukkit.yml
-cd /home
-rm -Rf $crack $bungeecord $pvp $nether $end $commandBlock $whiteList $structures $gamemode $difficulty $fly
 cd /home/$dossier
-rm -R temp
+rm -Rf $crack $bungeecord $pvp $nether $end $commandBlock $whiteList $structures $gamemode $difficulty $fly
+cd /home
 clear
 echo "Voici votre confuguration :" >> info-$dossier.txt
 echo "Dossier du serveur :" >> $dossier info-$dossier.txt

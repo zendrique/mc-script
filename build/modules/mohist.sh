@@ -1,4 +1,8 @@
 # Mohist
+
+version_mohist=1.12.2
+mohist_download=https://ci.codemc.io/job/Mohist-Community/job/Mohist-1.12.2/586/artifact/build/distributions/Mohist-1.12.2-81a1939-server.jar
+
 clear
 echo "Instalation de : Mohist"
 cd /home
@@ -17,7 +21,7 @@ rm -f start.sh
 rm -f eula.txt
 rm -f mohist.jar
 echo "Téléchargement de mohist..."
-wget https://ci.codemc.io/job/Mohist-Community/job/Mohist-1.12.2/557/artifact/build/distributions/Mohist-1.12.2-b704e64-server.jar
+wget $mohist_download
 mv Mohist-*-*-server.jar mohist.jar
 chmod 777 mohist.jar
 chmod 777 start.sh
@@ -36,7 +40,7 @@ touch info-$dossier.txt
 echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-$dossier.txt
 echo "Pour accéder à votre console taper la commande : screen -r" $dossier >> info-$dossier.txt
 echo "Detail de l'installation" >> info-$dossier.txt
-echo "Version du serveur : 1.12.2" >> info-$dossier.txt
+echo "Version du serveur :" $version_mohist >> info-$dossier.txt
 echo "API : SpigotAPI, Forge" >> info-$dossier.txt
 echo "Dossier d'instalation : /home/"$dossier >> info-$dossier.txt
 echo "Dossier des mods : /home/"$dossier"/mods" >> info-$dossier.txt
@@ -47,7 +51,7 @@ echo "Terminer !"
 echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r" $dossier
 echo "Detail de l'installation"
-echo "Version du serveur : 1.12.2"
+echo "Version du serveur :" $version_mohist
 echo "API : SpigotAPI, Forge"
 echo "Dossier d'instalation : /home/"$dossier
 echo "Dossier des mods : /home/"$dossier"/mods"

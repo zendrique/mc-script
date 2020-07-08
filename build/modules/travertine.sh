@@ -1,4 +1,8 @@
 # Travertine
+
+version_travertine=1.7.10
+travertine_download=https://papermc.io/ci/job/Travertine/lastSuccessfulBuild/artifact/Travertine-Proxy/bootstrap/target/Travertine.jar
+
 clear
 echo "Instalation de : Travertine"
 cd /home
@@ -16,7 +20,7 @@ cd $dossier
 rm -f Travertine.jar
 rm -f start.sh
 rm -f eula.txt
-wget https://papermc.io/ci/job/Travertine/lastSuccessfulBuild/artifact/Travertine-Proxy/bootstrap/target/Travertine.jar
+wget $travertine_download
 clear
 echo "Installation de Travertine..."
 touch start.sh && echo "screen -d -m -S "$dossier" java -jar Travertine.jar nogui" >> start.sh
@@ -31,7 +35,7 @@ touch info-$dossier.txt
 echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-$dossier.txt
 echo "Pour accéder à votre console taper la commande : screen -r" $dossier info-$dossier.txt
 echo "Detail de l'installation" info-$dossier.txt
-echo "Version du proxy : 1.7.10" info-$dossier.txt
+echo "Version du proxy :" $version_travertine info-$dossier.txt
 echo "API : BungeeCord" info-$dossier.txt
 echo "Dossier d'instalation : /home/"$dossier info-$dossier.txt
 echo "Dossier des plugins : /home/"$dossier"/plugins" info-$dossier.txt
@@ -41,7 +45,7 @@ echo "Terminer !"
 echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r" $dossier
 echo "Detail de l'installation"
-echo "Version du proxy : 1.7.10"
+echo "Version du proxy :" $version_travertine
 echo "API : BungeeCord"
 echo "Dossier d'instalation : /home/"$dossier
 echo "Dossier des plugins : /home/"$dossier"/plugins"

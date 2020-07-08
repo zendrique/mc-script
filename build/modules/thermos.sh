@@ -1,4 +1,9 @@
 # Thermos
+
+version_thermors=1.7.10
+thermos_download=https://github.com/CyberdyneCC/Thermos/releases/download/58/Thermos-1.7.10-1614-server.jar
+libraries_thermos_download=https://github.com/CyberdyneCC/Thermos/releases/download/58/Thermos-1.7.10-1614-server.jar
+
 clear
 echo "Instalation de : Thermos"
 cd /home
@@ -20,8 +25,8 @@ rm -f Thermos.jar
 rm -R libraries
 clear
 echo "Installation de Thermos..."
-wget https://github.com/CyberdyneCC/Thermos/releases/download/58/Thermos-1.7.10-1614-server.jar
-wget https://github.com/CyberdyneCC/Thermos/releases/download/58/libraries.zip
+wget $thermos_download
+wget $libraries_thermos_download
 mv Thermos-1.7.10-*-server.jar Thermos.jar
 unzip libraries.zip
 rm -f libraries.zip
@@ -39,7 +44,7 @@ touch info-$dossier.txt
 echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-$dossier.txt
 echo "Pour accéder à votre console taper la commande : screen -r" $dossier >> info-$dossier.txt
 echo "Detail de l'installation" >> info-$dossier.txt
-echo "Version du serveur : 1.7.10" >> info-$dossier.txt
+echo "Version du serveur :" $version_thermors >> info-$dossier.txt
 echo "API : SpigotAPI, Forge" >> info-$dossier.txt
 echo "Dossier d'instalation : /home/"$dossier >> info-$dossier.txt
 echo "Dossier des mods : /home/"$dossier"/mods" >> info-$dossier.txt
@@ -50,7 +55,7 @@ echo "Terminer !"
 echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r" $dossier
 echo "Detail de l'installation"
-echo "Version du serveur : 1.7.10"
+echo "Version du serveur :" $version_thermors
 echo "API : SpigotAPI, Forge"
 echo "Dossier d'instalation : /home/"$dossier
 echo "Dossier des mods : /home/"$dossier"/mods"

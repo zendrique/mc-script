@@ -1,4 +1,8 @@
 # Bungeecord
+
+version_bungeecord=1.8 - 1.16.1
+bungeecord_download=https://ci.md-5.net/job/BungeeCord/lastSuccessfulBuild/artifact/bootstrap/target/BungeeCord.jar
+
 clear
 echo "Instalation de : BungeeCord"
 cd /home
@@ -16,7 +20,7 @@ cd $dossier
 rm -f BungeeCord.jar
 rm -f start.sh
 rm -f eula.txt
-wget https://ci.md-5.net/job/BungeeCord/lastSuccessfulBuild/artifact/bootstrap/target/BungeeCord.jar
+wget $bungeecord_download
 clear
 echo "Installation de BungeeCord..."
 touch start.sh && echo "screen -d -m -S "$dossier" java -jar BungeeCord.jar nogui" >> start.sh
@@ -31,7 +35,7 @@ touch info-$dossier.txt
 echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-$dossier.txt
 echo "Pour accéder à votre console taper la commande : screen -r" $dossier >> info-$dossier.txt
 echo "Detail de l'installation" >> info-$dossier.txt
-echo "Version du proxy : 1.8 - 1.16.1" >> info-$dossier.txt
+echo "Version du proxy :" $version_bungeecord >> info-$dossier.txt
 echo "API : BungeeCord" >> info-$dossier.txt
 echo "Dossier d'instalation : /home/"$dossier >> info-$dossier.txt
 echo "Dossier des plugins : /home/"$dossier"/plugins" >> info-$dossier.txt
@@ -41,7 +45,7 @@ echo "Terminer !"
 echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r" $dossier
 echo "Detail de l'installation"
-echo "Version du proxy : 1.8 - 1.16.1"
+echo "Version du proxy :" $version_bungeecord
 echo "API : BungeeCord"
 echo "Dossier d'instalation : /home/"$dossier
 echo "Dossier des plugins : /home/"$dossier"/plugins"
