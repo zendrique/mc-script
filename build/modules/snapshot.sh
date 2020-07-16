@@ -1,6 +1,6 @@
 # Snapshot
 
-version_snapshot=20w19a
+version_snapshot=20w29a
 snapshot_download=https://launcher.mojang.com/v1/objects/ea9a65a38e000fe76b51fa36e923c09d5d8fa473/server.jar
 
 clear
