@@ -14,7 +14,7 @@ Vous devez disposer du packet : wget (sudo apt install wget)
 ```
 # Version prise en charge :
 ```
-Vanilla 1.16.1
+Vanilla 1.16.2
 Snapshot 1.16.2 Release Candidate 2
 Forge toutes versions
 spigot
