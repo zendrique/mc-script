@@ -25,7 +25,7 @@ Sponge 1.12.2
 CatServer 1.12.2
 Mohist 1.12.2
 Thermos 1.7.10
-Bungeecord 1.8 - 1.16.1
+Bungeecord 1.8 - 1.16.2
 HexaCord 1.7.10 - 1.16.1
 Travertine 1.7.10
 Waterfall 1.8 - 1.16.1
