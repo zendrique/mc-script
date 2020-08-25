@@ -1,7 +1,7 @@
 # Mohist
 
 version_mohist=1.12.2
-mohist_download=https://ci.codemc.io/job/Mohist-Community/job/Mohist-1.12.2/586/artifact/build/distributions/Mohist-1.12.2-81a1939-server.jar
+mohist_download=https://ci.codemc.io/job/Mohist-Community/job/Mohist-1.12.2/671/artifact/build/distributions/Mohist-1.12.2-905b5f8-server.jar
 
 clear
 echo "Instalation de : Mohist"

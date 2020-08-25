@@ -1,6 +1,6 @@
 # Tuinity
 
-version_tuinity=1.15.2
+version_tuinity=1.16.1
 tuinity_download=https://ci.codemc.io/job/Spottedleaf/job/Tuinity/lastSuccessfulBuild/artifact/tuinity-paperclip.jar
 
 clear

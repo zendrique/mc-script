@@ -1,7 +1,7 @@
 # CatServer
 
 version_CatServer=1.12.2
-CatServer_download=https://github.com/Luohuayu/CatServer/releases/download/20.07.05/CatServer-8d44800-universal.jar
+CatServer_download=https://github.com/Luohuayu/CatServer/releases/download/20.08.17/CatServer-20c1883-universal.jar
 
 clear
 echo "Instalation de : CatServer"
