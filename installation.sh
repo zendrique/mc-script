@@ -24,7 +24,7 @@ select yn in "Oui" "Non"; do
     esac
 done
 clear
-echo "[?] Voulez-vous  installez fail2ban (pour renforcer la sécuriter) ? (1 ou 2)" 
+echo "[?] Voulez-vous installez fail2ban (pour renforcer la sécuritée) ? (1 ou 2)" 
 select yn in "Oui" "Non"; do
     case $yn in
         Oui ) apt update && apt install fail2ban -y; break;;
