@@ -1,6 +1,6 @@
 # PaperSpigot
 
-version_paperspigot=1.16.2
+version_paperspigot=1.16.1
 paperspigot_download=https://papermc.io/ci/job/Paper-1.16/lastSuccessfulBuild/artifact/paperclip.jar
 
 clear

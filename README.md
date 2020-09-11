@@ -19,16 +19,16 @@ Snapshot 1.16.3 Release Candidate 1
 Forge toutes versions
 spigot
 bukkit
-paper 1.16.2
-tuinity 1.16.1
+paper 1.16.3
+tuinity 1.16.3
 Sponge 1.12.2
 CatServer 1.12.2
 Mohist 1.12.2
 Thermos 1.7.10
-Bungeecord 1.8 - 1.16.2
+Bungeecord 1.8 - 1.16.3
 HexaCord 1.7.10 - 1.16.2
 Travertine 1.7.10
-Waterfall 1.8 - 1.16.2
+Waterfall 1.8 - 1.16.3
 Mad-Pack
 OpenMod
 ```
