@@ -1,8 +1,8 @@
 # Forge
 
-forge_16_download=https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.16.3-34.0.1/forge-1.16.3-34.0.1-installer.jar
+forge_16_download=https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.16.3-34.1.0/forge-1.16.3-34.1.0-installer.jar
 
-forge_15_download=https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.15.2-31.2.37/forge-1.15.2-31.2.37-installer.jar
+forge_15_download=https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.15.2-31.2.43/forge-1.15.2-31.2.43-installer.jar
 
 forge_12_download=https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.12.2-14.23.5.2854/forge-1.12.2-14.23.5.2854-installer.jar
 
