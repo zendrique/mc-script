@@ -11,6 +11,6 @@ select remove in "Oui" "Non"; do
         echo "Contributeur Yadasko https://github.com/Yadasko"
         echo "Fermture..."
         exit break;;
-        Non ) mc-script break;;
+        Non ) bash /opt/mc-script/mc-script.sh break;;
         esac
 done

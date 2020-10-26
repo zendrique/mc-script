@@ -66,5 +66,5 @@ bash build/build_standalone_script.sh
 echo "[.] Creation d'un alias"
 alias mc-script='bash /opt/mc-script/mc-script.sh'
 echo "[.] Démarage de mc-script"
-mc-script
+bash /opt/mc-script/mc-script.sh
 exit

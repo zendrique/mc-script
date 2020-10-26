@@ -9,7 +9,7 @@ echo "Retour au menue dans 10 secondes."
 echo "Voulez-vous continuer ? (1 ou 2)"
 select remove in "Oui" "Non"; do
     case $remove in
-        Oui ) mc-script
+        Oui ) bash /opt/mc-script/mc-script.sh
         exit break;;
         Non ) exit break;;
         esac
