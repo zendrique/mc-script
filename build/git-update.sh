@@ -7,7 +7,7 @@ if [ "$EUID" -ne 0 ]; then
     exit
 fi
 echo "Mise à jour du dépôt..."
-cd /home
+cd /opt
 rm -R mc-script
 git clone https://github.com/zendrique/mc-script
 echo "Fini !"

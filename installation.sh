@@ -11,7 +11,7 @@ echo "[?] En utilisant mc-script vous acceptez la charte d'utilisation de Mojang
 select licence in "Oui" "Non"; do
     case $licence in
         Oui ) break;;
-        Non ) rm -R /home/mc-script && rm -f /home/installation.sh
+        Non ) rm -R /opt/mc-script
                 exit;;
     esac
 done
@@ -61,17 +61,11 @@ clear
 
 clear
 echo "[.] Compilation de mc-script"
-cd /home/mc-script
+cd /opt/mc-script
 bash build/build_standalone_script.sh
-mv mc-script.sh /home
 clear
-echo "[.] Netoyage"
-cd /home
-rm -R mc-script/
-rm -f installation.sh
-clear
+echo "[.] Creation d'un alias"
+alias mc-script='bash /opt/mc-script/mc-script.sh'
 echo "[.] Démarage de mc-script"
-cd /home
-dos2unix mc-script.sh
-bash mc-script.sh
+mc-script
 exit
