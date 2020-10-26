@@ -63,7 +63,6 @@ clear
 echo "[.] Compilation de mc-script"
 cd /opt/mc-script
 bash build/build_standalone_script.sh
-clear
 echo "[.] Creation d'un alias"
 alias mc-script='bash /opt/mc-script/mc-script.sh'
 echo "[.] Démarage de mc-script"

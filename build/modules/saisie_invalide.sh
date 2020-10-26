@@ -1,6 +1,7 @@
 # Saisie invalide
 clear
-echo "404 Not found. erreur de saisie !"
+echo "404 Not found."
+echo "Erreur de saisie !"
 sleep 3
-bash /home/mc-script.sh
+mc-script
 exit
