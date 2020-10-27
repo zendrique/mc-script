@@ -10,7 +10,7 @@ select remove in "Oui" "Non"; do
         echo "Script par zendrique https://github.com/zendrique"
         echo "Contributeur Yadasko https://github.com/Yadasko"
         echo "Fermture..."
-        exit break;;
+        break;;
         Non ) bash /opt/mc-script/mc-script.sh break;;
         esac
 done
