@@ -8,18 +8,21 @@ echo "Instalation de : Travertine"
 cd /home
 echo "Dans quel dossier voulez-vous installer votre serveur ? (ex: serveur1)"
 read dossier
-echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer et les autres sauvegardes écrasées s’il en existe ctrl + c pour annuler"
-sleep 4
-rm -f $dossier-backup.zip
+echo "[?] Une sauvegarde va être crée au nom de "$dossier"-backup.zip ci un fichier ou dossier portant déja se nom, il sera écrasé, voulez-vous continuer ? (1 ou 2)" 
+select sauvegarde in "Oui" "Non"; do
+    case $sauvegarde in
+        Oui ) break;;
+        Non ) exit; break;;
+rm $dossier-backup.zip
 zip -r $dossier-backup.zip $dossier/
 clear
 mkdir $dossier
 chmod 777 $dossier/
 chmod 777 -R $dossier/
 cd $dossier
-rm -f Travertine.jar
-rm -f start.sh
-rm -f eula.txt
+rm Travertine.jar
+rm start.sh
+rm eula.txt
 wget $travertine_download
 clear
 echo "Installation de Travertine..."
@@ -29,8 +32,7 @@ chmod 777 start.sh
 mkdir plugins
 cd /home
 chmod 777 -R $dossier/
-chmod 777 -R $dossier/*
-rm -f info-$dossier.txt
+rm info-$dossier.txt
 touch info-$dossier.txt
 echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-$dossier.txt
 echo "Pour accéder à votre console taper la commande : screen -r" $dossier info-$dossier.txt

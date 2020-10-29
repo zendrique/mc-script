@@ -11,6 +11,6 @@ select remove in "Oui" "Non"; do
     case $remove in
         Oui ) bash /opt/mc-script/mc-script.sh
         exit break;;
-        Non ) exit break;;
+        Non ) exit; break;;
         esac
 done

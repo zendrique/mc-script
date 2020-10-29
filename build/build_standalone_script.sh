@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo "[.] Building standalone mc-script..."
+echo "[.] Compilation de mc-script..."
 
 SCRIPT_PATH="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 

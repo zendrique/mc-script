@@ -14,15 +14,14 @@ echo "Veuiller coller le lien DIRECT de téléchargement du fichier jar de votre
 read lien
 wget $lien
 mv *.jar $dossier.jar
-rm -f eula.txt
-rm -f start.sh
+rm eula.txt
+rm start.sh
 touch eula.txt && echo "eula=true" >> eula.txt
 touch start.sh && echo "screen -d -m -S" $dossier "java -XX:+UseConcMarkSweepGC -jar" $dossier".jar nogui" >> start.sh
 cd /home
-rm -f info-$dossier.txt
+rm info-$dossier.txt
 touch info-$dossier.txt
 chmod 777 -R $dossier/
-chmod 777 -R $dossier/*
 echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-$dossier.txt
 echo "Pour accéder à votre console taper la commande : screen -r" $dossier >> info-$dossier.txt
 echo "Detail de l'installation :" >> info-$dossier.txt
