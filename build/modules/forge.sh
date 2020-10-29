@@ -11,13 +11,23 @@ forge_10_download=https://files.minecraftforge.net/maven/net/minecraftforge/forg
 forge_7_download=https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.7.10-10.13.4.1614-1.7.10/forge-1.7.10-10.13.4.1614-1.7.10-installer.jar
 
 clear
+
+function backup {
+    echo "[?] Une sauvegarde va être crée au nom de "$dossier"-backup.zip ci un fichier ou dossier portant déja se nom, il sera écrasé, voulez-vous continuer ? (1 ou 2)" 
+select sauvegarde in "Oui" "Non"; do
+    case $sauvegarde in
+        Oui ) break;;
+        Non ) exit; break;;
+    esac
+done
+}
+
 function 1.16.3 {
     echo "Instalation de : Forge" $version
     cd /home
     echo "Dans quel dossier voulez-vous installer votre serveur ? (ex: serveur1)"
     read dossier
-    echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer et les autres sauvegardes écrasées s’il en existe ctrl + c pour annuler"
-    sleep 4
+    backup
     rm $dossier-backup.zip
     zip -r $dossier-backup.zip $dossier/
     clear
@@ -81,8 +91,7 @@ function 1.15.2 {
     cd /home
     echo "Dans quel dossier voulez-vous installer votre serveur ? (ex: serveur1)"
     read dossier
-    echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer et les autres sauvegardes écrasées s’il en existe ctrl + c pour annuler"
-    sleep 4
+    backup
     rm $dossier-backup.zip
     zip -r $dossier-backup.zip $dossier/
     clear
@@ -146,8 +155,7 @@ function 1.12.2 {
     cd /home
     echo "Dans quel dossier voulez-vous installer votre serveur ? (ex: serveur1)"
     read dossier
-    echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer et les autres sauvegardes écrasées s’il en existe ctrl + c pour annuler"
-    sleep 4
+    backup
     rm $dossier-backup.zip
     zip -r $dossier-backup.zip $dossier/
     clear
@@ -209,8 +217,7 @@ function 1.10.2 {
     cd /home
     echo "Dans quel dossier voulez-vous installer votre serveur ? (ex: serveur1)"
     read dossier
-    echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer et les autres sauvegardes écrasées s’il en existe ctrl + c pour annuler"
-    sleep 4
+    backup
     rm $dossier-backup.zip
     zip -r $dossier-backup.zip $dossier/
     clear
@@ -271,8 +278,7 @@ function 1.7.10 {
     cd /home
     echo "Dans quel dossier voulez-vous installer votre serveur ? (ex: serveur1)"
     read dossier
-    echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer et les autres sauvegardes écrasées s’il en existe ctrl + c pour annuler"
-    sleep 4
+    backup
     rm $dossier-backup.zip
     zip -r $dossier-backup.zip $dossier/
     clear
@@ -334,8 +340,7 @@ function autre {
     cd /home
     echo "Dans quel dossier voulez-vous installer votre serveur ? (ex: serveur1)"
     read dossier
-    echo "Une sauvegarde va être crée dans /home si un serveur et déjà installer et les autres sauvegardes écrasées s’il en existe ctrl + c pour annuler"
-    sleep 4
+    backup
     rm $dossier-backup.zip
     zip -r $dossier-backup.zip $dossier/
     clear

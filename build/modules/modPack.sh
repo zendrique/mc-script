@@ -9,6 +9,8 @@ select sauvegarde in "Oui" "Non"; do
     case $sauvegarde in
         Oui ) break;;
         Non ) exit; break;;
+    esac
+done
 rm $dossier-backup.zip
 zip -r $dossier-backup.zip $dossier/
 clear
