@@ -2,11 +2,11 @@
 Mc-script est script visant à aider les proprietaires de serveur minecraft peut ou pas experimenter, à crée fracilement un serveur minecraft.
 Mc-script peut également aider les personnes plus competantes à eccelérer le déploiment et l'installation de leurs machine et serveur grace à sa suite utilitaire.
 Mc-script télécharge automatiquement installe les logicles necessaires met à jour le serveur...
-Pour exectuer Mc-script nous recommendons d'utiliser Debian.
+Pour exectuer Mc-script je recommende d'utiliser Debian.
 
 # Installation
-Pour installer mc-script copier colle les commandes suivantes dans un terminale (demande un accet root)
-Vous devez disposer du packet : wget (sudo apt install curl)
+Pour installer mc-script copier colle la commande suivante dans un terminale (demande un accet root)
+Vous devez disposer du packet : wget (sudo apt install wget)
 ```bash
 sudo wget -P /opt https://github.com/zendrique/mc-script/releases/download/1.4/boot.sh && sudo bash /opt/boot.sh
 ```
