@@ -1,7 +1,7 @@
 # HexaCord
 
-version_hexacord="1.7.10 - 1.16.3"
-hexacord_download=https://github.com/HexagonMC/BungeeCord/releases/download/v267/BungeeCord.jar
+version_hexacord="1.7.10 - 1.16.4"
+hexacord_download=https://github.com/HexagonMC/BungeeCord/releases/download/v268/BungeeCord.jar
 
 clear
 echo "Instalation de : HexaCord"

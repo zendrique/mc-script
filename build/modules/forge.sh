@@ -1,6 +1,6 @@
 # Forge
 
-forge_16_download=https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.16.3-34.1.0/forge-1.16.3-34.1.0-installer.jar
+forge_16_download=https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.16.4-35.0.1/forge-1.16.4-35.0.1-installer.jar
 
 forge_15_download=https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.15.2-31.2.43/forge-1.15.2-31.2.43-installer.jar
 
@@ -22,7 +22,7 @@ select sauvegarde in "Oui" "Non"; do
 done
 }
 
-function 1.16.3 {
+function 1.16.4 {
     echo "Instalation de : Forge" $version
     cd /home
     echo "Dans quel dossier voulez-vous installer votre serveur ? (ex: serveur1)"
@@ -398,9 +398,9 @@ function autre {
 }
 
 echo "Quel version de forge voulez-vous installer ? (1, 2, 3 uo 4)" 
-select version in "1.16.3" "1.15.2" "1.12.2" "1.10.2" "1.7.10" "autre"; do
+select version in "1.16.4" "1.15.2" "1.12.2" "1.10.2" "1.7.10" "autre"; do
     case $version in
-        1.16.3) 1.16.3 break;;
+        1.16.4) 1.16.4 break;;
         1.15.2 ) 1.15.2 break;;
         1.12.2 ) 1.12.2 break;;
         1.10.2 ) 1.10.2 break;;

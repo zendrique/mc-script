@@ -1,6 +1,6 @@
 # Waterfall
 
-version_waterfall="1.8 - 1.16.3"
+version_waterfall="1.8 - 1.16.4"
 waterfall_download=https://papermc.io/ci/job/Waterfall/lastSuccessfulBuild/artifact/Waterfall-Proxy/bootstrap/target/Waterfall.jar
 
 clear
