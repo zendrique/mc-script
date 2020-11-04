@@ -13,7 +13,7 @@ sudo wget -P /opt https://github.com/zendrique/mc-script/releases/download/1.4/b
 # Version prise en charge :
 ```
 Vanilla 1.16.4
-Snapshot 1.16.4 RELEASE CANDIDATE 1
+Snapshot 20W45A
 Forge toutes versions
 spigot
 bukkit
