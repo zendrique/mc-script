@@ -18,7 +18,7 @@ Forge toutes versions
 spigot
 bukkit
 paper 1.16.4
-tuinity 1.16.3
+tuinity 1.16.4
 Sponge 1.12.2
 CatServer 1.12.2
 Mohist 1.12.2
