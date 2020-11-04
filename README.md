@@ -6,7 +6,7 @@ Pour exectuer Mc-script nous recommendons d'utiliser Debian.
 
 # Installation
 Pour installer mc-script copier colle les commandes suivantes dans un terminale (demande un accet root)
-Vous devez disposer du packet : wget (sudo apt install curl)
+Vous devez disposer du packet : wget (sudo apt install wget)
 ```bash
 sudo wget -P /opt https://github.com/zendrique/mc-script/releases/download/1.4/boot.sh && sudo bash /opt/boot.sh
 ```
