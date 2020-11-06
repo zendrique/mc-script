@@ -63,7 +63,7 @@ function 1.16.4 {
     chmod 777 -R $dossier/
     rm info-$dossier.txt
     touch info-$dossier.txt
-    echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-$dossier.txt
+    echo "Pour démarer votre serveur faites la commande : bash /home/"$dossier"/start.sh" >> info-$dossier.txt
     echo "Pour accéder à votre console taper la commande : screen -r" $dossier >> info-$dossier.txt
     echo "Detail de l'installation :" >> info-$dossier.txt
     echo "Version du serveur :" $version >> info-$dossier.txt
@@ -73,7 +73,7 @@ function 1.16.4 {
     echo "Fichier de démarrage de : start.sh" >> info-$dossier.txt
     clear
     echo "Terminer !"
-    echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh"
+    echo "Pour démarer votre serveur faites la commande : bash /home/"$dossier"/start.sh"
     echo "Pour accéder à votre console taper la commande : screen -r" $dossier
     echo "Detail de l'installation :"
     echo "Version du serveur : 1.16.1"
@@ -127,7 +127,7 @@ function 1.15.2 {
     chmod 777 -R $dossier/
     rm info-$dossier.txt
     touch info-$dossier.txt
-    echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-$dossier.txt
+    echo "Pour démarer votre serveur faites la commande : bash /home/"$dossier"/start.sh" >> info-$dossier.txt
     echo "Pour accéder à votre console taper la commande : screen -r" $dossier >> info-$dossier.txt
     echo "Detail de l'installation :" >> info-$dossier.txt
     echo "Version du serveur :" $version >> info-$dossier.txt
@@ -137,7 +137,7 @@ function 1.15.2 {
     echo "Fichier de démarrage de : start.sh" >> info-$dossier.txt
     clear
     echo "Terminer !"
-    echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh"
+    echo "Pour démarer votre serveur faites la commande : bash /home/"$dossier"/start.sh"
     echo "Pour accéder à votre console taper la commande : screen -r" $dossier
     echo "Detail de l'installation :"
     echo "Version du serveur :" $version
@@ -191,7 +191,7 @@ function 1.12.2 {
     chmod 777 -R $dossier/
     rm -f info-$dossier.txt
     touch info-$dossier.txt
-    echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-$dossier.txt
+    echo "Pour démarer votre serveur faites la commande : bash /home/"$dossier"/start.sh" >> info-$dossier.txt
     echo "Pour accéder à votre console taper la commande : screen -r" $dossier >> info-$dossier.txt
     echo "Detail de l'installation" >> info-$dossier.txt
     echo "Version du serveur :" $version >> info-$dossier.txt
@@ -200,7 +200,7 @@ function 1.12.2 {
     echo "Fichier de démarrage de : start.sh" >> info-$dossier.txt
     clear
     echo "Terminer !"
-    echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh"
+    echo "Pour démarer votre serveur faites la commande : bash /home/"$dossier"/start.sh"
     echo "Pour accéder à votre console taper la commande : screen -r" $dossier
     echo "Detail de l'installation"
     echo "Version du serveur :" $version
@@ -253,7 +253,7 @@ function 1.10.2 {
     chmod 777 -R $dossier/
     rm -f info-$dossier.txt
     touch info-$dossier.txt
-    echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-$dossier.txt
+    echo "Pour démarer votre serveur faites la commande : bash /home/"$dossier"/start.sh" >> info-$dossier.txt
     echo "Pour accéder à votre console taper la commande : screen -r" $dossier >> info-$dossier.txt
     echo "Detail de l'installation" >> info-$dossier.txt
     echo "Version du serveur :" $version >> info-$dossier.txt
@@ -262,7 +262,7 @@ function 1.10.2 {
     echo "Fichier de démarrage de : start.sh" >> info-$dossier.txt
     clear
     echo "Terminer !"
-    echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh"
+    echo "Pour démarer votre serveur faites la commande : bash /home/"$dossier"/start.sh"
     echo "Pour accéder à votre console taper la commande : screen -r" $dossier
     echo "Detail de l'installation"
     echo "Version du serveur :" $version
@@ -314,7 +314,7 @@ function 1.7.10 {
     chmod 777 -R $dossier/
     rm -f info-$dossier.txt
     touch info-$dossier.txt
-    echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-$dossier.txt
+    echo "Pour démarer votre serveur faites la commande : bash /home/"$dossier"/start.sh" >> info-$dossier.txt
     echo "Pour accéder à votre console taper la commande : screen -r" $dossier >> info-$dossier.txt
     echo "Detail de l'installation" >> info-$dossier.txt
     echo "Version du serveur :" $version >> info-$dossier.txt
@@ -323,7 +323,7 @@ function 1.7.10 {
     echo "Fichier de démarrage de : start.sh" >> info-$dossier.txt
     clear
     echo "Terminer !"
-    echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh"
+    echo "Pour démarer votre serveur faites la commande : bash /home/"$dossier"/start.sh"
     echo "Pour accéder à votre console taper la commande : screen -r" $dossier
     echo "Detail de l'installation"
     echo "Version du serveur :" $version
@@ -377,7 +377,7 @@ function autre {
     chmod 777 -R $dossier/
     rm -f info-$dossier.txt
     touch info-$dossier.txt
-    echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-$dossier.txt
+    echo "Pour démarer votre serveur faites la commande : bash /home/"$dossier"/start.sh" >> info-$dossier.txt
     echo "Pour accéder à votre console taper la commande : screen -r" $dossier >> info-$dossier.txt
     echo "Detail de l'installation" >> info-$dossier.txt
     echo "Version du serveur : Forge autre" >> info-$dossier.txt
@@ -386,7 +386,7 @@ function autre {
     echo "Fichier de démarrage de : start.sh" >> info-$dossier.txt
     clear
     echo "Terminer !"
-    echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh"
+    echo "Pour démarer votre serveur faites la commande : bash /home/"$dossier"/start.sh"
     echo "Pour accéder à votre console taper la commande : screen -r" $dossier
     echo "Detail de l'installation"
     echo "Version du serveur : Forge autre"

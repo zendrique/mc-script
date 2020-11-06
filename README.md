@@ -5,7 +5,7 @@ Mc-script télécharge automatiquement installe les logicles necessaires met à 
 Pour exectuer Mc-script nous recommendons d'utiliser Debian.
 
 # Installation
-Pour installer mc-script copier colle les commandes suivantes dans un terminale (demande un accet root)
+Pour installer mc-script copier colle la commande suivante dans un terminale (demande un accet root)
 Vous devez disposer du packet : wget (sudo apt install wget)
 ```bash
 sudo wget -P /opt https://github.com/zendrique/mc-script/releases/download/1.4/boot.sh && sudo bash /opt/boot.sh
@@ -13,8 +13,9 @@ sudo wget -P /opt https://github.com/zendrique/mc-script/releases/download/1.4/b
 # Version prise en charge :
 ```
 Vanilla 1.16.4
-Snapshot 20W45A
+Snapshot 1.16.4 RELEASE CANDIDATE 1
 Forge toutes versions
+Fabric 1.16.4
 spigot
 bukkit
 paper 1.16.4

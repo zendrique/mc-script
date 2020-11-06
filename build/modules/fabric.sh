@@ -1,10 +1,10 @@
-# Mohist
+# Fabric
 
-version_mohist=1.12.2
-mohist_download=https://ci.codemc.io/job/Mohist-Community/job/Mohist-1.12.2/lastSuccessfulBuild/artifact/projects/mohist/build/libs/mohist-1.12.2-45-server.jar
+version_fabric=1.16.4
+fabric_download=https://maven.fabricmc.net/net/fabricmc/fabric-installer/0.6.1.51/fabric-installer-0.6.1.51.jar
 
 clear
-echo "Instalation de : Mohist"
+echo "Installation du serveur : Fabric"
 cd /home
 echo "Dans quel dossier voulez-vous installer votre serveur ? (ex: serveur1)"
 read dossier
@@ -22,43 +22,42 @@ mkdir $dossier
 chmod 777 $dossier/
 chmod 777 -R $dossier/
 cd $dossier
+rm server.jar
 rm start.sh
 rm eula.txt
-rm mohist.jar
-echo "Téléchargement de mohist..."
-wget $mohist_download
-mv Mohist-*-*-server.jar mohist.jar
-chmod 777 mohist.jar
-chmod 777 start.sh
+rm fabric-server-launch.jar
 clear
-echo "Installation de mohist..."
+echo "Téléchargement du serveur"
+wget $fabric_download
+mv fabric-installer-*.jar fabric-installer.jar
+clear
+echo "Installation de Fabric..."
+java -jar fabric-installer.jar server -downloadMinecraft
 touch eula.txt && echo "eula=true" >> eula.txt
-touch start.sh && echo "screen -d -m -S "$dossier" java -jar mohist.jar nogui" >> start.sh
+touch start.sh && echo "screen -d -m -S "$dossier" java -jar fabric-server-launch.jar nogui" >> start.sh
 chmod 777 start.sh
-mkdir plugins
-mkdir mods
+chmod 777 server.jar
+rm fabric-installer.jar
 cd /home
 chmod 777 -R $dossier/
 rm info-$dossier.txt
 touch info-$dossier.txt
-echo "Pour démarer votre serveur faites la commande : bash /home/"$dossier"/start.sh" >> info-$dossier.txt
+echo "Pour démarrer votre serveur faites la commande : bash /home/"$dossier"/start.sh" >> info-$dossier.txt
 echo "Pour accéder à votre console taper la commande : screen -r" $dossier >> info-$dossier.txt
-echo "Detail de l'installation" >> info-$dossier.txt
-echo "Version du serveur :" $version_mohist >> info-$dossier.txt
-echo "API : SpigotAPI, Forge" >> info-$dossier.txt
-echo "Dossier d'instalation : /home/"$dossier >> info-$dossier.txt
+echo "Détail de l'installation :" >> info-$dossier.txt
+echo "Version du serveur :" $version_vanilla >> info-$dossier.txt
+echo "API : Fabric" >> info-$dossier.txt
+echo "Dossier d'installation : /home/"$dossier >> info-$dossier.txt
 echo "Dossier des mods : /home/"$dossier"/mods" >> info-$dossier.txt
-echo "Dossier des plugins : /home/"$dossier"/plugins" >> info-$dossier.txt
 echo "Fichier de démarrage de : start.sh" >> info-$dossier.txt
 clear
 echo "Terminer !"
-echo "Pour démarer votre serveur faites la commande : bash /home/"$dossier"/start.sh"
+echo "Pour démarrer votre serveur faites la commande : bash /home/"$dossier"/start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r" $dossier
-echo "Detail de l'installation"
-echo "Version du serveur :" $version_mohist
-echo "API : SpigotAPI, Forge"
-echo "Dossier d'instalation : /home/"$dossier
+echo "Détail de l'installation :"
+echo "Version du serveur :" $version_vanilla
+echo "API : Fabric"
+echo "Dossier d'installation : /home/"$dossier
 echo "Dossier des mods : /home/"$dossier"/mods"
-echo "Dossier des plugins : /home/"$dossier"/plugins"
 echo "Fichier de démarrage de : start.sh"
 echo "Un fichier info-"$dossier".txt dans /home a été crée contenant les information afficher si dessue."

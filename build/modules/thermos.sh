@@ -45,7 +45,7 @@ cd /home
 chmod 777 -R $dossier/
 rm info-$dossier.txt
 touch info-$dossier.txt
-echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-$dossier.txt
+echo "Pour démarer votre serveur faites la commande : bash /home/"$dossier"/start.sh" >> info-$dossier.txt
 echo "Pour accéder à votre console taper la commande : screen -r" $dossier >> info-$dossier.txt
 echo "Detail de l'installation" >> info-$dossier.txt
 echo "Version du serveur :" $version_thermors >> info-$dossier.txt
@@ -56,7 +56,7 @@ echo "Dossier des plugins : /home/"$dossier"/plugins" >> info-$dossier.txt
 echo "Fichier de démarrage de : start.sh" >> info-$dossier.txt
 clear
 echo "Terminer !"
-echo "Pour démarer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh"
+echo "Pour démarer votre serveur faites la commande : bash /home/"$dossier"/start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r" $dossier
 echo "Detail de l'installation"
 echo "Version du serveur :" $version_thermors

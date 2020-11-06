@@ -1,7 +1,7 @@
 # Snapshot
 
-version_snapshot="20W45A"
-snapshot_download=https://launcher.mojang.com/v1/objects/043ec38297d0ec58abd6f636bc92f5664a8ccecb/server.jar
+version_snapshot="1.16.4 RELEASE CANDIDATE 1"
+snapshot_download=https://launcher.mojang.com/v1/objects/daf2d997bd6b1725b6d59b48f533a6804d43db33/server.jar
 
 clear
 echo "Installation du serveur : snapshot"
@@ -35,7 +35,7 @@ cd /home
 chmod 777 -R $dossier/
 rm info-$dossier.txt
 touch info-$dossier.txt
-echo "Pour démarrer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh" >> info-$dossier.txt
+echo "Pour démarrer votre serveur faites la commande : bash /home/"$dossier"/start.sh" >> info-$dossier.txt
 echo "Pour accéder à votre console taper la commande : screen -r" $dossier >> info-$dossier.txt
 echo "Détail de l'installation :" >> info-$dossier.txt
 echo "Version du serveur :" $version_snapshot >> info-$dossier.txt
@@ -44,7 +44,7 @@ echo "Dossier d'installation : /home/"$dossier >> info-$dossier.txt
 echo "Fichier de démarrage de : start.sh" >> info-$dossier.txt
 clear
 echo "Terminer !"
-echo "Pour démarrer votre serveur faites la commande : cd /home/"$dossier" && sh start.sh"
+echo "Pour démarrer votre serveur faites la commande : bash /home/"$dossier"/start.sh"
 echo "Pour accéder à votre console taper la commande : screen -r" $dossier
 echo "Détail de l'installation :"
 echo "Version du serveur :" $version_snapshot
