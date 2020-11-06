@@ -28,7 +28,7 @@ rm eula.txt
 wget $waterfall_download
 clear
 echo "Installation de Waterfall..."
-echo "cd /home"$dossier"" >> start.sh
+echo "cd /home/"$dossier"" >> start.sh
 touch start.sh && echo "screen -d -m -S "$dossier" java -jar Waterfall.jar nogui" >> start.sh
 chmod 777 Waterfall.jar
 chmod 777 start.sh

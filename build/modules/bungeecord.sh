@@ -28,7 +28,7 @@ rm eula.txt
 wget $bungeecord_download
 clear
 echo "Installation de BungeeCord..."
-touch start.sh && echo "cd /home"$dossier"" >> start.sh
+touch start.sh && echo "cd /home/"$dossier"" >> start.sh
 echo "screen -d -m -S "$dossier" java -jar BungeeCord.jar nogui" >> start.sh
 mkdir plugins
 chmod 777 BungeeCord.jar

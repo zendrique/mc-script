@@ -29,7 +29,7 @@ wget $hexacord_download
 mv BungeeCord.jar HexaCord.jar
 clear
 echo "Installation de HexaCord..."
-touch start.sh && echo "cd /home"$dossier"" >> start.sh
+touch start.sh && echo "cd /home/"$dossier"" >> start.sh
 echo "screen -d -m -S "$dossier" java -jar HexaCord.jar nogui" >> start.sh
 mkdir plugins
 chmod 777 HexaCord.jar

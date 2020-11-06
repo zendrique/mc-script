@@ -33,7 +33,7 @@ chmod 777 start.sh
 clear
 echo "Installation de mohist..."
 touch eula.txt && echo "eula=true" >> eula.txt
-touch start.sh && echo "cd /home"$dossier"" >> start.sh
+touch start.sh && echo "cd /home/"$dossier"" >> start.sh
 echo "screen -d -m -S "$dossier" java -jar mohist.jar nogui" >> start.sh
 chmod 777 start.sh
 mkdir plugins

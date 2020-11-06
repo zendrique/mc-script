@@ -53,7 +53,7 @@ function 1.16.4 {
     rm -f forge-installer.jar
     mv forge-*.jar forge.jar
     touch eula.txt && echo "eula=true" >> eula.txt
-    touch start.sh && echo "cd /home"$dossier"" >> start.sh
+    touch start.sh && echo "cd /home/"$dossier"" >> start.sh
     echo "screen -d -m -S "$dossier" java -jar forge.jar nogui" >> start.sh
     chmod 777 start.sh
     chmod 777 forge.jar
@@ -118,7 +118,7 @@ function 1.15.2 {
     rm forge-installer.jar
     mv forge-*.jar forge.jar
     touch eula.txt && echo "eula=true" >> eula.txt
-    touch start.sh && echo "cd /home"$dossier"" >> start.sh
+    touch start.sh && echo "cd /home/"$dossier"" >> start.sh
     echo "screen -d -m -S "$dossier" java -jar forge.jar nogui" >> start.sh
     chmod 777 start.sh
     chmod 777 forge.jar
@@ -183,7 +183,7 @@ function 1.12.2 {
     rm -f forge-installer.jar
     mv forge-*.jar forge.jar
     touch eula.txt && echo "eula=true" >> eula.txt
-    touch start.sh && echo "cd /home"$dossier"" >> start.sh
+    touch start.sh && echo "cd /home/"$dossier"" >> start.sh
     echo "screen -d -m -S "$dossier" java -jar forge.jar nogui" >> start.sh
     chmod 777 start.sh
     chmod 777 forge.jar
@@ -246,7 +246,7 @@ function 1.10.2 {
     rm -f forge-installer.jar
     mv forge-*.jar forge.jar
     touch eula.txt && echo "eula=true" >> eula.txt
-    touch start.sh && echo "cd /home"$dossier"" >> start.sh
+    touch start.sh && echo "cd /home/"$dossier"" >> start.sh
     echo "screen -d -m -S "$dossier" java -jar forge.jar nogui" >> start.sh
     chmod 777 start.sh
     chmod 777 forge.jar
@@ -308,7 +308,7 @@ function 1.7.10 {
     rm forge-installer.jar
     mv forge-*.jar forge.jar
     touch eula.txt && echo "eula=true" >> eula.txt
-    touch start.sh && echo "cd /home"$dossier"" >> start.sh
+    touch start.sh && echo "cd /home/"$dossier"" >> start.sh
     echo "screen -d -m -S "$dossier" java -jar forge.jar nogui" >> start.sh
     chmod 777 start.sh
     chmod 777 forge.jar
@@ -372,7 +372,7 @@ function autre {
     rm -f forge-installer.jar
     mv forge-*.jar forge.jar
     touch eula.txt && echo "eula=true" >> eula.txt
-    touch start.sh && echo "cd /home"$dossier"" >> start.sh
+    touch start.sh && echo "cd /home/"$dossier"" >> start.sh
     echo "screen -d -m -S "$dossier" java -jar forge.jar nogui" >> start.sh
     chmod 777 start.sh
     chmod 777 forge.jar

@@ -34,7 +34,7 @@ clear
 echo "Installation de Fabric..."
 java -jar fabric-installer.jar server -downloadMinecraft
 touch eula.txt && echo "eula=true" >> eula.txt
-touch start.sh && echo "cd /home"$dossier"" >> start.sh
+touch start.sh && echo "cd /home/"$dossier"" >> start.sh
 echo "screen -d -m -S "$dossier" java -jar fabric-server-launch.jar nogui" >> start.sh
 chmod 777 start.sh
 chmod 777 server.jar

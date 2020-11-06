@@ -38,7 +38,7 @@ java -jar BuildTools.jar --disable-java-check --output-dir /home/$dossier --rev 
 cd /home/$dossier
 mv spigot-*.jar spigot.jar
 touch eula.txt && echo "eula=true" >> eula.txt
-touch start.sh && echo "cd /home"$dossier"" >> start.sh
+touch start.sh && echo "cd /home/"$dossier"" >> start.sh
 echo "screen -d -m -S "$dossier" java -XX:+UseConcMarkSweepGC -jar spigot.jar nogui" >> start.sh
 chmod 777 start.sh
 chmod 777 spigot.jar

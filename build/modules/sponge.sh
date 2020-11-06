@@ -37,7 +37,7 @@ java -jar forge-installer.jar --installServer
 rm forge-installer.jar
 mv forge-*.jar forge.jar
 touch eula.txt && echo "eula=true" >> eula.txt
-touch start.sh && echo "cd /home"$dossier"" >> start.sh
+touch start.sh && echo "cd /home/"$dossier"" >> start.sh
 echo "screen -d -m -S "$dossier" java -jar forge.jar nogui" >> start.sh
 chmod 777 start.sh
 chmod 777 forge.jar
