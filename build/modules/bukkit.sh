@@ -38,7 +38,8 @@ java -jar BuildTools.jar --disable-java-check --compile craftbukkit --output-dir
 cd /home/$dossier
 mv craftbukkit-*.jar craftbukkit.jar
 touch eula.txt && echo "eula=true" >> eula.txt
-touch start.sh && echo "screen -d -m -S "$dossier" java -XX:+UseConcMarkSweepGC -jar craftbukkit.jar nogui" >> start.sh
+touch start.sh && echo "cd /home"$dossier"" >> start.sh
+echo "screen -d -m -S "$dossier" java -XX:+UseConcMarkSweepGC -jar craftbukkit.jar nogui" >> start.sh
 chmod 777 start.sh
 chmod 777 craftbukkit.jar
 clear
