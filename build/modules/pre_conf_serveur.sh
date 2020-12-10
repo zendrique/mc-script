@@ -148,24 +148,24 @@ rm -Rf $crack $bungeecord $pvp $nether $end $commandBlock $whiteList $structures
 cd /home
 clear
 echo "Voici votre confuguration :" >> info-$dossier.txt
-echo "Dossier du serveur :" >> $dossier info-$dossier.txt
-echo "Port de votre serveur :" >> $port info-$dossier.txt
-echo "Vesion crack :" >> $crack info-$dossier.txt
-echo "Bungeecord :" >> $bungeecord info-$dossier.txt
-echo "pvp :" >> $pvp info-$dossier.txt
-echo "Nether :" >> $nether info-$dossier.txt
-echo "End :" >> $end info-$dossier.txt
-echo "Command bolock :" >> $commandBlock info-$dossier.txt
-echo  "Distance de vue :" >> $vue info-$dossier.txt
-echo "Spawn protection :" >> $spawn info-$dossier.txt
-echo "Joueurs max :" >> $max info-$dossier.txt
-echo "Nom du monde :" >> $mode info-$dossier.txt
-echo "Motd :" >> $motd info-$dossier.txt
-echo "White-liste :" >> $whiteList info-$dossier.txt
-echo "Génration des structures :" >> $structures info-$dossier.txt
-echo "Gamemode :" >> $gamemode info-$dossier.txt
-echo "Dificulté :" >> $difficulty info-$dossier.txt
-echo "Fly :" >> $fly info-$dossier.txt
+echo "Dossier du serveur :" $dossier >> info-$dossier.txt
+echo "Port de votre serveur :" $port >> info-$dossier.txt
+echo "Vesion crack :" $crack >> info-$dossier.txt
+echo "Bungeecord :" $bungeecord >> info-$dossier.txt
+echo "pvp :" $pvp >> info-$dossier.txt
+echo "Nether :" $nether>> info-$dossier.txt
+echo "End :" $end >> info-$dossier.txt
+echo "Command bolock :" $commandBlock >> info-$dossier.txt
+echo  "Distance de vue :" $vue >> info-$dossier.txt
+echo "Spawn protection :" $spawn >> info-$dossier.txt
+echo "Joueurs max :" $max >> info-$dossier.txt
+echo "Nom du monde :" $monde >> info-$dossier.txt
+echo "Motd :" $motd >> info-$dossier.txt
+echo "White-liste :" $whiteList >> info-$dossier.txt
+echo "Génration des structures :" $structures >> info-$dossier.txt
+echo "Gamemode :" $gamemode >> info-$dossier.txt
+echo "Dificulté :" $difficulty >> info-$dossier.txt
+echo "Fly :" $fly >> info-$dossier.txt
 
 clear
 
@@ -182,7 +182,7 @@ echo "Command bolock :" $commandBlock
 echo  "Distance de vue :" $vue
 echo "Spawn protection :" $spawn
 echo "Joueurs max :" $max
-echo "Nom du monde :" $mode
+echo "Nom du monde :" $monde
 echo "Motd :" $motd
 echo "White-liste :" $whiteList
 echo "Génration des structures :" $structures

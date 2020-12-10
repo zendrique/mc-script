@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+
+path=/opt/mc-script
+
 clear
 
 if [ "$EUID" -ne 0 ]; then 
@@ -11,7 +14,7 @@ echo "[?] En utilisant mc-script vous acceptez la charte d'utilisation de Mojang
 select licence in "Oui" "Non"; do
     case $licence in
         Oui ) break;;
-        Non ) rm -R /opt/mc-script
+        Non ) rm -R $path
                 exit;;
     esac
 done
@@ -32,6 +35,28 @@ select yn in "Oui" "Non"; do
     esac
 done
 clear
+
+{
+    echo "[.] Un insant..."
+    wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | apt-key add -
+    add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
+    apt update
+
+} || {
+    echo "[!] Une erreur est survenue lors de l'ajout du dépôts de Java..."
+    exit 1
+}
+clear
+
+echo "[?] Quel version de java voulez-vous ? (1 ou 2)" 
+select java in "Java 8" "Java 11"; do
+    case $java in
+        Java 8 ) apt install adoptopenjdk-8-hotspot -y; break;;
+        Java 11 ) apt install adoptopenjdk-11-hotspot -y; break;;
+    esac
+done
+clear
+
 {
     echo "[.] Téléchargement des dépendances..."
     apt install nano screen git zip apt-transport-https ca-certificates dirmngr gnupg software-properties-common cron -y
@@ -39,32 +64,13 @@ clear
     echo "[!] Une erreur est survenue lors du téléchargement des paquets ..."
     exit 1
 }
-clear
-{
-    echo "[.] Ajout du dépôt Java 8..."
-    wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | apt-key add -
-    add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
-    apt update
-
-} || {
-    echo "[!] Une erreur est survenue lors de l'ajout des dépôts Java 8..."
-    exit 1
-}
-clear
-{
-    echo "[.] Téléchargement de Java 8..."
-    apt install adoptopenjdk-8-hotspot -y
-} || {
-    echo "[!] Une erreur est survenue lors du téléchargement de Java 8..."
-    exit 1
-}
 
 clear
 echo "[.] Compilation de mc-script"
-cd /opt/mc-script
+cd $path
 bash build/build_standalone_script.sh
 echo "[.] Creation d'un alias"
 alias mc-script='bash /opt/mc-script/mc-script.sh'
 echo "[.] Démarage de mc-script"
-bash /opt/mc-script/mc-script.sh
+bash $path/mc-script.sh
 exit
