@@ -49,10 +49,10 @@ clear
 clear
 
 echo "[?] Quel version de java voulez-vous ? (1 ou 2)" 
-select java in "Java 8" "Java 11"; do
+select java in "8" "11"; do
     case $java in
-        Java 8 ) apt install adoptopenjdk-8-hotspot -y; break;;
-        Java 11 ) apt install adoptopenjdk-11-hotspot -y; break;;
+        8 ) apt install adoptopenjdk-8-hotspot -y; break;;
+        11 ) apt install adoptopenjdk-11-hotspot -y; break;;
     esac
 done
 clear
