@@ -37,6 +37,15 @@ done
 clear
 
 {
+    echo "[.] Téléchargement des dépendances..."
+    apt install nano screen git zip apt-transport-https ca-certificates dirmngr gnupg software-properties-common cron -y
+} || {
+    echo "[!] Une erreur est survenue lors du téléchargement des paquets ..."
+    exit 1
+}
+
+clear
+{
     echo "[.] Un insant..."
     wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | apt-key add -
     add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
@@ -55,15 +64,6 @@ select java in "8" "11"; do
         11 ) apt install adoptopenjdk-11-hotspot -y; break;;
     esac
 done
-clear
-
-{
-    echo "[.] Téléchargement des dépendances..."
-    apt install nano screen git zip apt-transport-https ca-certificates dirmngr gnupg software-properties-common cron -y
-} || {
-    echo "[!] Une erreur est survenue lors du téléchargement des paquets ..."
-    exit 1
-}
 
 clear
 echo "[.] Compilation de mc-script"

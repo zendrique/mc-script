@@ -1,5 +1,5 @@
 # Pre conf serveur
-# Module non compiler car en développement !
+echo "Module en version beta, certaines options de configurations peuvent ne pas être prises en comptes selon le type de serveur à configuer."
 echo "Voulez-vous effectuer une pre-configuration de notre serveur ? (1 ou 2)" 
 select start in "Oui" "Non"; do
     case $start in
