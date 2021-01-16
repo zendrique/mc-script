@@ -1,6 +1,6 @@
 # Bungeecord
 
-version_bungeecord="1.8 - 1.16.4"
+version_bungeecord="1.8 - 1.16.5"
 bungeecord_download=https://ci.md-5.net/job/BungeeCord/lastSuccessfulBuild/artifact/bootstrap/target/BungeeCord.jar
 
 clear
