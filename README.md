@@ -18,7 +18,7 @@ Forge toutes versions
 Fabric 1.16.4
 spigot
 bukkit
-paper 1.16.4
+paper 1.16.5
 tuinity 1.16.4
 Sponge 1.12.2
 CatServer 1.12.2
