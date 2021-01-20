@@ -13,7 +13,7 @@ sudo wget -P /opt https://github.com/zendrique/mc-script/releases/download/1.4/b
 # Version prise en charge :
 ```
 Vanilla 1.16.5
-Snapshot 1.16.5 RELEASE CANDIDATE 1
+Snapshot 21W03A
 Forge toutes versions
 Fabric 1.16.4
 spigot
