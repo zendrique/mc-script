@@ -9,7 +9,7 @@ if [ "$EUID" -ne 0 ]; then
     exit
 fi
 
-echo "[?] Que voulez-vous installer ou mettre à jour ?"
+echo "[?] Que voulez-vous installé ou mettre à jour ?"
 echo "Taper le nombre qui correspond à ce que vous voulez installer et appuyer sur entrer."
 echo "-------------Vanilla---------------------"
 echo "1 - Vanilla"
