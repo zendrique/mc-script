@@ -142,7 +142,6 @@ bash $invocation/update
 bash $invocation/remove.sh
 ;;
 *) 
-<INSERT_saisie_invalide>
 bash $invocation/saisie_invalide.sh
 ;;
 esac

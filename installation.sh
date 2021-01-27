@@ -87,7 +87,7 @@ fi
 
 clear
 echo "[.] Creation d'un alias"
-alias mc-script='bash /opt/mc-script/mc-script.sh'
+alias mc-script='bash /opt/mc-script/script/mc-script.sh'
 echo "[.] Démarage de mc-script"
 bash $path/mc-script.sh
 exit
