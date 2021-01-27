@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-invocation="/opt/modules"
+invocation="/opt/mc-script/modules"
 
 clear
 

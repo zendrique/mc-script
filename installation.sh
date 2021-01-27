@@ -75,13 +75,18 @@ function java {
 
 if [ "$1" == "--update" ]
 then
+  clear
   echo "Installation de java, des dépendances, de la sécuriter, des accords passer car mise à jour."
   update
 else
   accords
+  clear
   update
+  clear
   securiter
+  clear
   dependances
+  clear
   java
 fi
 
@@ -89,5 +94,5 @@ clear
 echo "[.] Creation d'un alias"
 alias mc-script='bash /opt/mc-script/script/mc-script.sh'
 echo "[.] Démarage de mc-script"
-bash $path/mc-script.sh
+bash $path/script/mc-script.sh
 exit
