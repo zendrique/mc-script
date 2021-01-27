@@ -136,7 +136,7 @@ bash $invocation/system_info.sh
 bash $invocation/fermeture.sh
 ;;
 22)
-bash $invocation/update
+bash $invocation/update.sh
 ;;
 23)
 bash $invocation/remove.sh
