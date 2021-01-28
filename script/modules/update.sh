@@ -1,6 +1,6 @@
 # update
 clear
-echo "Démarage du programme..."
+echo "Démarrage du programme..."
 apt update && cd /opt
 rm -R mc-script
 clear && apt install dos2unix git -y
