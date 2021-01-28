@@ -18,6 +18,8 @@ select sauvegarde in "Oui" "Non"; do
 done
 rm $dossier-backup.zip
 zip -r $dossier-backup.zip $dossier/
+rm /opt/mc-script/dossier.txt
+echo $dossier > /opt/mc-script/dossier.txt
 clear
 mkdir $dossier
 chmod 777 $dossier/

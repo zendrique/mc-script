@@ -15,14 +15,14 @@ sudo wget -P /opt https://github.com/zendrique/mc-script/releases/download/1.4/b
 Vanilla 1.16.5
 Snapshot 21W03A
 Forge toutes versions
-Fabric 1.16.4
+Fabric 1.16.5
 spigot
 bukkit
 paper 1.16.5
-tuinity 1.16.4
+tuinity 1.16.5
 Sponge 1.12.2
 CatServer 1.12.2
-Mohist 1.12.2
+Mohist toutes versions
 Thermos 1.7.10
 Bungeecord 1.8 - 1.16.5
 HexaCord 1.7.10 - 1.16.4

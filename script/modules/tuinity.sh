@@ -1,6 +1,6 @@
 # Tuinity
 
-version_tuinity=1.16.4
+version_tuinity=1.16.5
 tuinity_download=https://ci.codemc.io/job/Spottedleaf/job/Tuinity/lastSuccessfulBuild/artifact/tuinity-paperclip.jar
 
 clear
@@ -17,6 +17,8 @@ select sauvegarde in "Oui" "Non"; do
 done
 rm $dossier-backup.zip
 zip -r $dossier-backup.zip $dossier/
+rm /opt/mc-script/dossier.txt
+echo $dossier > /opt/mc-script/dossier.txt
 clear
 mkdir $dossier
 chmod 777 $dossier/

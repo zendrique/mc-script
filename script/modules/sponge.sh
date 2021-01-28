@@ -1,7 +1,7 @@
 # Sponge
 
 version_sponge=1.12.2
-sponge_download=https://repo.spongepowered.org/maven/org/spongepowered/spongeforge/1.12.2-2838-7.3.1-RC4079/spongeforge-1.12.2-2838-7.3.1-RC4079.jar
+sponge_download=https://repo.spongepowered.org/maven/org/spongepowered/spongeforge/1.12.2-2838-7.3.0/spongeforge-1.12.2-2838-7.3.0.jar
 forge_sponge_download=https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.12.2-14.23.5.2854/forge-1.12.2-14.23.5.2854-installer.jar
 
 clear
@@ -18,6 +18,8 @@ select sauvegarde in "Oui" "Non"; do
 done
 rm $dossier-backup.zip
 zip -r $dossier-backup.zip $dossier/
+rm /opt/mc-script/dossier.txt
+echo $dossier > /opt/mc-script/dossier.txt
 clear
 mkdir $dossier
 chmod 777 $dossier/

@@ -1,6 +1,6 @@
 # Fabric
 
-version_fabric=1.16.4
+version_fabric=1.16.5
 fabric_download=https://maven.fabricmc.net/net/fabricmc/fabric-installer/0.6.1.51/fabric-installer-0.6.1.51.jar
 
 clear
@@ -17,6 +17,8 @@ select sauvegarde in "Oui" "Non"; do
 done
 rm $dossier-backup.zip
 zip -r $dossier-backup.zip $dossier/
+rm /opt/mc-script/dossier.txt
+echo $dossier > /opt/mc-script/dossier.txt
 clear
 mkdir $dossier
 chmod 777 $dossier/

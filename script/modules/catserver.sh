@@ -1,7 +1,7 @@
 # CatServer
 
 version_CatServer=1.12.2
-CatServer_download=https://github.com/Luohuayu/CatServer/releases/download/20.09.20/CatServer-9489fbb-universal.jar
+CatServer_download=https://github.com/Luohuayu/CatServer/releases/download/21.01.01/CatServer-2a9163f-universal.jar
 
 clear
 echo "Instalation de : CatServer"
@@ -17,6 +17,8 @@ select sauvegarde in "Oui" "Non"; do
 done
 rm $dossier-backup.zip
 zip -r $dossier-backup.zip $dossier/
+rm /opt/mc-script/dossier.txt
+echo $dossier > /opt/mc-script/dossier.txt
 clear
 mkdir $dossier
 chmod 777 $dossier/

@@ -1,13 +1,9 @@
 # Forge
 
 forge_16_download=https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.16.5-36.0.0/forge-1.16.5-36.0.0-installer.jar
-
 forge_15_download=https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.15.2-31.2.43/forge-1.15.2-31.2.43-installer.jar
-
 forge_12_download=https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.12.2-14.23.5.2854/forge-1.12.2-14.23.5.2854-installer.jar
-
 forge_10_download=https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.10.2-12.18.3.2511/forge-1.10.2-12.18.3.2511-installer.jar
-
 forge_7_download=https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.7.10-10.13.4.1614-1.7.10/forge-1.7.10-10.13.4.1614-1.7.10-installer.jar
 
 clear
@@ -30,6 +26,8 @@ function installation {
     backup
     rm $dossier-backup.zip
     zip -r $dossier-backup.zip $dossier/
+    rm /opt/mc-script/dossier.txt
+    echo $dossier > /opt/mc-script/dossier.txt
     clear
     mkdir $dossier
     chmod 777 $dossier/
@@ -109,7 +107,7 @@ function installation {
     exit
 }
 
-echo "Quel version de forge voulez-vous installer ? (1, 2, 3 uo 4)" 
+echo "Quel version de forge voulez-vous installer ? (1, 2, 3 ou 4)" 
 select version in "1.16.5" "1.15.2" "1.12.2" "1.10.2" "1.7.10" "autre"; do
     case $version in
         1.16.5) instalation break;;
