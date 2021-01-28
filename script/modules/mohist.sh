@@ -61,7 +61,7 @@ function instalation {
     echo "Pour démarer votre serveur faites la commande : bash /home/"$dossier"/start.sh" >> info-$dossier.txt
     echo "Pour accéder à votre console taper la commande : screen -r" $dossier >> info-$dossier.txt
     echo "Detail de l'installation" >> info-$dossier.txt
-    echo "Version du serveur :" $version_mohist >> info-$dossier.txt
+    echo "Version du serveur :" $version >> info-$dossier.txt
     echo "API : SpigotAPI, Forge" >> info-$dossier.txt
     echo "Dossier d'instalation : /home/"$dossier >> info-$dossier.txt
     echo "Dossier des mods : /home/"$dossier"/mods" >> info-$dossier.txt
@@ -72,7 +72,7 @@ function instalation {
     echo "Pour démarer votre serveur faites la commande : bash /home/"$dossier"/start.sh"
     echo "Pour accéder à votre console taper la commande : screen -r" $dossier
     echo "Detail de l'installation"
-    echo "Version du serveur :" $version_mohist
+    echo "Version du serveur :" $version
     echo "API : SpigotAPI, Forge"
     echo "Dossier d'instalation : /home/"$dossier
     echo "Dossier des mods : /home/"$dossier"/mods"
@@ -85,8 +85,11 @@ function instalation {
 echo "Quel version de mohist voulez-vous installer ? (1, 2 ou 3)" 
 select version in "1.16.5" "1.12.2" "1.7.10"; do
     case $version in
-        1.16.5) instalation break;;
-        1.12.2 ) instalation break;;
-        1.7.10 ) instalation break;;
+        1.16.5) instalation 
+        exit break;;
+        1.12.2 ) instalation 
+        exit break;;
+        1.7.10 ) instalation 
+        exit break;;
         esac
 done
