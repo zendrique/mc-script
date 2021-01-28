@@ -2,7 +2,7 @@
 
 mohist_16_download=https://mohistmc.com/builds/1.16.5/mohist-1.16.5-332-server.jar
 mohist_12_download=https://mohistmc.com/builds/1.12.2/mohist-1.12.2-185-server.jar
-mohist_17_download=https://mohistmc.com/builds/1.7.10/Mohist-1.7.10-26-server.jar
+mohist_7_download=https://mohistmc.com/builds/1.7.10/Mohist-1.7.10-26-server.jar
 
 clear
 
@@ -41,9 +41,9 @@ function instalation {
     fi
     if [ "$version" == "1.7.10" ]
     then
-      wget $mohist_12_download
+      wget $mohist_7_download
     fi
-    mv Mohist-*-*-server.jar mohist.jar
+    mv mohist-*-*-server.jar mohist.jar
     chmod 777 mohist.jar
     chmod 777 start.sh
     clear
