@@ -18,26 +18,27 @@ echo "3 - Spigot"
 echo "4 - Bukkit"
 echo "5 - PaperSpigot"
 echo "6 - Tuinity"
+echo "7 - Purpur"
 echo "--------------Moddé----------------------"
-echo "7 - Forge"
-echo "8 - Fabric"
-echo "9 - Sponge"
-echo "10 - CatServer"
-echo "11 - Mohist"
-echo "12 - Thermos"
+echo "8 - Forge"
+echo "9 - Fabric"
+echo "10 - Sponge"
+echo "11 - CatServer"
+echo "12 - Mohist"
+echo "13 - Thermos"
 echo "--------------Proxy---------------------"
-echo "13 - Bungeecord"
-echo "14 - Waterfall"
-echo "15 - Travertine"
-echo "16 - Hexacord"
+echo "14 - Bungeecord"
+echo "15 - Waterfall"
+echo "16 - Travertine"
+echo "17 - Hexacord"
 echo "-------------Autre----------------------"
-echo "17 - ModPack"
-echo "18 - OpenMod"
-echo "19 - Débogage"
-echo "20 - Info Système"
-echo "21 - Quitter"
-echo "22 - Mettre à jour mc-script"
-echo "23 - Supprimer mc-script"
+echo "18 - ModPack"
+echo "19 - OpenMod"
+echo "20 - Débogage"
+echo "21 - Info Système"
+echo "22 - Quitter"
+echo "23 - Mettre à jour mc-script"
+echo "24 - Supprimer mc-script"
 echo "----------------------------------------"
 echo "Que voulez-vous faire ?"
 read installation
@@ -73,72 +74,77 @@ bash $invocation/pre_conf_serveur.sh
 bash $invocation/fini.sh
 ;;
 7) 
-bash $invocation/forge.sh
+bash $invocation/purpur.sh
 bash $invocation/pre_conf_serveur.sh
 bash $invocation/fini.sh
 ;;
 8)
+bash $invocation/forge.sh
+bash $invocation/pre_conf_serveur.sh
+bash $invocation/fini.sh
+;;
+9)
 bash $invocation/fabric.sh
 bash $invocation/pre_conf_serveur.sh
 bash $invocation/fini.sh
 ;;
-9) 
+10) 
 bash $invocation/sponge.sh
 bash $invocation/pre_conf_serveur.sh
 bash $invocation/fini.sh
 ;;
-10) 
+11) 
 bash $invocation/catserver.sh
 bash $invocation/pre_conf_serveur.sh
 bash $invocation/fini.sh
 ;;
-11)
+12)
 bash $invocation/mohist.sh
 bash $invocation/pre_conf_serveur.sh
 bash $invocation/fini.sh
 ;;
-12) 
+13) 
 bash $invocation/thermos.sh
 bash $invocation/pre_conf_serveur.sh
 bash $invocation/fini.sh
 ;;
-13) 
+14) 
 bash $invocation/bungeecord.sh
 bash $invocation/fini.sh
 ;;
-14)
+15)
 bash $invocation/waterfall.sh
 bash $invocation/fini.sh
 ;;
-15)
+16)
 bash $invocation/travertine.sh
 bash $invocation/fini.sh
 ;;
-16)
+17)
 bash $invocation/hexacord.sh
 bash $invocation/fini.sh
 ;;
-17)
+18)
 bash $invocation/modpack.sh
 bash $invocation/fini.sh
 ;;
-18)
+19)
 bash $invocation/openMod.sh
 bash $invocation/fini.sh
 ;;
-19) 
+20) 
 bash $invocation/debug.sh
 ;;
-20) 
+21) 
 bash $invocation/system_info.sh
 ;;
-21)
+22)
 bash $invocation/fermeture.sh
 ;;
-22)
+23)
 bash $invocation/update.sh
 ;;
-23)
+24)
 bash $invocation/remove.sh
 ;;
 *) 
