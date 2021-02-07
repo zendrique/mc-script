@@ -31,14 +31,15 @@ echo "14 - Bungeecord"
 echo "15 - Waterfall"
 echo "16 - Travertine"
 echo "17 - Hexacord"
+echo "18 - Velocity"
 echo "-------------Autre----------------------"
-echo "18 - ModPack"
-echo "19 - OpenMod"
-echo "20 - Débogage"
-echo "21 - Info Système"
-echo "22 - Quitter"
-echo "23 - Mettre à jour mc-script"
-echo "24 - Supprimer mc-script"
+echo "19 - ModPack"
+echo "20 - OpenMod"
+echo "21 - Débogage"
+echo "22 - Info Système"
+echo "23 - Quitter"
+echo "24 - Mettre à jour mc-script"
+echo "25 - Supprimer mc-script"
 echo "----------------------------------------"
 echo "Que voulez-vous faire ?"
 read installation
@@ -125,26 +126,30 @@ bash $invocation/hexacord.sh
 bash $invocation/fini.sh
 ;;
 18)
-bash $invocation/modpack.sh
+bash $invocation/velocity.sh
 bash $invocation/fini.sh
 ;;
 19)
+bash $invocation/modpack.sh
+bash $invocation/fini.sh
+;;
+20)
 bash $invocation/openMod.sh
 bash $invocation/fini.sh
 ;;
-20) 
+21) 
 bash $invocation/debug.sh
 ;;
-21) 
+22) 
 bash $invocation/system_info.sh
 ;;
-22)
+23)
 bash $invocation/fermeture.sh
 ;;
-23)
+24)
 bash $invocation/update.sh
 ;;
-24)
+25)
 bash $invocation/remove.sh
 ;;
 *) 
