@@ -26,9 +26,10 @@ CatServer 1.12.2
 Mohist toutes versions
 Thermos 1.7.10
 Bungeecord 1.8 - 1.16.5
-HexaCord 1.7.10 - 1.16.4
+HexaCord 1.7.10 - 1.16.5
 Travertine 1.7.10
-Waterfall 1.8 - 1.16.4
+Waterfall 1.8 - 1.16.5
+Velocity 1.8 - 1.16.5
 Mad-Pack
 OpenMod
 ```
