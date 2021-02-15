@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 path=/opt/mc-script
+os=$(cat /etc/issue)
 
 clear
 
@@ -8,6 +9,21 @@ if [ "$EUID" -ne 0 ]; then
     echo "[!] Veuillez lancer le script en root (via sudo)"
     exit
 fi
+
+function os_fail {
+    clear
+    echo "Votre OS n'est pas compatible vous devez utiliser Debian 10 !"
+    exit
+}
+
+function os {
+    if [ "$os" == "Debian GNU/Linux 10 \n \l" ]; then
+    echo "OS compatible !"
+    else
+    os_fail
+    fi
+
+}
 
 function accords {
     echo "[!] Mc-script sous licence GPL-3"
@@ -79,6 +95,7 @@ then
   echo "Installation de java, des dépendances, de la sécuriter, des accords passer car mise à jour."
   update
 else
+  os
   accords
   clear
   update
@@ -92,7 +109,7 @@ fi
 
 clear
 echo "[.] Creation d'un alias"
-alias mc-script='bash /opt/mc-script/script/mc-script.sh'
+alias mc-script='sudo bash /opt/mc-script/script/mc-script.sh'
 echo "[.] Démarage de mc-script"
 bash $path/script/mc-script.sh
 exit
