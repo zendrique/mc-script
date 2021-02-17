@@ -143,7 +143,6 @@ select fly in "Oui" "Non"; do
         Non ) echo "allow-flight=false" >> /home/$dossier/server.properties; break;;
         esac
 done
-rm /opt/mc-script/variable/dossier.txt
 cd /home
 clear
 echo "Voici votre confuguration :" >> info-$dossier.txt
