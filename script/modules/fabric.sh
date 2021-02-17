@@ -17,12 +17,9 @@ select sauvegarde in "Oui" "Non"; do
 done
 rm $dossier-backup.zip
 zip -r $dossier-backup.zip $dossier/
-rm /opt/mc-script/dossier.txt
-echo $dossier > /opt/mc-script/dossier.txt
+echo $dossier > /opt/mc-script/variable/dossier.txt
 clear
 mkdir $dossier
-chmod 777 $dossier/
-chmod 777 -R $dossier/
 cd $dossier
 rm server.jar
 rm start.sh
@@ -38,11 +35,8 @@ java -jar fabric-installer.jar server -downloadMinecraft
 touch eula.txt && echo "eula=true" >> eula.txt
 touch start.sh && echo "cd /home/"$dossier"" >> start.sh
 echo "screen -d -m -S "$dossier" java -jar fabric-server-launch.jar nogui" >> start.sh
-chmod 777 start.sh
-chmod 777 server.jar
 rm fabric-installer.jar
 cd /home
-chmod 777 -R $dossier/
 rm info-$dossier.txt
 touch info-$dossier.txt
 echo "Pour démarrer votre serveur faites la commande : bash /home/"$dossier"/start.sh" >> info-$dossier.txt

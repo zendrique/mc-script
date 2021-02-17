@@ -1,7 +1,7 @@
 # Snapshot
 
-version_snapshot="21W06A"
-snapshot_download=https://launcher.mojang.com/v1/objects/6290ba4b475fca4a74de990c7fd8eccffd9654dd/server.jar
+version_snapshot="21W07A"
+snapshot_download=https://launcher.mojang.com/v1/objects/99c3a9744719d0d401af63bb684cf1eb5231a75c/server.jar
 
 clear
 echo "Installation du serveur : snapshot"
@@ -17,12 +17,9 @@ select sauvegarde in "Oui" "Non"; do
 done
 rm $dossier-backup.zip
 zip -r $dossier-backup.zip $dossier/
-rm /opt/mc-script/dossier.txt
-echo $dossier > /opt/mc-script/dossier.txt
+echo $dossier > /opt/mc-script/variable/dossier.txt
 clear
 mkdir $dossier
-chmod 777 $dossier/
-chmod 777 -R $dossier/
 cd $dossier
 rm server.jar
 rm start.sh
@@ -32,10 +29,7 @@ wget $snapshot_download
 touch eula.txt && echo "eula=true" >> eula.txt
 touch start.sh && echo "cd /home/"$dossier"" >> start.sh
 echo "screen -d -m -S "$dossier" java -jar server.jar nogui" >> start.sh
-chmod 777 start.sh
-chmod 777 server.jar
 cd /home
-chmod 777 -R $dossier/
 rm info-$dossier.txt
 touch info-$dossier.txt
 echo "Pour démarrer votre serveur faites la commande : bash /home/"$dossier"/start.sh" >> info-$dossier.txt

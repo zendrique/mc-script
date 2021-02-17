@@ -19,8 +19,6 @@ rm $dossier-backup.zip
 zip -r $dossier-backup.zip $dossier/
 clear
 mkdir $dossier
-chmod 777 $dossier/
-chmod 777 -R $dossier/
 cd $dossier
 rm Waterfall.jar
 rm start.sh
@@ -30,11 +28,8 @@ clear
 echo "Installation de Waterfall..."
 echo "cd /home/"$dossier"" >> start.sh
 touch start.sh && echo "screen -d -m -S "$dossier" java -jar Waterfall.jar nogui" >> start.sh
-chmod 777 Waterfall.jar
-chmod 777 start.sh
 mkdir plugins
 cd /home
-chmod 777 -R $dossier/
 rm info-$dossier.txt
 touch info-$dossier.txt
 echo "Pour démarer votre serveur faites la commande : bash /home/"$dossier"/start.sh" >> info-$dossier.txt

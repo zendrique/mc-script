@@ -26,12 +26,9 @@ function installation {
     backup
     rm $dossier-backup.zip
     zip -r $dossier-backup.zip $dossier/
-    rm /opt/mc-script/dossier.txt
-    echo $dossier > /opt/mc-script/dossier.txt
+    echo $dossier > /opt/mc-script/variable/dossier.txt
     clear
     mkdir $dossier
-    chmod 777 $dossier/
-    chmod 777 -R $dossier/
     cd $dossier
     rm forge-*.jar
     rm forge.jar
@@ -39,8 +36,6 @@ function installation {
     rm eula.txt
     rm -R libraries
     mkdir mods
-    chmod 777 mods/
-    chmod 777 -R mods/
     clear
     echo "Téléchargement de forge" $version
     if [ "$version" == "1.16.5" ]
@@ -76,13 +71,10 @@ function installation {
     touch eula.txt && echo "eula=true" >> eula.txt
     touch start.sh && echo "cd /home/"$dossier"" >> start.sh
     echo "screen -d -m -S "$dossier" java -jar forge.jar nogui" >> start.sh
-    chmod 777 start.sh
-    chmod 777 forge.jar
     echo "Nettoyage..."
     rm installer.log
     rm forge-installer.jar.log
     cd /home
-    chmod 777 -R $dossier/
     rm info-$dossier.txt
     touch info-$dossier.txt
     echo "Pour démarer votre serveur faites la commande : bash /home/"$dossier"/start.sh" >> info-$dossier.txt

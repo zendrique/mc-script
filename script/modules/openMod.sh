@@ -7,8 +7,6 @@ echo "Dans quel dossier voulez-vous installer votre serveur ? (ex: serveur1)"
 read dossier
 clear
 mkdir $dossier
-chmod 777 $dossier/
-chmod 777 -R $dossier/
 cd $dossier
 echo "Veuiller coller le lien DIRECT de téléchargement du fichier jar de votre serveur serveur"
 read lien
@@ -22,7 +20,6 @@ echo "screen -d -m -S" $dossier "java -XX:+UseConcMarkSweepGC -jar" $dossier".ja
 cd /home
 rm info-$dossier.txt
 touch info-$dossier.txt
-chmod 777 -R $dossier/
 echo "Pour démarer votre serveur faites la commande : bash /home/"$dossier"/start.sh" >> info-$dossier.txt
 echo "Pour accéder à votre console taper la commande : screen -r" $dossier >> info-$dossier.txt
 echo "Detail de l'installation :" >> info-$dossier.txt

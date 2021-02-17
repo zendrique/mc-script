@@ -19,8 +19,6 @@ rm $dossier-backup.zip
 zip -r $dossier-backup.zip $dossier/
 clear
 mkdir $dossier
-chmod 777 $dossier/
-chmod 777 -R $dossier/
 cd $dossier
 rm BungeeCord.jar
 rm start.sh
@@ -31,10 +29,7 @@ echo "Installation de BungeeCord..."
 touch start.sh && echo "cd /home/"$dossier"" >> start.sh
 echo "screen -d -m -S "$dossier" java -jar BungeeCord.jar nogui" >> start.sh
 mkdir plugins
-chmod 777 BungeeCord.jar
-chmod 777 start.sh
 cd /home
-chmod 777 -R $dossier/
 rm info-$dossier.txt
 touch info-$dossier.txt
 echo "Pour démarer votre serveur faites la commande : bash /home/"$dossier"/start.sh" >> info-$dossier.txt

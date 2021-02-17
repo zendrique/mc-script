@@ -143,11 +143,7 @@ select fly in "Oui" "Non"; do
         Non ) echo "allow-flight=false" >> /home/$dossier/server.properties; break;;
         esac
 done
-chmod 777 /home/$dossier/server.properties
-chmod 777 /home/$dossier/spigot.yml
-chmod 777 /home/$dossier/bukkit.yml
-cd /home/$dossier
-rm -Rf $crack $bungeecord $pvp $nether $end $commandBlock $whiteList $structures $gamemode $difficulty $fly
+rm /opt/mc-script/variable/dossier.txt
 cd /home
 clear
 echo "Voici votre confuguration :" >> info-$dossier.txt

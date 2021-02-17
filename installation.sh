@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+if [ "$EUID" -ne 0 ]; then 
+    echo "[!] Veuillez lancer le script en root (via sudo)"
+    exit
+fi
+
 path=/opt/mc-script
 os=$(cat /etc/issue)
 
@@ -93,6 +98,7 @@ if [ "$1" == "--update" ]
 then
   clear
   echo "Installation de java, des dépendances, de la sécuriter, des accords passer car mise à jour."
+  os
   update
 else
   os
@@ -110,6 +116,8 @@ fi
 clear
 echo "[.] Creation d'un alias"
 alias mc-script='sudo bash /opt/mc-script/script/mc-script.sh'
+echo "[.] Nettyoage"
+rm /opt/mc-script/installation.sh
 echo "[.] Démarage de mc-script"
 bash $path/script/mc-script.sh
 exit

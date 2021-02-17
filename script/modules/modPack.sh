@@ -15,8 +15,6 @@ rm $dossier-backup.zip
 zip -r $dossier-backup.zip $dossier/
 clear
 mkdir $dossier
-chmod 777 $dossier/
-chmod 777 -R $dossier/
 cd $dossier
 echo "Veuiller coller le lien DIRECT de téléchargement de votre modPack (fichier serveur)"
 read lien
@@ -25,7 +23,6 @@ unzip *.zip
 rm eula.txt
 touch eula.txt && echo "eula=true" >> eula.txt
 cd /home
-chmod 777 -R $dossier/
 clear
 echo "Terminer !"
 echo "Le fihier à été télécharger et décompresser dans le répertoire /home/"$dossier
