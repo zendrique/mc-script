@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 final_user=$1
+rm initialisation.sh
 cd /opt
 apt update
 apt install dos2unix git -y

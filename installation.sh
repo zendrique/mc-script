@@ -24,6 +24,8 @@ function os_fail {
 function os {
     if [ "$os" == "Debian GNU/Linux 10 \n \l" ]; then
     echo "OS compatible !"
+    sleep 2
+    clear
     else
     os_fail
     fi
