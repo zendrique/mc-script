@@ -116,10 +116,10 @@ else
 fi
 
 clear
-echo "[.] Creation d'un alias"
-alias mc-script='sudo bash /opt/mc-script/script/mc-script.sh'
 echo "[.] Nettyoage"
 rm /opt/mc-script/installation.sh
+echo "[.] Préparation des variables"
+mkdir /opt/mc-sript/variable/
 echo "[.] Démarage de mc-script"
 bash $path/script/mc-script.sh
 exit
