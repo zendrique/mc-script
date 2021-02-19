@@ -7,7 +7,7 @@ echo "Voulez-vous effectuer une pre-configuration de notre serveur ? (1 ou 2)"
 select start in "Oui" "Non"; do
     case $start in
         Oui ) break;;
-        Non ) exit break;;
+        Non ) exit;;
         esac
 done
 cd /home/$dossier
