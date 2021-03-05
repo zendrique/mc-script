@@ -29,7 +29,7 @@ Bungeecord 1.8 - 1.16.5
 HexaCord 1.7.10 - 1.16.5
 Travertine 1.7.10
 Waterfall 1.8 - 1.16.5
-Velocity 1.8 - 1.16.5
+Velocity 1.7.2 - 1.16.5
 Mad-Pack
 OpenMod
 ```
