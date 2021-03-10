@@ -13,7 +13,7 @@ wget https://github.com/zendrique/mc-script/releases/download/1.5/boot.sh && bas
 # Version prise en charge :
 ```
 Vanilla 1.16.5
-Snapshot 21W08A
+Snapshot 21W10A
 Forge toutes versions
 Fabric 1.16.5
 Spigot

@@ -1,8 +1,10 @@
 # update
+
 dossier="/opt/mc-script"
 dossier_update="/opt/mc-script/update/mc-script"
+
 clear
-echo "[.] Vérification des composant élémaentaire..."
+echo "[.] Vérification des composant élémentaire..."
 apt update
 apt install dos2unix git -y
 clear
