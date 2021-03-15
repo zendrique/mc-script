@@ -67,7 +67,7 @@ function securiter {
 function dependances {
     {
         echo "[.] Téléchargement des dépendances..."
-        apt install nano screen git zip apt-transport-https ca-certificates dirmngr gnupg software-properties-common cron -y
+        apt install nano screen git zip apt-transport-https ca-certificates dirmngr gnupg software-properties-common cron jq curl -y
     } || {
         echo "[!] Une erreur est survenue lors du téléchargement des paquets ..."
         exit 1
@@ -99,9 +99,10 @@ function java {
 if [ "$1" == "--update" ]
 then
   clear
-  echo "Installation de java, des dépendances, de la sécuriter, des accords passer car mise à jour."
+  echo "Installation de java, de la sécuriter, des accords passer car mise à jour."
   os
   update
+  dependances
 else
   os
   accords

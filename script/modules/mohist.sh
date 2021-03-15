@@ -1,8 +1,7 @@
 # Mohist
 
-mohist_16_download=https://mohistmc.com/builds/1.16.5/mohist-1.16.5-332-server.jar
-mohist_12_download=https://mohistmc.com/builds/1.12.2/mohist-1.12.2-185-server.jar
-mohist_7_download=https://mohistmc.com/builds/1.7.10/Mohist-1.7.10-26-server.jar
+detector="/opt/mc-script/mohist-detector.sh"
+patch="/opt/mc-script/variable/mohist-version.txt"
 
 clear
 
@@ -30,16 +29,23 @@ function instalation {
     echo "Téléchargement de mohist" $version
     if [ "$version" == "1.16.5" ]
     then
-      wget $mohist_16_download
+      bash $detector
+      lien=$"cat($patch)"
+      wget $lien
     fi
     if [ "$version" == "1.12.2" ]
     then
-      wget $mohist_12_download
+      bash $detector
+      lien=$"cat($patch)"
+      wget $lien
     fi
     if [ "$version" == "1.7.10" ]
     then
-      wget $mohist_7_download
+      bash $detector
+      lien=$"cat($patch)"
+      wget $lien
     fi
+    rm $pach
     mv mohist-*-*-server.jar mohist.jar
     clear
     echo "Installation de mohist..."
