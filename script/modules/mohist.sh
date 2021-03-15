@@ -30,19 +30,19 @@ function instalation {
     if [ "$version" == "1.16.5" ]
     then
       bash $detector
-      lien=$"cat($patch)"
+      lien=$(cat($patch))
       wget $lien
     fi
     if [ "$version" == "1.12.2" ]
     then
       bash $detector
-      lien=$"cat($patch)"
+      lien=$(cat($patch))
       wget $lien
     fi
     if [ "$version" == "1.7.10" ]
     then
       bash $detector
-      lien=$"cat($patch)"
+      lien=$(cat($patch))
       wget $lien
     fi
     rm $pach
