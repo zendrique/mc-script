@@ -49,7 +49,7 @@ function instalation {
       version_7=$(curl -s 'https://mohistmc.com/api/1.7.10/latest' | jq -r '.url')
       wget $version_7
     fi
-    mv mohist-*-*-server.jar mohist.jar
+    mv mohist-*.jar mohist.jar
     clear
     echo "Installation de mohist..."
     touch eula.txt && echo "eula=true" >> eula.txt

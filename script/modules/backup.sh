@@ -8,7 +8,11 @@ function existe {
     echo "Voulez vous continuer ?"
     select validation in "Oui" "Non"; do
     case $validation in
-            Oui )  zip -r /home/backup.zip /home/$dossier break;;
+            Oui )  rm /home/dossier.zip
+            zip -r /home/$dossier.zip /home/$dossier 
+            clear
+            echo "Une suaveguarde avec le nom : "$dossier".zip a été crée"
+            break;;
             Non ) break;;
         esac
     done
@@ -16,6 +20,7 @@ function existe {
 }
 
 function non-existe  {
+    clear
     echo "[.] Acune suaveguarde à crée"
     exit
 }
