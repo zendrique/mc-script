@@ -45,7 +45,6 @@ function instalation {
       lien=$(cat($patch))
       wget $lien
     fi
-    rm $pach
     mv mohist-*-*-server.jar mohist.jar
     clear
     echo "Installation de mohist..."
