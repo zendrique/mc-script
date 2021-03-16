@@ -16,6 +16,8 @@ cd $dossier
 rm BungeeCord.jar
 rm start.sh
 rm eula.txt
+clear
+echo "Téléchargement de BungeeCord"
 curl -O $bungeecord_download
 clear
 echo "Installation de BungeeCord..."

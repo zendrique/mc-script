@@ -17,6 +17,7 @@ rm start.sh
 rm eula.txt
 mkdir buildtools
 cd buildtools
+clear
 echo "Téléchargement de BuildTools..."
 curl -O $spigot_download
 git config --global --unset core.autocrlf

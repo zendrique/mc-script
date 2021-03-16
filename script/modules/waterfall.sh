@@ -16,6 +16,8 @@ cd $dossier
 rm Waterfall.jar
 rm start.sh
 rm eula.txt
+clear
+echo "Téléchargement de Waterfall"
 curl -O $waterfall_download
 clear
 echo "Installation de Waterfall..."

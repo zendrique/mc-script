@@ -16,6 +16,7 @@ cd $dossier
 rm start.sh
 rm eula.txt
 rm catserver.jar
+clear
 echo "Téléchargement de CatServer..."
 curl -O $CatServer_download
 mv CatServer-*-universal.jar CatServer.jar

@@ -16,6 +16,7 @@ cd $dossier
 rm purpurclip.jar
 rm start.sh
 rm eula.txt
+clear
 echo "Téléchargement de purpur..."
 curl -O $purpur_download
 touch eula.txt && echo "eula=true" >> eula.txt

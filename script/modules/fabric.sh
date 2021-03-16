@@ -18,7 +18,7 @@ rm start.sh
 rm eula.txt
 rm fabric-server-launch.jar
 clear
-echo "Téléchargement du serveur"
+echo "Téléchargement de Fabric"
 curl -O $fabric_download
 mv fabric-installer-*.jar fabric-installer.jar
 clear

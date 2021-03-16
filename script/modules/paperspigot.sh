@@ -16,6 +16,7 @@ cd $dossier
 rm paperclip.jar
 rm start.sh
 rm eula.txt
+clear
 echo "Téléchargement de paperspigot..."
 curl -O $paperspigot_download
 touch eula.txt && echo "eula=true" >> eula.txt

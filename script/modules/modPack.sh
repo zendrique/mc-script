@@ -11,6 +11,8 @@ mkdir $dossier
 cd $dossier
 echo "Veuiller coller le lien DIRECT de téléchargement de votre modPack (fichier serveur)"
 read lien
+clear
+echo "Téléchargement..."
 curl -O $lien
 unzip *.zip
 rm eula.txt

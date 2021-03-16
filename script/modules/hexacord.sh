@@ -16,6 +16,8 @@ cd $dossier
 rm HexaCord.jar
 rm start.sh
 rm eula.txt
+clear
+echo "Téléchargement de HexaCord"
 curl -O $hexacord_download
 mv BungeeCord.jar HexaCord.jar
 clear

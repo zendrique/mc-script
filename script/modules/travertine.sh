@@ -16,6 +16,8 @@ cd $dossier
 rm Travertine.jar
 rm start.sh
 rm eula.txt
+clear
+echo "Téléchargement de Travertine"
 curl -O $travertine_download
 clear
 echo "Installation de Travertine..."

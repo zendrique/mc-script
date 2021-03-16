@@ -16,6 +16,7 @@ cd $dossier
 rm server.jar
 rm start.sh
 rm eula.txt
+clear
 echo "Téléchargement du serveur"
 curl -O $vanilla_download
 touch eula.txt && echo "eula=true" >> eula.txt

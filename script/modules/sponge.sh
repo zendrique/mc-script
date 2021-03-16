@@ -19,6 +19,7 @@ rm eula.txt
 rm forge.jar
 rm forge-*.jar
 rm -R libraries
+clear
 echo "Téléchargement de forge"
 curl -O $forge_sponge_download
 mv forge-*-installer.jar forge-installer.jar

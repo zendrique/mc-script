@@ -16,6 +16,7 @@ cd $dossier
 rm tuinity-paperclip.jar
 rm start.sh
 rm eula.txt
+clear
 echo "Téléchargement de tuinity..."
 curl -O $tuinity_download
 touch eula.txt && echo "eula=true" >> eula.txt

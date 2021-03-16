@@ -16,6 +16,8 @@ cd $dossier
 rm velocity.jar
 rm start.sh
 rm eula.txt
+clear
+echo "Téléchargement de Velocity"
 curl -O $velocity_download
 mv 1.*.jar velocity.jar
 clear
