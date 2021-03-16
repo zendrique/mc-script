@@ -25,10 +25,12 @@ function non-existe  {
     exit
 }
 
-fi [ -d "/home/$dossier" ];then
+if [ -d "/home/$dossier" ];then
 existe
+sleep 3
 else
 non-existe
+sleep 2
 fi
 
 exit

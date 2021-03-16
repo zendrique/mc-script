@@ -10,7 +10,7 @@ mkdir $dossier
 cd $dossier
 echo "Veuiller coller le lien DIRECT de téléchargement du fichier jar de votre serveur serveur"
 read lien
-wget $lien
+curl -O $lien
 mv *.jar $dossier.jar
 rm eula.txt
 rm start.sh

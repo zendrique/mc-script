@@ -10,16 +10,8 @@ function instalation {
     cd /home
     echo "Dans quel dossier voulez-vous installer votre serveur ? (ex: serveur1)"
     read dossier
-    echo "[?] Une sauvegarde va être crée au nom de "$dossier"-backup.zip ci un fichier ou dossier portant déja se nom, il sera écrasé, voulez-vous continuer ? (1 ou 2)" 
-    select sauvegarde in "Oui" "Non"; do
-        case $sauvegarde in
-            Oui ) break;;
-            Non ) exit; break;;
-        esac
-    done
-    rm $dossier-backup.zip
-    zip -r $dossier-backup.zip $dossier/
-    echo $dossier > /opt/mc-script/variable/dossier.txt
+    echo $dossier >> /opt/mc-script/variable/dossier.txt
+    bash /opt/mc-script/modules/backup.sh
     clear
     mkdir $dossier
     cd $dossier
@@ -33,21 +25,21 @@ function instalation {
       clear
       echo "Détermination du lien..."
       version_16=$(curl -s 'https://mohistmc.com/api/1.16.5/latest' | jq -r '.url')
-      wget $version_16
+      curl -O $version_16
     fi
     if [ "$version" == "1.12.2" ]
     then
       clear
       echo "Détermination du lien..."
       version_12=$(curl -s 'https://mohistmc.com/api/1.12.2/latest' | jq -r '.url')
-      wget $version_12
+      curl -O $version_12
     fi
     if [ "$version" == "1.7.10" ]
     then
       clear
       echo "Détermination du lien..."
       version_7=$(curl -s 'https://mohistmc.com/api/1.7.10/latest' | jq -r '.url')
-      wget $version_7
+      curl -O $version_7
     fi
     mv mohist-*.jar mohist.jar
     clear

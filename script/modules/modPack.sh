@@ -4,21 +4,14 @@ echo "Instalation d'un modPack"
 cd /home
 echo "Dans quel dossier voulez-vous installer votre serveur ? (ex: serveur1)"
 read dossier
-echo "[?] Une sauvegarde va être crée au nom de "$dossier"-backup.zip ci un fichier ou dossier portant déja se nom, il sera écrasé, voulez-vous continuer ? (1 ou 2)" 
-select sauvegarde in "Oui" "Non"; do
-    case $sauvegarde in
-        Oui ) break;;
-        Non ) exit; break;;
-    esac
-done
-rm $dossier-backup.zip
-zip -r $dossier-backup.zip $dossier/
+echo $dossier >> /opt/mc-script/variable/dossier.txt
+bash /opt/mc-script/modules/backup.sh
 clear
 mkdir $dossier
 cd $dossier
 echo "Veuiller coller le lien DIRECT de téléchargement de votre modPack (fichier serveur)"
 read lien
-wget $lien
+curl -O $lien
 unzip *.zip
 rm eula.txt
 touch eula.txt && echo "eula=true" >> eula.txt

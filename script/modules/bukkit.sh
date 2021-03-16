@@ -7,16 +7,8 @@ echo "Instalation de : Bukkit"
 cd /home
 echo "Dans quel dossier voulez-vous installer votre serveur ? (ex: serveur1)"
 read dossier
-echo "[?] Une sauvegarde va être crée au nom de "$dossier"-backup.zip ci un fichier ou dossier portant déja se nom, il sera écrasé, voulez-vous continuer ? (1 ou 2)" 
-select sauvegarde in "Oui" "Non"; do
-    case $sauvegarde in
-        Oui ) break;;
-        Non ) exit; break;;
-    esac
-done
-rm $dossier-backup.zip
-zip -r $dossier-backup.zip $dossier/
-echo $dossier > /opt/mc-script/variable/dossier.txt
+echo $dossier >> /opt/mc-script/variable/dossier.txt
+bash /opt/mc-script/modules/backup.sh
 clear
 mkdir $dossier
 cd $dossier
@@ -26,7 +18,7 @@ rm eula.txt
 mkdir buildtools
 cd buildtools
 echo "Téléchargement de BuildTools..."
-wget $bukkit_download
+curl -O $bukkit_download
 git config --global --unset core.autocrlf
 clear
 echo "Pour connaitre les versions prises en charge reférer vous à cette page :"
