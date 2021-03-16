@@ -1,6 +1,6 @@
 # Mohist
 
-detector="/opt/mc-script/mohist-detector.sh"
+detector="/opt/mc-script/version/mohist-detector.sh"
 patch="/opt/mc-script/variable/mohist-version.txt"
 
 clear
