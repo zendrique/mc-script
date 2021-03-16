@@ -26,27 +26,31 @@ function instalation {
     rm start.sh
     rm eula.txt
     rm mohist.jar
+    clear
     echo "Téléchargement de mohist" $version
     if [ "$version" == "1.16.5" ]
     then
-      bash $detector
-      lien=$(cat $patch)
-      wget $lien
+      clear
+      echo "Détermination du lien..."
+      version_16=$(curl -s 'https://mohistmc.com/api/1.16.5/latest' | jq -r '.url')
+      wget $version_16
     fi
     if [ "$version" == "1.12.2" ]
     then
-      bash $detector
-      lien=$(cat $patch)
-      wget $lien
+      clear
+      echo "Détermination du lien..."
+      version_12=$(curl -s 'https://mohistmc.com/api/1.12.2/latest' | jq -r '.url')
+      wget $version_12
     fi
     if [ "$version" == "1.7.10" ]
     then
-      bash $detector
-      lien=$(cat $patch)
-      wget $lien
+      clear
+      echo "Détermination du lien..."
+      version_7=$(curl -s 'https://mohistmc.com/api/1.7.10/latest' | jq -r '.url')
+      wget $version_7
     fi
     mv mohist-*-*-server.jar mohist.jar
-    
+    clear
     echo "Installation de mohist..."
     touch eula.txt && echo "eula=true" >> eula.txt
     touch start.sh && echo "cd /home/"$dossier"" >> start.sh
@@ -65,7 +69,7 @@ function instalation {
     echo "Dossier des mods : /home/"$dossier"/mods" >> info-$dossier.txt
     echo "Dossier des plugins : /home/"$dossier"/plugins" >> info-$dossier.txt
     echo "Fichier de démarrage de : start.sh" >> info-$dossier.txt
-    
+    clear
     echo "Terminer !"
     echo "Pour démarer votre serveur faites la commande : bash /home/"$dossier"/start.sh"
     echo "Pour accéder à votre console taper la commande : screen -r" $dossier
