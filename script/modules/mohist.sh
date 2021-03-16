@@ -30,23 +30,23 @@ function instalation {
     if [ "$version" == "1.16.5" ]
     then
       bash $detector
-      lien=$(cat($patch))
+      lien=$(cat $patch)
       wget $lien
     fi
     if [ "$version" == "1.12.2" ]
     then
       bash $detector
-      lien=$(cat($patch))
+      lien=$(cat $patch)
       wget $lien
     fi
     if [ "$version" == "1.7.10" ]
     then
       bash $detector
-      lien=$(cat($patch))
+      lien=$(cat $patch)
       wget $lien
     fi
     mv mohist-*-*-server.jar mohist.jar
-    clear
+    
     echo "Installation de mohist..."
     touch eula.txt && echo "eula=true" >> eula.txt
     touch start.sh && echo "cd /home/"$dossier"" >> start.sh
@@ -65,7 +65,7 @@ function instalation {
     echo "Dossier des mods : /home/"$dossier"/mods" >> info-$dossier.txt
     echo "Dossier des plugins : /home/"$dossier"/plugins" >> info-$dossier.txt
     echo "Fichier de démarrage de : start.sh" >> info-$dossier.txt
-    clear
+    
     echo "Terminer !"
     echo "Pour démarer votre serveur faites la commande : bash /home/"$dossier"/start.sh"
     echo "Pour accéder à votre console taper la commande : screen -r" $dossier
