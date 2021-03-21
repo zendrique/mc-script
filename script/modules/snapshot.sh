@@ -1,7 +1,7 @@
 # Snapshot
 
-version_snapshot="21W10A"
-snapshot_download=https://launcher.mojang.com/v1/objects/5998d2c7c15fea04b2541efdcbec4c8cfe5df2a6/server.jar
+version_snapshot="21W11A"
+snapshot_download=https://launcher.mojang.com/v1/objects/c828957ad249138129ccbc8749bfd14f01d96a4b/server.jar
 
 clear
 echo "Installation du serveur : snapshot"
