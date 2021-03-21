@@ -1,7 +1,7 @@
 # Vanilla
 
 version_vanilla=1.16.5
-vanilla_download=https://launcher.mojang.com/v1/objects/1b557e7b033b583cd9f66746b7a9ab1ec1673ced/server.jar
+vanilla_download=https://launcher.mojang.com/v1/objects/c828957ad249138129ccbc8749bfd14f01d96a4b/server.jar
 
 clear
 echo "Installation du serveur : Vanilla"
