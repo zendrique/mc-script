@@ -1,10 +1,11 @@
 # Vanilla
 
-version_vanilla=1.16.5
-vanilla_download=https://launcher.mojang.com/v1/objects/1b557e7b033b583cd9f66746b7a9ab1ec1673ced/server.jar
+version_vanilla=`curl https://launchermeta.mojang.com/mc/game/version_manifest.json | jq -r '.latest.release'`
+MANIFEST_URL=$(curl -sSL https://launchermeta.mojang.com/mc/game/version_manifest.json | jq --arg VERSION $version_vanilla -r '.versions | .[] | select(.id== $VERSION )|.url')
+DOWNLOAD_URL=$(curl ${MANIFEST_URL} | jq .downloads.server | jq -r '. | .url')
 
 clear
-echo "Installation du serveur : Vanilla"
+echo "Installation du serveur : Vanilla en" $version_vanilla
 cd /home
 echo "Dans quel dossier voulez-vous installer votre serveur ? (ex: serveur1)"
 read dossier
@@ -18,7 +19,7 @@ rm start.sh
 rm eula.txt
 clear
 echo "Téléchargement du serveur"
-curl -O $vanilla_download
+curl -O ${SERVER_JARFILE} $DOWNLOAD_URL
 touch eula.txt && echo "eula=true" >> eula.txt
 touch start.sh && echo "cd /home/"$dossier"" >> start.sh
 echo "screen -d -m -S "$dossier" java -jar server.jar nogui" >> start.sh
