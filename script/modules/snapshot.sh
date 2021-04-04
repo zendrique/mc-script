@@ -1,10 +1,11 @@
 # Snapshot
 
-version_snapshot="21W13A"
-snapshot_download=https://launcher.mojang.com/v1/objects/36d49b1a6d05f1deac293d477bfa2b4a1babb71c/server.jar
+version_snapshot=`curl https://launchermeta.mojang.com/mc/game/version_manifest.json | jq -r '.latest.snapshot'`
+MANIFEST_URL=$(curl -sSL https://launchermeta.mojang.com/mc/game/version_manifest.json | jq --arg VERSION $version_snapshot -r '.versions | .[] | select(.id== $VERSION )|.url')
+DOWNLOAD_URL=$(curl ${MANIFEST_URL} | jq .downloads.server | jq -r '. | .url')
 
 clear
-echo "Installation du serveur : snapshot"
+echo "Installation du serveur : snapshoten version" $version_snapshot
 cd /home
 echo "Dans quel dossier voulez-vous installer votre serveur ? (ex: serveur1)"
 read dossier
@@ -18,7 +19,7 @@ rm start.sh
 rm eula.txt
 clear
 echo "Téléchargement du serveur"
-curl -O $snapshot_download
+curl -O ${SERVER_JARFILE} $DOWNLOAD_URL
 touch eula.txt && echo "eula=true" >> eula.txt
 touch start.sh && echo "cd /home/"$dossier"" >> start.sh
 echo "screen -d -m -S "$dossier" java -jar server.jar nogui" >> start.sh
