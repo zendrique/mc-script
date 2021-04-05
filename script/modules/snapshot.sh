@@ -5,7 +5,7 @@ MANIFEST_URL=$(curl -sSL https://launchermeta.mojang.com/mc/game/version_manifes
 DOWNLOAD_URL=$(curl ${MANIFEST_URL} | jq .downloads.server | jq -r '. | .url')
 
 clear
-echo "Installation du serveur : snapshoten version" $version_snapshot
+echo "Installation du serveur : snapshot en version" $version_snapshot
 cd /home
 echo "Dans quel dossier voulez-vous installer votre serveur ? (ex: serveur1)"
 read dossier
