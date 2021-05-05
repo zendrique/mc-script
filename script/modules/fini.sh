@@ -2,7 +2,7 @@
 
 # Détéction de la sortie d'information Java
 java_validation=$(cat /opt/mc-script/variable/java.txt)
-if [ $java_validation == "0" ]; then
+if [ $java_validation -eq "0" ]; then
     rm /opt/mc-script/variable/java.txt
     exit 1
 fi
