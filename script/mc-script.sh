@@ -18,28 +18,31 @@ echo "3 - Spigot"
 echo "4 - Bukkit"
 echo "5 - PaperSpigot"
 echo "6 - Tuinity"
-echo "7 - Purpur"
-echo "--------------Moddé----------------------"
-echo "8 - Forge"
-echo "9 - Fabric"
-echo "10 - Sponge"
-echo "11 - CatServer"
-echo "12 - Mohist"
-echo "13 - Thermos"
-echo "--------------Proxy---------------------"
-echo "14 - Bungeecord"
-echo "15 - Waterfall"
-echo "16 - Travertine"
-echo "17 - Hexacord"
-echo "18 - Velocity"
+echo "7 - Airplane"
+echo "8 - Purpur"
+echo "-------------Moddé-----------------------"
+echo "9 - Forge"
+echo "10 - Fabric"
+echo "11 - Sponge"
+echo "-------------Hybride---------------------"
+echo "12 - CatServer"
+echo "13 - Mohist"
+echo "14 - Thermos"
+echo "-------------Proxy----------------------"
+echo "15 - Bungeecord"
+echo "16 - Waterfall"
+echo "17 - Travertine"
+echo "18 - Hexacord"
+echo "19 - Velocity"
+echo "20 - FLameCord"
 echo "-------------Autre----------------------"
-echo "19 - ModPack"
-echo "20 - OpenMod"
-echo "21 - Débogage"
-echo "22 - Info Système"
-echo "23 - Quitter"
-echo "24 - Mettre à jour mc-script"
-echo "25 - Supprimer mc-script"
+echo "21 - ModPack"
+echo "22 - OpenMod"
+echo "23 - Débogage"
+echo "24 - Info Système"
+echo "25 - Quitter"
+echo "26 - Mettre à jour mc-script"
+echo "27 - Supprimer mc-script"
 echo "----------------------------------------"
 echo "Que voulez-vous faire ?"
 read installation
@@ -81,95 +84,105 @@ bash $invocation/file_permission.sh
 bash $invocation/fini.sh
 ;;
 7) 
+bash $invocation/airplane.sh
+bash $invocation/pre_conf_serveur.sh 
+bash $invocation/file_permission.sh
+bash $invocation/fini.sh
+;;
+8) 
 bash $invocation/purpur.sh
 bash $invocation/pre_conf_serveur.sh 
 bash $invocation/file_permission.sh
 bash $invocation/fini.sh
 ;;
-8)
+9)
 bash $invocation/forge.sh
 bash $invocation/pre_conf_serveur.sh 
 bash $invocation/file_permission.sh
 bash $invocation/fini.sh
 ;;
-9)
+10)
 bash $invocation/fabric.sh
 bash $invocation/pre_conf_serveur.sh 
 bash $invocation/file_permission.sh
 bash $invocation/fini.sh
 ;;
-10) 
+11) 
 bash $invocation/sponge.sh
 bash $invocation/pre_conf_serveur.sh 
 bash $invocation/file_permission.sh
 bash $invocation/fini.sh
 ;;
-11) 
+12) 
 bash $invocation/catserver.sh
 bash $invocation/pre_conf_serveur.sh 
 bash $invocation/file_permission.sh
 bash $invocation/fini.sh
 ;;
-12)
+13)
 bash $invocation/mohist.sh
 bash $invocation/pre_conf_serveur.sh 
 bash $invocation/file_permission.sh
 bash $invocation/fini.sh
 ;;
-13) 
+14) 
 bash $invocation/thermos.sh
 bash $invocation/pre_conf_serveur.sh 
 bash $invocation/file_permission.sh
 bash $invocation/fini.sh
 ;;
-14) 
+15) 
 bash $invocation/bungeecord.sh
 bash $invocation/file_permission.sh
 bash $invocation/fini.sh
 ;;
-15)
+16)
 bash $invocation/waterfall.sh 
 bash $invocation/file_permission.sh
 bash $invocation/fini.sh
 ;;
-16)
+17)
 bash $invocation/travertine.sh
 bash $invocation/file_permission.sh
 bash $invocation/fini.sh
 ;;
-17)
+18)
 bash $invocation/hexacord.sh
 bash $invocation/file_permission.sh
 bash $invocation/fini.sh
 ;;
-18)
+19)
 bash $invocation/velocity.sh
 bash $invocation/file_permission.sh
 bash $invocation/fini.sh
 ;;
-19)
+20)
+bash $invocation/flamecord.sh
+bash $invocation/file_permission.sh
+bash $invocation/fini.sh
+21)
 bash $invocation/modpack.sh
 bash $invocation/file_permission.sh
 bash $invocation/fini.sh
 ;;
-20)
+22)
 bash $invocation/openMod.sh
 bash $invocation/file_permission.sh
 bash $invocation/fini.sh
 ;;
-21) 
+23) 
 bash $invocation/debug.sh
 ;;
-22) 
+24) 
 bash $invocation/system_info.sh
 ;;
-23)
+25)
 bash $invocation/fermeture.sh
 ;;
-24)
+26)
 bash $invocation/update.sh
 ;;
-25)
+27)
 bash $invocation/remove.sh
 ;;
 *) 

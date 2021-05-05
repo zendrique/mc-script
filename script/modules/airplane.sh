@@ -1,0 +1,49 @@
+# Airplane
+
+version_airplane=1.16.5
+airplane_download=https://dl.airplane.gg/latest/Airplane-JDK8/launcher-airplane.jar
+java_version=8
+clear
+echo "Instalation de : Aireplane"
+cd /home
+echo "Dans quel dossier voulez-vous installer votre serveur ? (ex: serveur1)"
+read dossier
+echo $dossier >> /opt/mc-script/variable/dossier.txt
+bash /opt/mc-script/modules/backup.sh
+bash /opt/mc-script/modules/java-detector.sh 8 Aireplane
+java_validation=$(cat /opt/mc-script/variable/java.txt)
+if [ $java_validation == "0" ]; then
+    exit 1
+fi
+clear
+mkdir $dossier
+cd $dossier
+rm launcher-airplane.jar
+rm start.sh
+rm eula.txt
+clear
+echo "Téléchargement de airplane..."
+curl -O $airplane_download
+touch eula.txt && echo "eula=true" >> eula.txt
+touch start.sh && echo "cd /home/"$dossier"" >> start.sh
+echo "screen -d -m -S "$dossier" java -XX:+UseConcMarkSweepGC -jar launcher-airplane.jar nogui" >> start.sh
+cd /home
+rm info-$dossier.txt
+touch info-$dossier.txt
+echo "Pour démarer votre serveur faites la commande : bash /home/"$dossier"/start.sh" >> info-$dossier.txt
+echo "Pour accéder à votre console taper la commande : screen -r" $dossier >> info-$dossier.txt
+echo "Detail de l'installation :" >> info-$dossier.txt
+echo "Version du serveur :" $airplane_tuinity >> info-$dossier.txt
+echo "API : SpigotAPI" >> info-$dossier.txt
+echo "Dossier d'instalation : /home/"$dossier >> info-$dossier.txt
+echo "Fichier de démarrage de : start.sh" >> info-$dossier.txt
+clear
+echo "Terminer !"
+echo "Pour démarer votre serveur faites la commande : bash /home/"$dossier"/start.sh"
+echo "Pour accéder à votre console taper la commande : screen -r" $dossier
+echo "Detail de l'installation :"
+echo "Version du serveur :" $airplane_tuinity
+echo "API : SpigotAPI"
+echo "Dossier d'instalation : /home/"$dossier
+echo "Fichier de démarrage de : start.sh"
+echo "Un fichier info-"$dossier".txt dans /home a été crée contenant les information afficher si dessue."

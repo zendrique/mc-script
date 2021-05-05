@@ -2,6 +2,12 @@
 
 dossier=$(cat /opt/mc-script/variable/dossier.txt)
 
+# Détéction de la sortie d'information Java
+java_validation=$(cat /opt/mc-script/variable/java.txt)
+if [ $java_validation == "0" ]; then
+    exit 1
+fi
+
 echo "Module en version beta, certaines options de configurations peuvent ne pas être prises en comptes selon le type de serveur à configuer."
 echo "Voulez-vous effectuer une pre-configuration de notre serveur ? (1 ou 2)" 
 select start in "Oui" "Non"; do
