@@ -1,10 +1,17 @@
 # backup
 
 dossier=$(cat /opt/mc-script/variable/dossier.txt)
+java_validation=$(cat /opt/mc-script/variable/java.txt)
+
+# Détéction de la sortie d'information Java
+if [ $java_validation -ne "1" ]; then
+    exit 1
+fi
+
 clear
 
 function existe {
-    echo "Une vauvegaurde du dossier "$dossier" va être crée"
+    echo "Une sauvegaurde du dossier "$dossier" va être crée"
     echo "Voulez vous continuer ?"
     select validation in "Oui" "Non"; do
     case $validation in

@@ -1,6 +1,7 @@
 # Pre conf serveur
 
 dossier=$(cat /opt/mc-script/variable/dossier.txt)
+java_validation=$(cat /opt/mc-script/variable/java.txt)
 
 # Détéction de la sortie d'information Java
 java_validation=$(cat /opt/mc-script/variable/java.txt)
