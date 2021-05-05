@@ -9,9 +9,10 @@ echo "Dans quel dossier voulez-vous installer votre serveur ? (ex: serveur1)"
 read dossier
 echo $dossier >> /opt/mc-script/variable/dossier.txt
 bash /opt/mc-script/modules/backup.sh
+touch /opt/mc-script/variable/java.txt
 bash /opt/mc-script/modules/java-detector.sh 11 Aireplane
 java_validation=$(cat /opt/mc-script/variable/java.txt)
-if [ $java_validation -eq "0" ]; then
+if [ $java_validation -ne "0" ]; then
     exit 1
 fi
 clear

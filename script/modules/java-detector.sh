@@ -1,9 +1,10 @@
 # Java detector
 
 variable="/opt/mc-script/variable"
+
+# Code da la variable java.txt
 # 0 = Installation annuler
 # 1 = Installation valider ou confirmer
-touch $variable/java.txt
 
 java_version=$(java -version 2>&1 \
   | head -1 \
