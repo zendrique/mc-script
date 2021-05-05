@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+if [ "$EUID" -ne 0 ]; then 
+    echo "[!] Veuillez lancer le script en root (via sudo)"
+    exit
+fi
+
+bash /opt/mc-script/script/mc-script.sh

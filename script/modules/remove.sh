@@ -6,6 +6,7 @@ select remove in "Oui" "Non"; do
         Oui ) echo "Suppression de mc-script..."
         cd /opt
         rm -R mc-script
+        rm /usr/bin/mc-script
         unalias {mc-script}
         echo "Script par zendrique https://github.com/zendrique"
         echo "Contributeur Yadasko https://github.com/Yadasko"

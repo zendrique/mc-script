@@ -35,6 +35,13 @@ FlameCord 1.8 1.16.5
 Mad-Pack
 OpenMod
 ```
+# Utilisation
+Le script se présente tout simplement sous la forme d'un menu qui vous demandes ce que vous voulez installer
+Quand mc-script est installé vous pouvez le démarrer tout simplement avec la commande suivante :
+```
+mc-script
+```
+
 # Version Spigot et Bukkit
 Les version prise en charge par mc-script sont les version prises en charge par BuildTools.
 Plus d'info > https://www.spigotmc.org/wiki/buildtools/

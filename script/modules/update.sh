@@ -10,7 +10,7 @@ apt install dos2unix git -y
 clear
 echo "[.] Supression des fichiers..."
 rm -R $dossier/script/
-rm $dossier/README.md $dossier/*.sh $dossier/LICENSE
+rm $dossier/README.md $dossier/*.sh $dossier/LICENSE /usr/bin/mc-script
 clear
 echo "[.] Téléchargement de mc-script..."
 mkdir $dossier/update

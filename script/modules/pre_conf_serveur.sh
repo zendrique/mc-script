@@ -4,7 +4,7 @@ dossier=$(cat /opt/mc-script/variable/dossier.txt)
 
 # Détéction de la sortie d'information Java
 java_validation=$(cat /opt/mc-script/variable/java.txt)
-if [ $java_validation -ne "0" ]; then
+if [ $java_validation -ne "1" ]; then
     exit 1
 fi
 

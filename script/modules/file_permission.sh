@@ -7,7 +7,7 @@ java_file="/opt/mc-script/variable/java.txt"
 java_validation=$(cat /opt/mc-script/variable/java.txt)
 
 # Détéction de la sortie d'information Java
-if [ $java_validation -ne "0" ]; then
+if [ $java_validation -ne "1" ]; then
     rm $java_file
     exit 1
 fi

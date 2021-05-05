@@ -96,6 +96,12 @@ function java {
     done
 }
 
+function mcscript {
+    rm -f /usr/bin/mc-script
+    mv $path/mc-script /usr/bin/
+    chmod +x /usr/bin/mc-script
+}
+
 if [ "$1" == "--update" ]
 then
   clear
@@ -103,6 +109,7 @@ then
   os
   update
   dependances
+  mcscript
 else
   os
   accords
@@ -114,6 +121,7 @@ else
   dependances
   clear
   java
+  mcscript
 fi
 
 clear

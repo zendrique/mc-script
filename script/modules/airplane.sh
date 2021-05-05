@@ -5,7 +5,7 @@ airplane_download=https://dl.airplane.gg/latest/Airplane-JDK8/launcher-airplane.
 
 # Détéction de sortie de Java
 java_validation=$(cat /opt/mc-script/variable/java.txt)
-if [ $java_validation -ne "0" ]; then
+if [ $java_validation -ne "1" ]; then
     exit 1
 fi
 
