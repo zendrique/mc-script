@@ -7,6 +7,7 @@ if [ $java_validation -ne "1" ]; then
     exit 1
 fi
 
+clear
 echo "Voulez-vous retourner au menue de mc-script ? (1 ou 2)"
 select fin in "Oui" "Non"; do
     case $fin in
