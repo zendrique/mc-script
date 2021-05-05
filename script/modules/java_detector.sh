@@ -5,6 +5,7 @@ variable="/opt/mc-script/variable"
 # Code da la variable java.txt
 # 0 = Installation annuler
 # 1 = Installation valider ou confirmer
+touch /opt/mc-script/variable/java.txt
 
 java_version=$(java -version 2>&1 \
   | head -1 \
@@ -36,7 +37,6 @@ function ingorer {
         esac
     done
 }
-
 
 function menue {
     echo "Que voulez vous faire ?"

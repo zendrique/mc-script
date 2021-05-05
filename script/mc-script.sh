@@ -47,7 +47,7 @@ echo "----------------------------------------"
 echo "Que voulez-vous faire ?"
 read installation
 case $installation in
-1) 
+1)
 bash $invocation/vanilla.sh
 bash $invocation/pre_conf_serveur.sh 
 bash $invocation/file_permission.sh
@@ -84,6 +84,8 @@ bash $invocation/file_permission.sh
 bash $invocation/fini.sh
 ;;
 7) 
+bash $invocation/java_detector.sh 11 Airplane
+bash $invocation/backup.sh
 bash $invocation/airplane.sh
 bash $invocation/pre_conf_serveur.sh 
 bash $invocation/file_permission.sh
