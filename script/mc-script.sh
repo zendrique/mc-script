@@ -160,6 +160,7 @@ bash $invocation/fini.sh
 bash $invocation/flamecord.sh
 bash $invocation/file_permission.sh
 bash $invocation/fini.sh
+;;
 21)
 bash $invocation/modpack.sh
 bash $invocation/file_permission.sh
