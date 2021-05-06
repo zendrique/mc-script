@@ -2,13 +2,18 @@
 
 spigot_download=https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
 
+# Détéction de sortie de Java
+java_validation=$(cat /opt/mc-script/variable/java.txt)
+if [ $java_validation -ne "1" ]; then
+    exit 1
+fi
+
 clear
 echo "Installation du serveur : Spigot"
 cd /home
 echo "Dans quel dossier voulez-vous installer votre serveur ? (ex: serveur1)"
 read dossier
 echo $dossier >> /opt/mc-script/variable/dossier.txt
-bash /opt/mc-script/modules/backup.sh
 clear
 mkdir $dossier
 cd $dossier

@@ -3,13 +3,18 @@
 version_paperspigot=1.16.5
 paperspigot_download=https://papermc.io/ci/job/Paper-1.16/lastSuccessfulBuild/artifact/paperclip.jar
 
+# Détéction de sortie de Java
+java_validation=$(cat /opt/mc-script/variable/java.txt)
+if [ $java_validation -ne "1" ]; then
+    exit 1
+fi
+
 clear
 echo "Instalation de : PaperSpigot"
 cd /home
 echo "Dans quel dossier voulez-vous installer votre serveur ? (ex: serveur1)"
 read dossier
 echo $dossier >> /opt/mc-script/variable/dossier.txt
-bash /opt/mc-script/modules/backup.sh
 clear
 mkdir $dossier
 cd $dossier

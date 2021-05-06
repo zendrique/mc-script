@@ -48,42 +48,54 @@ echo "Que voulez-vous faire ?"
 read installation
 case $installation in
 1)
+bash $invocation/java_detector.sh --noargs
+bash $invocation/backup.sh
 bash $invocation/vanilla.sh
 bash $invocation/pre_conf_serveur.sh 
 bash $invocation/file_permission.sh
 bash $invocation/fini.sh
 ;;
-2) 
+2)
+bash $invocation/java_detector.sh --noargs
+bash $invocation/backup.sh
 bash $invocation/snapshot.sh
 bash $invocation/pre_conf_serveur.sh 
 bash $invocation/file_permission.sh
 bash $invocation/fini.sh
 ;;
-3) 
+3)
+bash $invocation/java_detector.sh --noargs
+bash $invocation/backup.sh
 bash $invocation/spigot.sh
 bash $invocation/pre_conf_serveur.sh 
 bash $invocation/file_permission.sh
 bash $invocation/fini.sh
 ;;
-4) 
+4)
+bash $invocation/java_detector.sh --noargs
+bash $invocation/backup.sh
 bash $invocation/bukkit.sh
 bash $invocation/pre_conf_serveur.sh 
 bash $invocation/file_permission.sh
 bash $invocation/fini.sh
 ;;
-5) 
+5)
+bash $invocation/java_detector.sh 11 PaperSpigot
+bash $invocation/backup.sh
 bash $invocation/paperspigot.sh
 bash $invocation/pre_conf_serveur.sh 
 bash $invocation/file_permission.sh
 bash $invocation/fini.sh
 ;;
 6)
+bash $invocation/java_detector.sh 1 Tuinity
+bash $invocation/backup.sh
 bash $invocation/tuinity.sh
 bash $invocation/pre_conf_serveur.sh 
 bash $invocation/file_permission.sh
 bash $invocation/fini.sh
 ;;
-7) 
+7)
 bash $invocation/java_detector.sh 11 Airplane
 bash $invocation/backup.sh
 bash $invocation/airplane.sh
@@ -91,92 +103,122 @@ bash $invocation/pre_conf_serveur.sh
 bash $invocation/file_permission.sh
 bash $invocation/fini.sh
 ;;
-8) 
+8)
+bash $invocation/java_detector.sh 11 Purpur
+bash $invocation/backup.sh
 bash $invocation/purpur.sh
 bash $invocation/pre_conf_serveur.sh 
 bash $invocation/file_permission.sh
 bash $invocation/fini.sh
 ;;
 9)
+bash $invocation/java_detector.sh --noargs
+bash $invocation/backup.sh
 bash $invocation/forge.sh
 bash $invocation/pre_conf_serveur.sh 
 bash $invocation/file_permission.sh
 bash $invocation/fini.sh
 ;;
 10)
+bash $invocation/java_detector.sh --noargs
+bash $invocation/backup.sh
 bash $invocation/fabric.sh
 bash $invocation/pre_conf_serveur.sh 
 bash $invocation/file_permission.sh
 bash $invocation/fini.sh
 ;;
-11) 
+11)
+bash $invocation/java_detector.sh --noargs
+bash $invocation/backup.sh
 bash $invocation/sponge.sh
 bash $invocation/pre_conf_serveur.sh 
 bash $invocation/file_permission.sh
 bash $invocation/fini.sh
 ;;
-12) 
+12)
+bash $invocation/java_detector.sh 8 CatServer
+bash $invocation/backup.sh
 bash $invocation/catserver.sh
 bash $invocation/pre_conf_serveur.sh 
 bash $invocation/file_permission.sh
 bash $invocation/fini.sh
 ;;
 13)
+bash $invocation/java_detector.sh 11 Mohist
+bash $invocation/backup.sh
 bash $invocation/mohist.sh
 bash $invocation/pre_conf_serveur.sh 
 bash $invocation/file_permission.sh
 bash $invocation/fini.sh
 ;;
-14) 
+14)
+bash $invocation/java_detector.sh --noargs
+bash $invocation/backup.sh
 bash $invocation/thermos.sh
 bash $invocation/pre_conf_serveur.sh 
 bash $invocation/file_permission.sh
 bash $invocation/fini.sh
 ;;
-15) 
+15)
+bash $invocation/java_detector.sh --noargs
+bash $invocation/backup.sh
 bash $invocation/bungeecord.sh
 bash $invocation/file_permission.sh
 bash $invocation/fini.sh
 ;;
 16)
+bash $invocation/java_detector.sh --noargs
+bash $invocation/backup.sh
 bash $invocation/waterfall.sh 
 bash $invocation/file_permission.sh
 bash $invocation/fini.sh
 ;;
 17)
+bash $invocation/java_detector.sh --noargs
+bash $invocation/backup.sh
 bash $invocation/travertine.sh
 bash $invocation/file_permission.sh
 bash $invocation/fini.sh
 ;;
 18)
+bash $invocation/java_detector.sh --noargs
+bash $invocation/backup.sh
 bash $invocation/hexacord.sh
 bash $invocation/file_permission.sh
 bash $invocation/fini.sh
 ;;
 19)
+bash $invocation/java_detector.sh --noargs
+bash $invocation/backup.sh
 bash $invocation/velocity.sh
 bash $invocation/file_permission.sh
 bash $invocation/fini.sh
 ;;
 20)
+bash $invocation/java_detector.sh --noargs
+bash $invocation/backup.sh
 bash $invocation/flamecord.sh
 bash $invocation/file_permission.sh
 bash $invocation/fini.sh
 ;;
 21)
+bash $invocation/java_detector.sh --noargs
+bash $invocation/backup.sh
 bash $invocation/modpack.sh
 bash $invocation/file_permission.sh
 bash $invocation/fini.sh
 ;;
 22)
+bash $invocation/java_detector.sh --noargs
+bash $invocation/backup.sh
 bash $invocation/openMod.sh
 bash $invocation/file_permission.sh
 bash $invocation/fini.sh
 ;;
-23) 
+23)
 bash $invocation/debug.sh
 ;;
-24) 
+24)
 bash $invocation/system_info.sh
 ;;
 25)
@@ -188,7 +230,7 @@ bash $invocation/update.sh
 27)
 bash $invocation/remove.sh
 ;;
-*) 
+*)
 bash $invocation/saisie_invalide.sh
 ;;
 esac

@@ -3,6 +3,12 @@
 detector="/opt/mc-script/script/version/mohist-detector.sh"
 patch="/opt/mc-script/variable/mohist-version.txt"
 
+# Détéction de sortie de Java
+java_validation=$(cat /opt/mc-script/variable/java.txt)
+if [ $java_validation -ne "1" ]; then
+    exit 1
+fi
+
 clear
 
 function instalation {
@@ -11,7 +17,6 @@ function instalation {
     echo "Dans quel dossier voulez-vous installer votre serveur ? (ex: serveur1)"
     read dossier
     echo $dossier >> /opt/mc-script/variable/dossier.txt
-    bash /opt/mc-script/modules/backup.sh
     clear
     mkdir $dossier
     cd $dossier

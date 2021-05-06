@@ -1,4 +1,11 @@
 # OpenMod
+
+# Détéction de sortie de Java
+java_validation=$(cat /opt/mc-script/variable/java.txt)
+if [ $java_validation -ne "1" ]; then
+    exit 1
+fi
+
 clear
 echo "Instalation d'un serveur non pris en charge"
 echo "Proposer un template sur le github du projet !"
