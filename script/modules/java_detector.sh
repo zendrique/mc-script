@@ -7,9 +7,8 @@ if [ $1 = "--noargs" ]; then
     exit 0
 fi
 
-module_version = $1
-module_name = $2
 variable="/opt/mc-script/variable"
+java_apt=adoptopenjdk-$1-hotspot
 
 # Code da la variable java.txt
 # 0 = Installation annuler
@@ -26,13 +25,13 @@ java_version=$(java -version 2>&1 \
 clear
 echo "Détérmination de votre version de Java..."
 echo "Version de Java détecter :" $java_version
-echo "Version demander par le module :" $module_version
-echo "Nom du module :" $module_name
+echo "Version demander par le module :" $1
+echo "Nom du module :" $2
 
 function changer {
     apt autoremove --purge -y adoptopenjdk-$java_version-hotspot
     apt update
-    apt install -y adoptopenjdk-$module_version-hotspot
+    apt install -y $java_apt
     echo "1" >> $variable/java.txt
     exit 0
 }
@@ -63,7 +62,8 @@ function menue {
 }
 
 function erreur {
-    echo "La version de Java demander : Java "$module_version" n'est pas installer sur votre serveur."
+    echo "La version de Java demander : Java " $1 
+    echo "n'est pas installer sur votre serveur."
     echo "Version installer sur votre serveur : Java" $java_version
     menue
 }
@@ -73,7 +73,7 @@ function ok {
     exit 0
 }
 
-if [ "$module_version" -eq "$java_version" ]; then
+if [ "$1" -eq "$java_version" ]; then
     ok
     else
     erreur
