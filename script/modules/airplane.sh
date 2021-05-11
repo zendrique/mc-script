@@ -1,7 +1,7 @@
 # Airplane
 
 version_airplane=1.16.5
-airplane_download=https://dl.airplane.gg/latest/Airplane-JDK8/launcher-airplane.jar
+airplane_download=https://dl.airplane.gg/latest/Airplane-JDK11/launcher-airplane.jar
 
 # Détéction de sortie de Java
 java_validation=$(cat /opt/mc-script/variable/java.txt)

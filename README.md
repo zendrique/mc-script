@@ -20,7 +20,7 @@ Spigot
 Bukkit
 Paperspigot 1.16.5
 Tuinity 1.16.5
-Airplane 1.16.5 (JDK 8)
+Airplane 1.16.5 (JDK 11)
 Purpur 1.16.5
 Sponge 1.12.2
 CatServer 1.12.2
