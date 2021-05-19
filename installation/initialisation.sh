@@ -4,7 +4,7 @@ cd /opt
 clear
 echo "Installation..."
 apt update >> /dev/null
-apt install apt-utils -yes
+apt install apt-utils -y
 clear
 apt install dos2unix git dialog -y >> /dev/null
 clear
