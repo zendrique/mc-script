@@ -13,6 +13,6 @@ fi
 
 dossier=$(cat /opt/mc-script/variable/dossier.txt)
 
-sudo chown -R $final_user:$final_user $path/$dossier
+chown -R $final_user:$final_user $path/$dossier
 rm /opt/mc-script/variable/dossier.txt
 exit 0

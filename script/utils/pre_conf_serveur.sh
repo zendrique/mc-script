@@ -1,7 +1,5 @@
 # Pre conf serveur
 
-java_validation=$(cat /opt/mc-script/variable/java.txt)
-
 # Détéction de la sortie d'information Java
 java_validation=$(cat /opt/mc-script/variable/java.txt)
 if [ $java_validation -ne "1" ]; then

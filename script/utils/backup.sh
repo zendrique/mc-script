@@ -1,17 +1,12 @@
 # backup
 
 java_validation=$(cat /opt/mc-script/variable/java.txt)
+dossier=$(cat /opt/mc-script/variable/dossier.txt)
 
 # Détéction de la sortie d'information Java
 if [ $java_validation -ne "1" ]; then
     exit 1
 fi
-
-clear
-echo "Dans quel dossier voulez-vous installer vous serveur ?"
-read dossier
-
-echo $dossier /opt/mc-script/variable/dossier.txt
 
 clear
 
@@ -36,7 +31,7 @@ function existe {
 function non-existe  {
     clear
     echo "[.] Acune suaveguarde à crée"
-    exit
+    exit 2
 }
 
 if [ -d "/home/$dossier" ];then
@@ -46,5 +41,4 @@ else
 non-existe
 sleep 2
 fi
-
-exit
+exit 0
