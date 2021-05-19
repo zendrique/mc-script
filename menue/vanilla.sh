@@ -21,7 +21,7 @@ while true; do
     --clear \
     --cancel-label "Retour" \
     --menu "Que voulez-vous installer ou mettre à jour ?" $HEIGHT $WIDTH 4 \
-    "1" "Va,illa" \
+    "1" "Vanilla" \
     "2" "Snapshot" \
     "3" "Spigot" \
     "4" "Bukkit" \

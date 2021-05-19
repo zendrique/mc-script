@@ -2,6 +2,7 @@
 
 version_hexacord="1.7.10 - 1.16.4"
 hexacord_download=https://github.com/HexagonMC/BungeeCord/releases/download/v272/BungeeCord.jar
+dossier=$(cat /opt/mc-script/variable/dossier.txt)
 
 # Détéction de sortie de Java
 java_validation=$(cat /opt/mc-script/variable/java.txt)
@@ -12,10 +13,6 @@ fi
 clear
 echo "Instalation de : HexaCord"
 cd /home
-echo "Dans quel dossier voulez-vous installer votre serveur ? (ex: serveur1)"
-read dossier
-echo $dossier >> /opt/mc-script/variable/dossier.txt
-clear
 mkdir $dossier
 cd $dossier
 rm HexaCord.jar

@@ -9,14 +9,11 @@ fi
 version_snapshot=`curl https://launchermeta.mojang.com/mc/game/version_manifest.json | jq -r '.latest.snapshot'`
 MANIFEST_URL=$(curl -sSL https://launchermeta.mojang.com/mc/game/version_manifest.json | jq --arg VERSION $version_snapshot -r '.versions | .[] | select(.id== $VERSION )|.url')
 DOWNLOAD_URL=$(curl ${MANIFEST_URL} | jq .downloads.server | jq -r '. | .url')
+dossier=$(cat /opt/mc-script/variable/dossier.txt)
 
 clear
 echo "Installation du serveur : snapshot en version" $version_snapshot
 cd /home
-echo "Dans quel dossier voulez-vous installer votre serveur ? (ex: serveur1)"
-read dossier
-echo $dossier >> /opt/mc-script/variable/dossier.txt
-clear
 mkdir $dossier
 cd $dossier
 rm server.jar

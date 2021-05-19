@@ -2,6 +2,7 @@
 
 version_CatServer=1.12.2
 CatServer_download=https://github.com/Luohuayu/CatServer/releases/download/21.04.20/CatServer-4292748-universal.jar
+dossier=$(cat /opt/mc-script/variable/dossier.txt)
 
 # Détéction de sortie de Java
 java_validation=$(cat /opt/mc-script/variable/java.txt)
@@ -12,10 +13,6 @@ fi
 clear
 echo "Instalation de : CatServer"
 cd /home
-echo "Dans quel dossier voulez-vous installer votre serveur ? (ex: serveur1)"
-read dossier
-echo $dossier >> /opt/mc-script/variable/dossier.txt
-clear
 mkdir $dossier
 cd $dossier
 rm start.sh

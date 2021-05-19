@@ -2,6 +2,7 @@
 
 version_airplane=1.16.5
 airplane_download=https://dl.airplane.gg/latest/Airplane-JDK11/launcher-airplane.jar
+dossier=$(cat /opt/mc-script/variable/dossier.txt)
 
 # Détéction de sortie de Java
 java_validation=$(cat /opt/mc-script/variable/java.txt)
@@ -12,10 +13,6 @@ fi
 clear
 echo "Instalation de : Aireplane"
 cd /home
-echo "Dans quel dossier voulez-vous installer votre serveur ? (ex: serveur1)"
-read dossier
-echo $dossier >> /opt/mc-script/variable/dossier.txt
-clear
 mkdir $dossier
 cd $dossier
 rm launcher-airplane.jar

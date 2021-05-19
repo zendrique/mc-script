@@ -2,6 +2,7 @@
 
 detector="/opt/mc-script/script/version/mohist-detector.sh"
 patch="/opt/mc-script/variable/mohist-version.txt"
+dossier=$(cat /opt/mc-script/variable/dossier.txt)
 
 # Détéction de sortie de Java
 java_validation=$(cat /opt/mc-script/variable/java.txt)
@@ -14,10 +15,6 @@ clear
 function instalation {
     echo "Instalation de : Mohist" $version
     cd /home
-    echo "Dans quel dossier voulez-vous installer votre serveur ? (ex: serveur1)"
-    read dossier
-    echo $dossier >> /opt/mc-script/variable/dossier.txt
-    clear
     mkdir $dossier
     cd $dossier
     rm start.sh

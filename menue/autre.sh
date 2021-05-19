@@ -49,6 +49,7 @@ while true; do
       ;;
     1 )
       bash $utils/java_detector.sh --noargs
+      bash $utils/dossier.txt
       bash $utils/backup.sh
       bash $serveur/modpack.sh
       bash $utils/file_permission.sh
@@ -56,6 +57,7 @@ while true; do
       ;;
     2 )
       bash $utils/java_detector.sh --noargs
+      bash $utils/dossier.txt
       bash $utils/backup.sh
       bash $serveur/openMod.sh
       bash $utils/file_permission.sh

@@ -3,6 +3,7 @@
 version_sponge=1.12.2
 sponge_download=https://repo.spongepowered.org/maven/org/spongepowered/spongeforge/1.12.2-2838-7.3.0/spongeforge-1.12.2-2838-7.3.0.jar
 forge_sponge_download=https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.12.2-14.23.5.2854/forge-1.12.2-14.23.5.2854-installer.jar
+dossier=$(cat /opt/mc-script/variable/dossier.txt)
 
 # Détéction de sortie de Java
 java_validation=$(cat /opt/mc-script/variable/java.txt)
@@ -13,10 +14,6 @@ fi
 clear
 echo "Instalation de : Sponge Forge"
 cd /home
-echo "Dans quel dossier voulez-vous installer votre serveur ? (ex: serveur1)"
-read dossier
-echo $dossier >> /opt/mc-script/variable/dossier.txt
-clear
 mkdir $dossier
 cd $dossier
 rm start.sh

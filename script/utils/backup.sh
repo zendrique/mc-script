@@ -7,7 +7,11 @@ if [ $java_validation -ne "1" ]; then
     exit 1
 fi
 
-dossier=$(cat /opt/mc-script/variable/dossier.txt)
+clear
+echo "Dans quel dossier voulez-vous installer vous serveur ?"
+read dossier
+
+echo $dossier /opt/mc-script/variable/dossier.txt
 
 clear
 

@@ -49,8 +49,8 @@ function ingorer {
 function menue {
     echo "Que voulez vous faire ?"
     echo "1 - Quitter"
-    echo "2 - Installer la version demander et deesintaller l'autre (recommender)"
-    echo "3 - Ne rien faire poursuivre l'installation"
+    echo "2 - Installer la version demander et désintaller l'autre (recommender)"
+    echo "3 - Ne rien faire et poursuivre l'installation"
     select version in "1" "2" "3"; do
     case $version in
         1 ) echo "0" >> $variable/java.txt 

@@ -6,13 +6,11 @@ if [ $java_validation -ne "1" ]; then
     exit 1
 fi
 
+dossier=$(cat /opt/mc-script/variable/dossier.txt)
+
 clear
 echo "Instalation d'un modPack"
 cd /home
-echo "Dans quel dossier voulez-vous installer votre serveur ? (ex: serveur1)"
-read dossier
-echo $dossier >> /opt/mc-script/variable/dossier.txt
-clear
 mkdir $dossier
 cd $dossier
 echo "Veuiller coller le lien DIRECT de téléchargement de votre modPack (fichier serveur)"

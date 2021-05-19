@@ -6,13 +6,12 @@ if [ $java_validation -ne "1" ]; then
     exit 1
 fi
 
+dossier=$(cat /opt/mc-script/variable/dossier.txt)
+
 clear
 echo "Instalation d'un serveur non pris en charge"
 echo "Proposer un template sur le github du projet !"
 cd /home
-echo "Dans quel dossier voulez-vous installer votre serveur ? (ex: serveur1)"
-read dossier
-clear
 mkdir $dossier
 cd $dossier
 echo "Veuiller coller le lien DIRECT de téléchargement du fichier jar de votre serveur serveur"

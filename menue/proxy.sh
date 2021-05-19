@@ -47,6 +47,7 @@ while true; do
       ;;
     1 )
       bash $utils/java_detector.sh --noargs
+      bash $utils/dossier.txt
       bash $utils/backup.sh
       bash $serveur/bungeecord.sh
       bash $utils/file_permission.sh
@@ -54,6 +55,7 @@ while true; do
       ;;
     2 )
       bash $utils/java_detector.sh --noargs
+      bash $utils/dossier.txt
       bash $utils/backup.sh
       bash $serveur/waterfall.sh 
       bash $utils/file_permission.sh
@@ -61,6 +63,7 @@ while true; do
       ;;
     3 )
       bash $utils/java_detector.sh --noargs
+      bash $utils/dossier.txt
       bash $utils/backup.sh
       bash $serveur/travertine.sh
       bash $utils/file_permission.sh
@@ -68,6 +71,7 @@ while true; do
       ;;
     4 )
       bash $utils/java_detector.sh --noargs
+      bash $utils/dossier.txt
       bash $utils/backup.sh
       bash $serveur/hexacord.sh
       bash $utils/file_permission.sh
@@ -75,6 +79,7 @@ while true; do
       ;;
     5 )
       bash $utils/java_detector.sh --noargs
+      bash $utils/dossier.txt
       bash $utils/backup.sh
       bash $serveur/velocity.sh
       bash $utils/file_permission.sh
@@ -82,6 +87,7 @@ while true; do
       ;;
     6 )
       bash $utils/java_detector.sh --noargs
+      bash $utils/dossier.txt
       bash $utils/backup.sh
       bash $serveur/flamecord.sh
       bash $utils/file_permission.sh

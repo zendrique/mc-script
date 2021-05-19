@@ -6,6 +6,8 @@ if [ $java_validation -ne "1" ]; then
     exit 1
 fi
 
+dossier=$(cat /opt/mc-script/variable/dossier.txt)
+
 clear
 echo "En quel version du jeux voulez-vous ?"
 echo "ex : 1.12.2"
@@ -14,9 +16,6 @@ clear
 echo "Quel version de Forge voulez-vous ?"
 echo "(vide) pour la dernière en date"
 read FORGE_VERSION
-echo "Dans quel dossier voulez-vous installer votre serveur ? (ex: serveur1)"
-read dossier
-echo $dossier >> /opt/mc-script/variable/dossier.txt
 clear
 mkdir $dossier
 cd $dossier

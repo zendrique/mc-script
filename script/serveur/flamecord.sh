@@ -2,6 +2,7 @@
 
 version_flamecord="1.8 - 1.16.5"
 flamecord_download=https://github.com/2lstudios-mc/FlameCord/releases/download/bc4a8ac/FlameCord.jar
+dossier=$(cat /opt/mc-script/variable/dossier.txt)
 
 # Détéction de sortie de Java
 java_validation=$(cat /opt/mc-script/variable/java.txt)
@@ -12,10 +13,6 @@ fi
 clear
 echo "Instalation de : FlameCord"
 cd /home
-echo "Dans quel dossier voulez-vous installer votre serveur ? (ex: serveur1)"
-read dossier
-echo $dossier >> /opt/mc-script/variable/dossier.txt
-clear
 mkdir $dossier
 cd $dossier
 rm Waterfall.jar
