@@ -9,4 +9,5 @@ response=$?
 case $response in
    0) bash /opt/mc-script/installation/installation.sh ;;
    1) bash /opt/mc-script/script/utils/remove.sh;;
+   255) bash /opt/mc-script/script/utils/remove.sh;;
 esac
