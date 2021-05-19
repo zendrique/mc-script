@@ -23,5 +23,5 @@ mv -t $dossier LICENSE mc-script README.md
 dos2unix $dossier/installation.sh
 rm -r $dossier_update
 echo "[.] Démarrage du programme..."
-bash /opt/mc-script/installation.sh --update
+bash /opt/mc-script/installation/installation.sh --update
 exit 0
