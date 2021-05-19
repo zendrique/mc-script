@@ -119,8 +119,6 @@ else
 fi
 
 clear
-echo "[.] Nettyoage"
-rm /opt/mc-script/installation.sh
 echo "[.] Démarage de mc-script"
-bash $path/script/mc-script.sh
+bash $path/menue/mc-script.sh
 exit
