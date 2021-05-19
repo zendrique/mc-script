@@ -4,8 +4,8 @@ DIALOG_CANCEL=1
 DIALOG_ESC=255
 HEIGHT=0
 WIDTH=0
-invocation="/opt/mc-script/script/serveur"
-
+serveur="/opt/mc-script/script/serveur"
+utils="/opt/mc-script/script/utils"
 display_result() {
   dialog --title "$1" \
     --no-collapse \
@@ -43,28 +43,28 @@ while true; do
       echo "mc-script - Terminer."
       ;;
     1 )
-      bash $invocation/java_detector.sh --noargs
-      bash $invocation/backup.sh
-      bash $invocation/forge.sh
-      bash $invocation/pre_conf_serveur.sh 
-      bash $invocation/file_permission.sh
-      bash $invocation/fini.sh
+      bash $utils/java_detector.sh --noargs
+      bash $utils/backup.sh
+      bash $serveur/forge.sh
+      bash $utils/pre_conf_serveur.sh 
+      bash $utils/file_permission.sh
+      bash $utils/fini.sh
       ;;
     2 )
-      bash $invocation/java_detector.sh --noargs
-      bash $invocation/backup.sh
-      bash $invocation/fabric.sh
-      bash $invocation/pre_conf_serveur.sh 
-      bash $invocation/file_permission.sh
-      bash $invocation/fini.sh
+      bash $utils/java_detector.sh --noargs
+      bash $utils/backup.sh
+      bash $serveur/fabric.sh
+      bash $utils/pre_conf_serveur.sh 
+      bash $utils/file_permission.sh
+      bash $utils/fini.sh
       ;;
     3 )
-      bash $invocation/java_detector.sh --noargs
-      bash $invocation/backup.sh
-      bash $invocation/sponge.sh
-      bash $invocation/pre_conf_serveur.sh 
-      bash $invocation/file_permission.sh
-      bash $invocation/fini.sh
+      bash $utils/java_detector.sh --noargs
+      bash $utils/backup.sh
+      bash $serveur/sponge.sh
+      bash $utils/pre_conf_serveur.sh 
+      bash $utils/file_permission.sh
+      bash $utils/fini.sh
       ;;
   esac
 done

@@ -4,7 +4,8 @@ DIALOG_CANCEL=1
 DIALOG_ESC=255
 HEIGHT=0
 WIDTH=0
-invocation="/opt/mc-script/script/serveur"
+serveur="/opt/mc-script/script/serveur"
+utils="/opt/mc-script/script/utils"
 
 display_result() {
   dialog --title "$1" \
@@ -47,33 +48,33 @@ while true; do
       echo "mc-script - Terminer."
       ;;
     1 )
-      bash $invocation/java_detector.sh --noargs
-      bash $invocation/backup.sh
-      bash $invocation/modpack.sh
-      bash $invocation/file_permission.sh
-      bash $invocation/fini.sh
+      bash $utils/java_detector.sh --noargs
+      bash $utils/backup.sh
+      bash $serveur/modpack.sh
+      bash $utils/file_permission.sh
+      bash $utils/fini.sh
       ;;
     2 )
-      bash $invocation/java_detector.sh --noargs
-      bash $invocation/backup.sh
-      bash $invocation/openMod.sh
-      bash $invocation/file_permission.sh
-      bash $invocation/fini.sh
+      bash $utils/java_detector.sh --noargs
+      bash $utils/backup.sh
+      bash $serveur/openMod.sh
+      bash $utils/file_permission.sh
+      bash $utils/fini.sh
       ;;
     3 )
-      bash $invocation/debug.sh
+      bash $utils/debug.sh
       ;;
     4 )
-      bash $invocation/system_info.sh
+      bash $utils/system_info.sh
       ;;
     5 )
-      bash $invocation/fermeture.sh
+      bash $utils/fermeture.sh
       ;;
     6 )
-      bash $invocation/update.sh
+      bash $utils/update.sh
       ;;
     7 )
-      bash $invocation/remove.sh
+      bash $utils/remove.sh
       ;;
   esac
 done

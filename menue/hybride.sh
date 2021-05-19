@@ -4,7 +4,8 @@ DIALOG_CANCEL=1
 DIALOG_ESC=255
 HEIGHT=0
 WIDTH=0
-invocation="/opt/mc-script/script/serveur"
+serveur="/opt/mc-script/script/serveur"
+utils="/opt/mc-script/script/utils"
 
 display_result() {
   dialog --title "$1" \
@@ -43,28 +44,28 @@ while true; do
       echo "mc-script - Terminer."
       ;;
     1 )
-      bash $invocation/java_detector.sh 8 CatServer
-      bash $invocation/backup.sh
-      bash $invocation/catserver.sh
-      bash $invocation/pre_conf_serveur.sh 
-      bash $invocation/file_permission.sh
-      bash $invocation/fini.sh
+      bash $utils/java_detector.sh 8 CatServer
+      bash $utils/backup.sh
+      bash $serveur/catserver.sh
+      bash $utils/pre_conf_serveur.sh 
+      bash $utils/file_permission.sh
+      bash $utils/fini.sh
       ;;
     2 )
-      bash $invocation/java_detector.sh 11 Mohist
-      bash $invocation/backup.sh
-      bash $invocation/mohist.sh
-      bash $invocation/pre_conf_serveur.sh 
-      bash $invocation/file_permission.sh
-      bash $invocation/fini.sh
+      bash $utils/java_detector.sh 11 Mohist
+      bash $utils/backup.sh
+      bash $serveur/mohist.sh
+      bash $utils/pre_conf_serveur.sh 
+      bash $utils/file_permission.sh
+      bash $utils/fini.sh
       ;;
     3 )
-      bash $invocation/java_detector.sh --noargs
-      bash $invocation/backup.sh
-      bash $invocation/thermos.sh
-      bash $invocation/pre_conf_serveur.sh 
-      bash $invocation/file_permission.sh
-      bash $invocation/fini.sh
+      bash $utils/java_detector.sh --noargs
+      bash $utils/backup.sh
+      bash $serveur/thermos.sh
+      bash $utils/pre_conf_serveur.sh 
+      bash $utils/file_permission.sh
+      bash $utils/fini.sh
       ;;
   esac
 done

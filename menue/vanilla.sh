@@ -4,7 +4,8 @@ DIALOG_CANCEL=1
 DIALOG_ESC=255
 HEIGHT=0
 WIDTH=0
-invocation="/opt/mc-script/script/serveur"
+serveur="/opt/mc-script/script/serveur"
+utils="/opt/mc-script/script/utils"
 
 display_result() {
   dialog --title "$1" \
@@ -48,68 +49,68 @@ while true; do
       echo "mc-script - Terminer."
       ;;
     1 )
-      bash $invocation/java_detector.sh --noargs
-      bash $invocation/backup.sh
-      bash $invocation/vanilla.sh
-      bash $invocation/pre_conf_serveur.sh 
-      bash $invocation/file_permission.sh
-      bash $invocation/fini.sh
+      bash $utils/java_detector.sh --noargs
+      bash $utils/backup.sh
+      bash $serveur/vanilla.sh
+      bash $utils/pre_conf_serveur.sh 
+      bash $utils/file_permission.sh
+      bash $utils/fini.sh
       ;;
     2 )
-      bash $invocation/java_detector.sh --noargs
-      bash $invocation/backup.sh
-      bash $invocation/snapshot.sh
-      bash $invocation/pre_conf_serveur.sh 
-      bash $invocation/file_permission.sh
-      bash $invocation/fini.sh
+      bash $utils/java_detector.sh --noargs
+      bash $utils/backup.sh
+      bash $serveur/snapshot.sh
+      bash $utils/pre_conf_serveur.sh 
+      bash $utils/file_permission.sh
+      bash $utils/fini.sh
       ;;
     3 )
-      bash $invocation/java_detector.sh --noargs
-      bash $invocation/backup.sh
-      bash $invocation/spigot.sh
-      bash $invocation/pre_conf_serveur.sh 
-      bash $invocation/file_permission.sh
-      bash $invocation/fini.sh
+      bash $utils/java_detector.sh --noargs
+      bash $utils/backup.sh
+      bash $serveur/spigot.sh
+      bash $utils/pre_conf_serveur.sh 
+      bash $utils/file_permission.sh
+      bash $utils/fini.sh
       ;;
     4 )
-      bash $invocation/java_detector.sh --noargs
-      bash $invocation/backup.sh
-      bash $invocation/bukkit.sh
-      bash $invocation/pre_conf_serveur.sh 
-      bash $invocation/file_permission.sh
-      bash $invocation/fini.sh
+      bash $utils/java_detector.sh --noargs
+      bash $utils/backup.sh
+      bash $serveur/bukkit.sh
+      bash $utils/pre_conf_serveur.sh 
+      bash $utils/file_permission.sh
+      bash $utils/fini.sh
       ;;
     5 )
-      bash $invocation/java_detector.sh 11 PaperSpigot
-      bash $invocation/backup.sh
-      bash $invocation/paperspigot.sh
-      bash $invocation/pre_conf_serveur.sh 
-      bash $invocation/file_permission.sh
-      bash $invocation/fini.sh
+      bash $utils/java_detector.sh 11 PaperSpigot
+      bash $utils/backup.sh
+      bash $serveur/paperspigot.sh
+      bash $utils/pre_conf_serveur.sh 
+      bash $utils/file_permission.sh
+      bash $utils/fini.sh
       ;;
     6 )
-      bash $invocation/java_detector.sh 1 Tuinity
-      bash $invocation/backup.sh
-      bash $invocation/tuinity.sh
-      bash $invocation/pre_conf_serveur.sh 
-      bash $invocation/file_permission.sh
-      bash $invocation/fini.sh
+      bash $utils/java_detector.sh 1 Tuinity
+      bash $utils/backup.sh
+      bash $serveur/tuinity.sh
+      bash $utils/pre_conf_serveur.sh 
+      bash $utils/file_permission.sh
+      bash $utils/fini.sh
       ;;
     7 )
-      bash $invocation/java_detector.sh 11 Airplane
-      bash $invocation/backup.sh
-      bash $invocation/airplane.sh
-      bash $invocation/pre_conf_serveur.sh 
-      bash $invocation/file_permission.sh
-      bash $invocation/fini.sh
+      bash $utils/java_detector.sh 11 Airplane
+      bash $utils/backup.sh
+      bash $serveur/airplane.sh
+      bash $utils/pre_conf_serveur.sh 
+      bash $utils/file_permission.sh
+      bash $utils/fini.sh
       ;;
     8 )
-      bash $invocation/java_detector.sh 11 Purpur
-      bash $invocation/backup.sh
-      bash $invocation/purpur.sh
-      bash $invocation/pre_conf_serveur.sh 
-      bash $invocation/file_permission.sh
-      bash $invocation/fini.sh
+      bash $utils/java_detector.sh 11 Purpur
+      bash $utils/backup.sh
+      bash $serveur/purpur.sh
+      bash $utils/pre_conf_serveur.sh 
+      bash $utils/file_permission.sh
+      bash $utils/fini.sh
       ;;
   esac
 done
