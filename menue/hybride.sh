@@ -4,7 +4,7 @@ DIALOG_CANCEL=1
 DIALOG_ESC=255
 HEIGHT=0
 WIDTH=0
-invocation="/opt/mc-script/script/modules"
+invocation="/opt/mc-script/script/serveur"
 
 display_result() {
   dialog --title "$1" \
