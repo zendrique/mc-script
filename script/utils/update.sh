@@ -5,8 +5,8 @@ dossier_update="/opt/mc-script/update/mc-script"
 
 clear
 echo "[.] Vérification des composant élémentaire..."
-apt update
-apt install dos2unix git -y
+apt update >> /dev/null
+apt install dos2unix git -y >> /dev/null
 clear
 echo "[.] Supression des fichiers..."
 rm -R $dossier/script/
@@ -15,7 +15,7 @@ clear
 echo "[.] Téléchargement de mc-script..."
 mkdir $dossier/update
 cd $dossier/update
-git clone https://github.com/zendrique/mc-script
+git clone https://github.com/zendrique/mc-script >> /dev/null
 clear
 echo "[.] Préparation de la mise à jour..."
 mv $dossier_update/* $dossier

@@ -5,4 +5,4 @@ if [ "$EUID" -ne 0 ]; then
     exit
 fi
 
-bash /opt/mc-script/script/mc-script.sh
+bash /opt/mc-script/menue/mc-script.sh

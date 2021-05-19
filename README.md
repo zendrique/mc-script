@@ -8,7 +8,7 @@ Pour exécuter Mc-script la dernière version de Debian 10 est recomma
 Pour installer mc-script copier colle la commande suivante dans un terminal (demande un accès root)
 Vous devez disposer du packet : wget (sudo apt install wget)
 ```bash
-wget https://github.com/zendrique/mc-script/releases/download/1.5/boot.sh && bash boot.sh
+wget https://github.com/zendrique/mc-script/releases/download/1.6/boot-mc-script.sh && bash boot-mc-script.sh
 ```
 # Version prise en charge :
 ```

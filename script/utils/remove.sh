@@ -7,11 +7,10 @@ select remove in "Oui" "Non"; do
         cd /opt
         rm -R mc-script
         rm /usr/bin/mc-script
-        unalias {mc-script}
         echo "Script par zendrique https://github.com/zendrique"
         echo "Contributeur Yadasko https://github.com/Yadasko"
         echo "Fermture..."
         break;;
-        Non ) bash /opt/mc-script/mc-script.sh; break;;
+        Non ) mc-script; break;;
         esac
 done

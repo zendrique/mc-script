@@ -17,7 +17,9 @@ function existe {
     select validation in "Oui" "Non"; do
     case $validation in
             Oui )  rm /home/dossier.zip
-            zip -r /home/$dossier.zip /home/$dossier 
+            clear
+            echo "Création d'une sauveguarde...."
+            zip -r /home/$dossier.zip /home/$dossier0 >> /dev/null 
             clear
             echo "Une suaveguarde avec le nom : "$dossier".zip a été crée"
             break;;
