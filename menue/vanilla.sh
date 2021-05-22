@@ -81,7 +81,7 @@ while true; do
       bash $utils/fini.sh
       ;;
     5 )
-      bash $utils/java_detector.sh 11 PaperSpigot
+      bash $utils/java_detector.sh 16 PaperSpigot
       bash $utils/backup.sh
       bash $serveur/paperspigot.sh
       bash $utils/pre_conf_serveur.sh 
@@ -89,7 +89,7 @@ while true; do
       bash $utils/fini.sh
       ;;
     6 )
-      bash $utils/java_detector.sh 1 Tuinity
+      bash $utils/java_detector.sh 16 Tuinity
       bash $utils/backup.sh
       bash $serveur/tuinity.sh
       bash $utils/pre_conf_serveur.sh 
@@ -97,7 +97,7 @@ while true; do
       bash $utils/fini.sh
       ;;
     7 )
-      bash $utils/java_detector.sh 11 Airplane
+      bash $utils/java_detector.sh 16 Airplane
       bash $utils/backup.sh
       bash $serveur/airplane.sh
       bash $utils/pre_conf_serveur.sh 
@@ -105,7 +105,7 @@ while true; do
       bash $utils/fini.sh
       ;;
     8 )
-      bash $utils/java_detector.sh 11 Purpur
+      bash $utils/java_detector.sh 16 Purpur
       bash $utils/backup.sh
       bash $serveur/purpur.sh
       bash $utils/pre_conf_serveur.sh 

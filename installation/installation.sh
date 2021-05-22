@@ -83,16 +83,20 @@ function java {
     clear
 
     echo "[?] Quel version de java voulez-vous ? (1 ou 2)" 
-    select java in "8" "11"; do
+    select java in "8" "11" "16"; do
         case $java in
             8 ) 
             clear
-            echo "Installation de java"
+            echo "Installation de java 8..."
             apt install adoptopenjdk-8-hotspot -y >> /dev/null; break;;
             11 ) 
             clear 
-            echo "Installation de java"
+            echo "Installation de java 11..."
             apt install adoptopenjdk-11-hotspot -y >> /dev/null; break;;
+            16 )
+            clear
+            echo "Installation de java 16..."
+            apt install adoptopenjdk-16-hotspot -y >> /dev/null; break;;
         esac
     done
 }

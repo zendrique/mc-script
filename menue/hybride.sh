@@ -53,7 +53,7 @@ while true; do
       bash $utils/fini.sh
       ;;
     2 )
-      bash $utils/java_detector.sh 11 Mohist
+      bash $utils/java_detector.sh 16 Mohist
       bash $utils/dossier.txt
       bash $utils/backup.sh
       bash $serveur/mohist.sh
