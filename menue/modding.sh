@@ -44,7 +44,7 @@ while true; do
       ;;
     1 )
       bash $utils/java_detector.sh --noargs
-      bash $utils/dossier.txt
+      bash $utils/dossier.sh
       bash $utils/backup.sh
       bash $serveur/forge.sh
       bash $utils/pre_conf_serveur.sh 
@@ -53,7 +53,7 @@ while true; do
       ;;
     2 )
       bash $utils/java_detector.sh --noargs
-      bash $utils/dossier.txt
+      bash $utils/dossier.sh
       bash $utils/backup.sh
       bash $serveur/fabric.sh
       bash $utils/pre_conf_serveur.sh 
@@ -62,7 +62,7 @@ while true; do
       ;;
     3 )
       bash $utils/java_detector.sh --noargs
-      bash $utils/dossier.txt
+      bash $utils/dossier.sh
       bash $utils/backup.sh
       bash $serveur/sponge.sh
       bash $utils/pre_conf_serveur.sh 

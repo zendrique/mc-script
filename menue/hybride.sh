@@ -45,7 +45,7 @@ while true; do
       ;;
     1 )
       bash $utils/java_detector.sh 8 CatServer
-      bash $utils/dossier.txt
+      bash $utils/dossier.sh
       bash $utils/backup.sh
       bash $serveur/catserver.sh
       bash $utils/pre_conf_serveur.sh 
@@ -54,7 +54,7 @@ while true; do
       ;;
     2 )
       bash $utils/java_detector.sh 16 Mohist
-      bash $utils/dossier.txt
+      bash $utils/dossier.sh
       bash $utils/backup.sh
       bash $serveur/mohist.sh
       bash $utils/pre_conf_serveur.sh 
@@ -63,7 +63,7 @@ while true; do
       ;;
     3 )
       bash $utils/java_detector.sh --noargs
-      bash $utils/dossier.txt
+      bash $utils/dossier.sh
       bash $utils/backup.sh
       bash $serveur/thermos.sh
       bash $utils/pre_conf_serveur.sh 
