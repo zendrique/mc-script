@@ -1,14 +1,14 @@
 # Java detector
 
+variable="/opt/mc-script/variable"
+java_apt=adoptopenjdk-$1-hotspot
+
 # Dans le cas que aucne version de java est demander
 if [ $1 = "--noargs" ]; then
     echo "Ok c'est bon"
     echo "1" >> $variable/java.txt
     exit 0
 fi
-
-variable="/opt/mc-script/variable"
-java_apt=adoptopenjdk-$1-hotspot
 
 # Code da la variable java.txt
 # 0 = Installation annuler
