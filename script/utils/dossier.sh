@@ -1,11 +1,12 @@
 #!/bin/bash
 
+java_validation=$(cat /opt/mc-script/variable/java.txt)
+source="/opt/mc-script/variable"
+
 # Détéction de la sortie d'information Java
 if [ $java_validation -ne "1" ]; then
     exit 1
 fi
-
-source="/opt/mc-script/variable"
 
 clear
 touch $source/dossier.txt
