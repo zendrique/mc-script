@@ -25,6 +25,8 @@ mv menue $dossier
 mv script $dossier
 mv LICENSE $dossier
 mv README.md $dossier
+mv mc-script /usr/bin
+chmod +x /usr/bin/mc-script
 dos2unix $dossier/installation.sh
 cd $dossier
 rm -r $dossier_update
