@@ -28,7 +28,7 @@ mv README.md $dossier
 mv mc-script $dossier
 dos2unix $dossier/installation.sh
 cd $dossier
-rm -r $dossier_update
+rm -r $dossier/update
 echo "[.] Démarrage du programme..."
 bash $dossier/installation/installation.sh --update
 exit 0
