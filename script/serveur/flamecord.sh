@@ -1,6 +1,6 @@
 # FlameCord
 
-version_flamecord="1.8 - 1.16.5"
+version_flamecord="1.7 - 1.16.5"
 flamecord_download=https://github.com/2lstudios-mc/FlameCord/releases/download/bc4a8ac/FlameCord.jar
 dossier=$(cat /opt/mc-script/variable/dossier.txt)
 
