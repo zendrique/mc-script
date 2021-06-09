@@ -61,7 +61,7 @@ while true; do
       bash $utils/fini.sh
       ;;
     3 )
-      bash $utils/java_detector.sh --noargs
+      bash $utils/java_detector.sh 8 Sponge
       bash $utils/dossier.sh
       bash $utils/backup.sh
       bash $serveur/sponge.sh

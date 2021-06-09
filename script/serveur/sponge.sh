@@ -23,7 +23,7 @@ rm forge-*.jar
 rm -R libraries
 clear
 echo "Téléchargement de forge"
-curl -O $forge_sponge_download
+wget $forge_sponge_download
 mv forge-*-installer.jar forge-installer.jar
 clear
 echo "Installation de forge"
