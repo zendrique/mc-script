@@ -50,6 +50,7 @@ while true; do
       ;;
     1 )
       bash $utils/java_detector.sh --noargs
+      bash $utils/dossier.sh
       bash $utils/backup.sh
       bash $serveur/vanilla.sh
       bash $utils/pre_conf_serveur.sh 
@@ -58,6 +59,7 @@ while true; do
       ;;
     2 )
       bash $utils/java_detector.sh --noargs
+      bash $utils/dossier.sh
       bash $utils/backup.sh
       bash $serveur/snapshot.sh
       bash $utils/pre_conf_serveur.sh 
@@ -66,6 +68,7 @@ while true; do
       ;;
     3 )
       bash $utils/java_detector.sh --noargs
+      bash $utils/dossier.sh
       bash $utils/backup.sh
       bash $serveur/spigot.sh
       bash $utils/pre_conf_serveur.sh 
@@ -74,6 +77,7 @@ while true; do
       ;;
     4 )
       bash $utils/java_detector.sh --noargs
+      bash $utils/dossier.sh
       bash $utils/backup.sh
       bash $serveur/bukkit.sh
       bash $utils/pre_conf_serveur.sh 
@@ -82,6 +86,7 @@ while true; do
       ;;
     5 )
       bash $utils/java_detector.sh 16 PaperSpigot
+      bash $utils/dossier.sh
       bash $utils/backup.sh
       bash $serveur/paperspigot.sh
       bash $utils/pre_conf_serveur.sh 
@@ -90,6 +95,7 @@ while true; do
       ;;
     6 )
       bash $utils/java_detector.sh 16 Tuinity
+      bash $utils/dossier.sh
       bash $utils/backup.sh
       bash $serveur/tuinity.sh
       bash $utils/pre_conf_serveur.sh 
@@ -98,6 +104,7 @@ while true; do
       ;;
     7 )
       bash $utils/java_detector.sh 16 Airplane
+      bash $utils/dossier.sh
       bash $utils/backup.sh
       bash $serveur/airplane.sh
       bash $utils/pre_conf_serveur.sh 
@@ -106,6 +113,7 @@ while true; do
       ;;
     8 )
       bash $utils/java_detector.sh 16 Purpur
+      bash $utils/dossier.sh
       bash $utils/backup.sh
       bash $serveur/purpur.sh
       bash $utils/pre_conf_serveur.sh 
