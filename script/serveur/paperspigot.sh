@@ -1,7 +1,7 @@
 # PaperSpigot
 
-version_paperspigot=1.16.5
-paperspigot_download=https://papermc.io/ci/job/Paper-1.16/lastSuccessfulBuild/artifact/paperclip.jar
+version_paperspigot=1.17
+paperspigot_download=https://papermc.io/api/v2/projects/paper/versions/1.17/builds/28/downloads/paper-1.17-28.jar
 dossier=$(cat /opt/mc-script/variable/dossier.txt)
 
 # Détéction de sortie de Java

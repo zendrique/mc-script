@@ -18,7 +18,7 @@ Forge toutes versions
 Fabric 1.16.5
 Spigot
 Bukkit
-Paperspigot 1.16.5
+Paperspigot 1.17
 Tuinity 1.16.5
 Airplane 1.16.5 (JDK 11)
 Purpur 1.16.5
