@@ -58,6 +58,7 @@ while true; do
       ;;
     4 )
       bash $source Spigot
+      ;;
     5 )
       bash $source PaperSpigot
       ;;
