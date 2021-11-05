@@ -43,7 +43,62 @@ function interact {
 }
 
 function menue {
+    source="/opt/mc-script/worker/serveur-config.sh"
+DIALOG_CANCEL=1
+DIALOG_ESC=255
+HEIGHT=0
+WIDTH=0
+display_result() {
+  dialog --title "$1" \
+    --no-collapse \
+    --msgbox "$result" 0 0
+}
 
+while true; do
+  exec 3>&1
+  selection=$(dialog \
+    --backtitle "$nom_serveur - menue principale" \
+    --title "MC-script" \
+    --clear \
+    --cancel-label "Quiter" \
+    --menu "Que voulez-vous faire ?" $HEIGHT $WIDTH 4 \
+    "1" "Démarrer" \
+    "2" "Redémarrer" \
+    "3" "Acceder à la console" \
+    2>&1 1>&3)
+  exit_status=$?
+  exec 3>&-
+  case $exit_status in
+    $DIALOG_CANCEL)
+      clear
+      echo "MC-script fermer avec succet."
+      exit
+      ;;
+    $DIALOG_ESC)
+      clear
+      echo "Fermeture de MC-script." >&2
+      exit 1
+      ;;
+  esac
+  case $selection in
+    0 )
+      $nom_serveur - Menue fermer
+      clear
+      ;;
+    1 )
+      start
+      clear
+      ;;
+    2 )
+      stop
+      clear
+      ;;
+    3 )
+      restart
+      clear
+      ;;
+  esac
+done
 }
 
 EOF

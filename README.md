@@ -14,3 +14,6 @@ Pour installer cette nouvelle version de MC-script, je me suis basé sur l'ancie
 ```bash
 wget http https://raw.githubusercontent.com/zendrique/mc-script/dev-V2/installation/boot-mc-script.sh && bash boot-mc-script.sh
 ```
+
+# Bilan
+Pour le moment uniquement la partie installation de mc-script est fonctionelle. N'hésiter pas à contribuer :)

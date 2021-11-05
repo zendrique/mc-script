@@ -1,17 +1,20 @@
 serveur_type=$1
 fichier="/opt/mc-script/worker/serveur-installation.sh"
 
-clear
-version_minecraft=$(dialog --title "Version Minage" --inputbox "SUr quel version de minge voulez-vous executer votre serveur ?" 0 0)
-clear
-version_java=$(java)
-clear
-port=$(dialog --title "Port" --inputbox "Sur quel port voulez-vous executer votre serveur ?" 0 0)
-clear
-dossier=$(dialog --title "Dossier" --inputbox "Comment voulez-vous nomer le dossier vôtre serveur ?" 0 0)
-clear
-nom_serveur=$(dialog --title "Dossier" --inputbox "Comment voulez-vous nomer le dossier vôtre serveur ?" 0 0)
-clear
+version_minecraft=""
+version_java=""
+port=""
+dossier=""
+nom_serveur=""
+
+
+dialog --title "Version Minecraft" --inputbox "Sur quel version de minge voulez-vous executer votre serveur ?" 0 0>$version_minecraft
+java
+dialog --title "Port" --inputbox "Sur quel port voulez-vous executer votre serveur ?" 0 0>$port
+dialog --title "Dossier" --inputbox "Comment voulez-vous nomer le dossier vôtre serveur ?" 0 0>$dossier
+dialog --title "Dossier" --inputbox "Comment voulez-vous nomer vôtre serveur ?" 0 0>nom_serveur
+
+
 bash $fichier $version_minecraft $serveur_type $version_java $port $dossier $nom_serveur
 
 function java {
@@ -71,4 +74,5 @@ function java {
     esac
     done
 }
+
 exit 0
