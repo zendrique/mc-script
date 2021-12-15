@@ -24,7 +24,7 @@ curl -O $waterfall_download
 clear
 echo "Installation de Waterfall..."
 echo "cd /home/"$dossier"" >> start.sh
-touch start.sh && echo "screen -d -m -S "$dossier" java -jar Waterfall.jar nogui" >> start.sh
+touch start.sh && echo "screen -d -m -S "$dossier" java -Dlog4j2.formatMsgNoLookups=true -jar Waterfall.jar nogui" >> start.sh
 mkdir plugins
 cd /home
 rm info-$dossier.txt

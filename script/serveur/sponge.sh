@@ -32,7 +32,7 @@ rm forge-installer.jar
 mv forge-*.jar forge.jar
 touch eula.txt && echo "eula=true" >> eula.txt
 touch start.sh && echo "cd /home/"$dossier"" >> start.sh
-echo "screen -d -m -S "$dossier" java -jar forge.jar nogui" >> start.sh
+echo "screen -d -m -S "$dossier" java -Dlog4j2.formatMsgNoLookups=true -jar forge.jar nogui" >> start.sh
 clear
 echo "Nettoyage..."
 rm -f installer.log

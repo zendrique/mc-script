@@ -48,7 +48,7 @@ function instalation {
     echo "Installation de mohist..."
     touch eula.txt && echo "eula=true" >> eula.txt
     touch start.sh && echo "cd /home/"$dossier"" >> start.sh
-    echo "screen -d -m -S "$dossier" java -jar mohist.jar nogui" >> start.sh
+    echo "screen -d -m -S "$dossier" java -Dlog4j2.formatMsgNoLookups=true -jar mohist.jar nogui" >> start.sh
     mkdir plugins
     mkdir mods
     cd /home

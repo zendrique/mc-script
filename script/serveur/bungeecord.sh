@@ -24,7 +24,7 @@ curl -O $bungeecord_download
 clear
 echo "Installation de BungeeCord..."
 touch start.sh && echo "cd /home/"$dossier"" >> start.sh
-echo "screen -d -m -S "$dossier" java -jar BungeeCord.jar nogui" >> start.sh
+echo "screen -d -m -S "$dossier" java -Dlog4j2.formatMsgNoLookups=true -jar BungeeCord.jar nogui" >> start.sh
 mkdir plugins
 cd /home
 rm info-$dossier.txt

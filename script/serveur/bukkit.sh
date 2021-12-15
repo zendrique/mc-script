@@ -33,7 +33,7 @@ cd /home/$dossier
 mv craftbukkit-*.jar craftbukkit.jar
 touch eula.txt && echo "eula=true" >> eula.txt
 touch start.sh && echo "cd /home/"$dossier"" >> start.sh
-echo "screen -d -m -S "$dossier" java -XX:+UseConcMarkSweepGC -jar craftbukkit.jar nogui" >> start.sh
+echo "screen -d -m -S "$dossier" java -XX:+UseConcMarkSweepGC -Dlog4j2.formatMsgNoLookups=true -jar craftbukkit.jar nogui" >> start.sh
 clear
 echo "Nettoyage..."
 rm -R /home/$dossier/buildtools

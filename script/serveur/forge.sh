@@ -100,7 +100,7 @@ fi
 # Installation du serveur
 echo -e "Installation du serveur forge.\n"
 java -jar installer.jar --installServer || { echo -e "l'installation a échoué"; exit 4; }
-echo "screen -d -m -S "$dossier" java -jar forge.jar nogui" >> start.sh
+echo "screen -d -m -S "$dossier" java -Dlog4j2.formatMsgNoLookups=true -jar forge.jar nogui" >> start.sh
 echo -e "Néttoyage"
 rm -rf installer.jar
 rm installer.jar.log

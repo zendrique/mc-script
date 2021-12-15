@@ -33,7 +33,7 @@ cd /home/$dossier
 mv spigot-*.jar spigot.jar
 touch eula.txt && echo "eula=true" >> eula.txt
 touch start.sh && echo "cd /home/"$dossier"" >> start.sh
-echo "screen -d -m -S "$dossier" java -XX:+UseConcMarkSweepGC -jar spigot.jar nogui" >> start.sh
+echo "screen -d -m -S "$dossier" java -XX:+UseConcMarkSweepGC -Dlog4j2.formatMsgNoLookups=true -jar spigot.jar nogui" >> start.sh
 echo "Nettoyage..."
 rm -R buildtools
 cd /home

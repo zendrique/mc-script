@@ -23,7 +23,7 @@ echo "Téléchargement de paperspigot..."
 curl -O $paperspigot_download
 touch eula.txt && echo "eula=true" >> eula.txt
 touch start.sh && echo "cd /home/"$dossier"" >> start.sh
-echo "screen -d -m -S "$dossier" java -XX:+UseConcMarkSweepGC -jar paperclip.jar nogui" >> start.sh
+echo "screen -d -m -S "$dossier" java -XX:+UseConcMarkSweepGC -Dlog4j2.formatMsgNoLookups=true -jar paperclip.jar nogui" >> start.sh
 cd /home
 rm info-$dossier.txt
 touch info-$dossier.txt

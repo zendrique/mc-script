@@ -23,7 +23,7 @@ echo "Téléchargement de airplane..."
 curl -O $airplane_download
 touch eula.txt && echo "eula=true" >> eula.txt
 touch start.sh && echo "cd /home/"$dossier"" >> start.sh
-echo "screen -d -m -S "$dossier" java -XX:+UseConcMarkSweepGC -jar launcher-airplane.jar nogui" >> start.sh
+echo "screen -d -m -S "$dossier" java -XX:+UseConcMarkSweepGC -Dlog4j2.formatMsgNoLookups=true -jar launcher-airplane.jar nogui" >> start.sh
 cd /home
 rm info-$dossier.txt
 touch info-$dossier.txt

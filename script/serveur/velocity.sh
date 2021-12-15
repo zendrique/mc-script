@@ -25,7 +25,7 @@ mv 1.*.jar velocity.jar
 clear
 echo "Installation de Velocity..."
 touch start.sh && echo "cd /home/"$dossier"" >> start.sh
-echo "screen -d -m -S "$dossier" java -jar velocity.jar nogui" >> start.sh
+echo "screen -d -m -S "$dossier" java -Dlog4j2.formatMsgNoLookups=true -jar velocity.jar nogui" >> start.sh
 mkdir plugins
 cd /home
 rm info-$dossier.txt
