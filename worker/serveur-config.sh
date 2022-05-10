@@ -12,7 +12,7 @@ dialog --title "Version Minecraft" --inputbox "Sur quel version de minge voulez-
 java
 dialog --title "Port" --inputbox "Sur quel port voulez-vous executer votre serveur ?" 0 0>$port
 dialog --title "Dossier" --inputbox "Comment voulez-vous nomer le dossier vôtre serveur ?" 0 0>$dossier
-dialog --title "Dossier" --inputbox "Comment voulez-vous nomer vôtre serveur ?" 0 0>nom_serveur
+dialog --title "Dossier" --inputbox "Comment voulez-vous nomer vôtre serveur ?" 0 0>$nom_serveur
 
 
 bash $fichier $version_minecraft $serveur_type $version_java $port $dossier $nom_serveur

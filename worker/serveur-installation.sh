@@ -17,7 +17,7 @@ touch $manager
 
 #------- Section de code pas trés propre mais, j'ai pas réussie à faire autrement :(
 echo "function start {" >> $manager
-echo    echo "Démarrage du serveur..." >> $manager
+echo    "echo Démarrage du serveur..." >> $manager
 
 if [ serveur_type == "vanilla" ] ; then
     echo "docker run -d -i -p 25565:$port -v /home/$dossier:/data -e EULA=TRUE -e VERSION=$version_minecraft --name $nom_serveur itzg/minecraft-server:java$version_java" >> $manager

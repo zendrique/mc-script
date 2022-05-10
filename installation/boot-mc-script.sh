@@ -5,6 +5,7 @@ if [ "$EUID" -ne 0 ]; then
     exit
 fi
 
+# Variable
 dossier="/opt/mc-script"
 
 #clear
@@ -22,15 +23,18 @@ function convertion {
 }
 
 if [ -d "$dossier" ] ; then
-    echo "Vielle installation détecter, nettoyage..."
+    echo "Ancienne installation détecter, nettoyage..."
     rm -r $dossier
     rm /usr/bin/mc-script
 fi
+
 apt update 
 apt install -y git dos2unix
 cd /opt
 git clone --branch dev-V2 https://github.com/zendrique/mc-script/
 convertion
+
+# Vérification de l'os
 bash $dossier/installation/os-controle.sh
 verification=$(echo $?)
 if [ "$verification" -eq 0 ]
