@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ "$EUID" -ne 0 ]; then 
+    echo "[!] Veuillez lancer le script en root (via sudo)"
+    exit 1
+fi
+
+bash /opt/mc-script/menue/java-manager.sh
+exit 0
